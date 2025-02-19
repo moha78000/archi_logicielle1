@@ -3,6 +3,19 @@ import uuid
 
 import archilog.models as models
 import archilog.services as services
+from flask import Flask, render_template
+
+
+app = Flask(__name__)
+@app.route("/")
+def home():
+    return render_template("home.html")
+
+@app.route("/hello/")
+@app.route("/hello/<name>")
+def hello(name=None):
+    return render_template("home.html", name=name)
+
 
 
 @click.group()
