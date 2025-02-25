@@ -79,7 +79,7 @@ def get_entry(id : uuid.UUID):
         if result:
             return f"ID: {result.id}, Name: {result.name}, Amount: {result.amount}, Category: {result.category}"
         else:
-            return f"No entry found with ID {id}."        
+            return f"Pas d'entrée trouvée avec l'id {id}."        
 
 # Exemple d'utilisation de la fonction principale
 if __name__ == "__main__":
