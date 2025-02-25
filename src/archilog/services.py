@@ -22,11 +22,6 @@ def import_from_csv(csv_file: io.StringIO) -> None:
     )
     next(csv_reader)
     for row in csv_reader:
-        try:
-            amount = float(row["amount"])
-        except ValueError:
-            amount = 0  # ou une autre valeur par défaut
-
         create_entry(
             name=row["name"],
             amount=float(row["amount"]),
