@@ -3,6 +3,7 @@ import uuid
 
 import archilog.models as models
 import archilog.services as services
+print(models)
 from flask import Flask, render_template
 
 
