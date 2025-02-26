@@ -70,3 +70,10 @@ def update(id: uuid.UUID, name: str, amount: float, category: str | None):
 @click.option("--id", required=True, type=click.UUID)
 def delete(id: uuid.UUID):
     models.delete_entry(id)
+
+
+@cli.command()
+@click.argument("csv_file", type=click.Path(writable=True))
+def export_csv(csv_file):
+    services.export_to_csv("csv_file")   
+    

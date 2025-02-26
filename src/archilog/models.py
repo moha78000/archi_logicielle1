@@ -40,7 +40,7 @@ def create_entry(name: str, amount: float, category: str | None = None):
         result = conn.execute(stmt)
     print(f"Entrée crée avec le nom '{name}' et le montant {amount}.")
 
-# Récupérer toutes les entrées de la table "entries"
+# Récupérer toutes les entrées contenues dans la table "entries"
 def get_all_entries():
     with engine.connect() as conn:
         result = conn.execute(entries_table.select()).fetchall()
@@ -51,6 +51,8 @@ def get_all_entries():
         
         # Afficher le tableau avec tabulate
         print(tabulate(data, headers=headers, tablefmt="grid"))
+
+        return data
 
 def delete_entry(id: uuid.UUID):
     # Création de la requête de suppression
