@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toutes les entrées</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Toutes les entrées dans la base de données</h1>
+
+    <!-- Table pour afficher les entrées -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Montant</th>
+                <th>Catégorie</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+                <tr>
+                    <td>{{entry[0]}}</td>
+                    <td>{{entry[1]}}</td>
+                    <td>{{entry[2]}}</td>
+                    <td>{{entry[3]}}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">Aucune entrée disponible.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('export_csv') }}"> Télécharger en CSV</a>
+</body>
+</html>

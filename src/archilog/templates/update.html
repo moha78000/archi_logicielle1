@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier une Entrée</title>
+</head>
+<body>
+    <h1>Modifier une Entrée</h1>
+    <form action="{{ url_for('update_entry_route') }}" method="POST">
+        <label for="id">ID de l'entrée :</label>
+        <input type="text" name="id" required>
+
+        <label for="name">Nom :</label>
+        <input type="text" name="name" required>
+
+        <label for="amount">Montant :</label>
+        <input type="number" step="0.01" name="amount" required>
+
+        <label for="category">Catégorie :</label>
+        <input type="text" name="category">
+
+        <button type="submit">Mettre à jour</button>
+    </form>
+    <a href="{{ url_for('list_entries') }}">Retour à la liste</a>
+</body>
+</html>

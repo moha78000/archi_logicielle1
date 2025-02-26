@@ -13,7 +13,7 @@ metadata = MetaData()
 entries_table = Table(
     "entries",
     metadata,               
-    Column("id", Uuid ,  primary_key=True, default=uuid.uuid4),
+    Column("id", String(36) ,  primary_key=True, default=str(uuid.uuid4())), # UUID stocké en string pour que SQLite puisse récupérer l'id
     Column("name", String, nullable=False),
     Column("amount", Float, nullable=False),
     Column("category", String, nullable=True),
@@ -54,7 +54,7 @@ def get_all_entries():
 
         return data
 
-def delete_entry(id: uuid.UUID):
+def delete_entry(id: str):
     # Création de la requête de suppression
     stmt = entries_table.delete().where(entries_table.c.id == id)
 

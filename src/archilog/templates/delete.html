@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrées</title>
+</head>
+<body>
+    <h1>Liste des Entrées</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Montant</th>
+                <th>Catégorie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+            <tr>
+                <td>{{ entry[0] }}</td>
+                <td>{{ entry[1] }}</td>
+                <td>{{ entry[2] }}</td>
+                <td>{{ entry[3] }}</td>
+                <td>
+                    <!-- Formulaire de suppression -->
+                    <form action="{{ url_for('delete_entry_route') }}" method="POST">
+                        <input type="hidden" name="id" value="{{ entry[0] }}">
+                        <button type="submit">Supprimer</button>
+                    </form>
+                </td>
+            </tr>           
+            {% else %}
+            <tr>
+                <td colspan="5">Aucune entrée trouvée</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
