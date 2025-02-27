@@ -3,7 +3,7 @@ import uuid
 
 import archilog.models as models
 import archilog.services as services
-from flask import Flask, render_template , request, redirect, url_for , send_file
+from flask import Flask, render_template , request, redirect, url_for , send_file , Response , flash
 from flask_sqlalchemy import SQLAlchemy
 
 import os
@@ -73,13 +73,10 @@ def delete_entry_form():
 
 
 
-@app.route("/delete_entry", methods=["POST"])
-def delete_entry_route():
-    # Récupérer les données du formulaire par l'id d'entrée
-    id = request.form["id"]
-    
-    # Appeler la fonction pour supprimer une entrée dans la base de données à partir de son ID
-    models.delete_entry(id)
+@app.route("/delete_entry/<uuid:user_id>" , methods=["POST"])  
+def delete_entry_route(user_id):
+   # Appeler la fonction pour supprimer une entrée dans la base de données à partir de son ID
+    models.delete_entry(user_id)
     
     print(f"Entrée avec l'id '{id}' à été supprimée.")
     return redirect(url_for("home"))  # Redirection vers la page d'accueil
@@ -93,7 +90,8 @@ def update_entry_form():
 
 @app.route("/update_entry", methods=["POST"])
 def update_entry_route():
-    id = request.form["id"]
+    
+    id = uuid.UUID(request.form["id"])  # Si id est un UUID valide
     name = request.form["name"]
     amount = float(request.form["amount"])
     category = request.form["category"] if "category" in request.form else None # Vérifier si la catégorie est fournie
@@ -105,51 +103,58 @@ def update_entry_route():
     return redirect(url_for("home"))  # Redirection vers la page d'accueil
 
 
-# Spécifier un chemin absolu pour l'exportation du fichier CSV
-EXPORT_DIR = os.path.join(os.getcwd(), 'exports')  # Crée un dossier 'exports' dans le répertoire de travail
-
-# Assurer que le dossier existe
-os.makedirs(EXPORT_DIR, exist_ok=True)
-
 @app.route("/export_csv")
 def export_csv():
-    # Nom du fichier à télécharger
-    file_name = "export.csv"
+    csv_file = services.export_to_csv()  # Appeler la fonction d'exportation des données en CSV
     
-    file_path = services.export_to_csv(file_name)  # Appel de la fonction d'exportation
+    return Response(csv_file.getvalue(), mimetype="text/csv",
+                    headers={"Content-Disposition": "attachment;filename=export.csv"}
+                    ) # Retourner le fichier CSV en tant que réponse  
 
-    # Retourner le fichier pour téléchargement
-    return send_file(file_path, as_attachment=True)
 
-UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'csv'}
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
-# Vérifier si le fichier est un CSV
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # Route pour afficher le formulaire d'importation
 @app.route('/import_csv', methods=['GET'])
 def import_csv_form():
     return render_template('import_csv.html')
 
+
+
+# Définir le dossier où les fichiers seront téléchargés
+UPLOAD_FOLDER = 'uploads'  # Remplace 'uploads' par le chemin complet si nécessaire
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+ALLOWED_EXTENSIONS = {'csv'}  # Autoriser uniquement les fichiers .csv
+
+# Assure-toi que le dossier existe (si ce n'est pas déjà fait)
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
+def allowed_file(filename):
+    return filename.endswith('.csv')  # Vérifie si le fichier se termine par '.csv'    
+
 # Route pour gérer l'importation du CSV
 @app.route('/import_csv', methods=['POST'])
 def import_csv():
-    file = request.files['csv_file']
+    file = request.files['csv_file']  # Récupère le fichier téléchargé
     
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        file.save(file_path)
+    if file and allowed_file(file.filename):  # Vérifie si le fichier a une extension valide
+        filename = secure_filename(file.filename)  # Sécuriser le nom du fichier pour éviter les attaques
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)  # Dossier où on sauvegarde le fichier
+        file.save(file_path)  # Sauvegarder le fichier dans le dossier
+
+        # Ouvrir le fichier et l'envoyer à la fonction d'importation
+        with open(file_path, 'r', encoding='utf-8') as f:
+            # Créer un objet StringIO à partir du fichier
+            csv_file = io.StringIO(f.read())
+            services.import_from_csv(csv_file)  # Appeler la fonction d'importation
+
+
         
-        # Appeler la fonction d'importation des données CSV
-        models.import_csv_to_db(file_path)
-        
-        return redirect(url_for('home'))  # Rediriger vers la page d'accueil après importation
-    return 'Fichier invalide, veuillez télécharger un fichier CSV.'
+        return redirect(url_for('home'))  # Rediriger vers la page d'accueil après l'importation
+    
+    flash('Fichier invalide, veuillez télécharger un fichier CSV.')  # Message d'erreur
+    return redirect(url_for('import_csv_form'))  # Rediriger vers la page de téléchargement du fichier
 
 
 
@@ -210,5 +215,5 @@ def delete(id: uuid.UUID):
 @cli.command()
 @click.argument("csv_file", type=click.Path(writable=True))
 def export_csv(csv_file):
-    services.export_to_csv("csv_file")   
+    services.export_to_csv(csv_file)   
     

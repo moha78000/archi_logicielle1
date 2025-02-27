@@ -13,7 +13,7 @@ metadata = MetaData()
 entries_table = Table(
     "entries",
     metadata,               
-    Column("id", String(36) ,  primary_key=True, default=str(uuid.uuid4())), # UUID stocké en string pour que SQLite puisse récupérer l'id
+    Column("id", Uuid ,  primary_key=True, default=uuid.uuid4), # UUID stocké en string pour que SQLite puisse récupérer l'id
     Column("name", String, nullable=False),
     Column("amount", Float, nullable=False),
     Column("category", String, nullable=True),
@@ -54,25 +54,30 @@ def get_all_entries():
 
         return data
 
-def delete_entry(id: str):
-    # Création de la requête de suppression
-    stmt = entries_table.delete().where(entries_table.c.id == id)
+def delete_entry(id : uuid.UUID) -> None: 
+    """
+    Fonction pour supprimer une entrée par son UUID.
+    :param id: L'ID de l'entrée à supprimer, qui peut être une chaîne ou un UUID.
+    """
 
-    # Exécution de la requête
+    
+    # Suppression de l'entrée par l'UUID
+    stmt = entries_table.delete().where(entries_table.c.id == id)  # Assurez-vous que l'ID est une chaîne
+
     with engine.begin() as conn:
-        result = conn.execute(stmt)
-        conn.commit()   # Sauvegarder les modifications
-        print(f"L'entrée avec l'ID {id} a été supprimée.")
+        conn.execute(stmt)
+
+    print(f"L'entrée avec l'ID {id} a été supprimée.")
         
 
 def update_entry(id: uuid.UUID, name: str, amount: float, category: str | None = None):
+    
     # Création de la requête de mise à jour
     stmt = entries_table.update().where(entries_table.c.id == id).values(name=name, amount=amount, category=category)
 
     # Exécution de la requête
     with engine.begin() as conn:
         result = conn.execute(stmt)
-        conn.commit()
         print(f"L'entrée avec l'ID {id} a été mise à jour.")
 
 def get_entry(id : uuid.UUID):

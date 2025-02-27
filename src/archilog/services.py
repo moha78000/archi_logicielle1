@@ -8,18 +8,26 @@ from sqlalchemy import select
 
 
 
-def export_to_csv(csv_file: io.StringIO) -> None:
+def export_to_csv(csv_file_path=None):
+    csv_file = io.StringIO() if csv_file_path is None else open(csv_file_path, "w", newline="", encoding="utf-8")
+
     with engine.connect() as conn:
-        result = conn.execute(select(entries_table)).fetchall()  # Récupérer les entrées
-        entries = [Entry(*row) for row in result]  # Convertir les tuples en objets Entry
+        result = conn.execute(select(entries_table)).fetchall()
+        entries = [Entry(*row) for row in result]
 
-    with open("export.csv", "w", newline="", encoding="utf-8") as f:
-        csv_writer = csv.DictWriter(f, fieldnames=[f.name for f in dataclasses.fields(Entry)])
-        csv_writer.writeheader()
-        for entry in entries:
-            csv_writer.writerow(asdict(entry))  # Maintenant, entry est bien une instance de dataclass
+    csv_writer = csv.DictWriter(csv_file, fieldnames=[f.name for f in dataclasses.fields(Entry)])
+    csv_writer.writeheader()
 
-    print("Exportation réussie !")
+    for entry in entries:
+        csv_writer.writerow(dataclasses.asdict(entry))
+
+    if csv_file_path is None:
+        csv_file.seek(0)  # Revenir au début pour Flask
+        return csv_file
+    else:
+        csv_file.close()  # Fermer le fichier pour Click
+        print(f"Exportation réussie vers {csv_file_path} !")
+        
 
 def import_from_csv(csv_file: io.StringIO) -> None:
     # L'ordre des colonnes attendues
