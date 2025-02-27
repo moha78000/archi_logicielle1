@@ -24,7 +24,7 @@ Course & examples : [https://kathode.neocities.org](https://kathode.neocities.or
 # Archi-Logicielle1 - Gestion des Entrées
 
 ## Description
-Archi-Logicielle1 est une application Flask qui permet de gérer une base de données d'entrées. Ces entrées peuvent être des objets divers (voitures, téléphones, etc.) et sont stockées dans une base de données SQLite. L'application permet de créer, afficher, mettre à jour et supprimer des entrées via une interface web simple.
+Archi-Logicielle1 est une application Flask qui permet de gérer une base de données d'entrées. Ces entrées sont stockées dans une base de données SQLite. L'application permet de créer, afficher, mettre à jour et supprimer des entrées via une interface web simple.
 
 ## Fonctionnalités
 - **Créer une nouvelle entrée** : Ajouter une entrée avec un nom, un montant et une catégorie.
