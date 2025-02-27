@@ -4,20 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toutes les entrées</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/entries.css') }}">
 </head>
 <body>
     <h1>Toutes les entrées dans la base de données</h1>
@@ -35,10 +22,10 @@
         <tbody>
             {% for entry in entries %}
                 <tr>
-                    <td>{{ entry.id }}</td>
-                    <td>{{ entry.name }}</td>
-                    <td>{{ entry.amount }}</td>
-                    <td>{{ entry.category }}</td>
+                    <td>{{ entry[0] }}</td>
+                    <td>{{ entry[1] }}</td>
+                    <td>{{ entry[2] }}</td>
+                    <td>{{ entry[3] }}</td>
                 </tr>
             {% else %}
                 <tr>
@@ -47,6 +34,8 @@
             {% endfor %}
         </tbody>
     </table>
-    <a href="{{ url_for('export_csv') }}"> Télécharger en CSV</a>
+
+    <!-- Lien pour télécharger en CSV -->
+    <a href="{{ url_for('export_csv') }}">Télécharger en CSV</a>
 </body>
 </html>

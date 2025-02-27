@@ -4,23 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenue sur mon application Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
 
-<h1>Accueil</h1>
 <body>
-    <a href="{{ url_for('create_entry_form') }}">Créer une nouvelle entrée</a>
-    <a href="{{ url_for('hello') }}">Hello</a>
-    <a href="{{ url_for('list_entries') }}">Voir toutes les entrées</a>
-    <a href="{{ url_for('delete_entry_form') }}">Pour supprimer une entrée</a>
-    <a href="{{ url_for('update_entry_form') }}">Pour mettre à jour une entrée</a>
-    <a href="{{ url_for('import_csv_form') }}">Importer un fichier CSV</a>
-
-
+    <div class="container">
+        <h1>Accueil</h1>
+        <a href="{{ url_for('create_entry_form') }}">Créer une nouvelle entrée</a>
+        <a href="{{ url_for('list_entries') }}">Voir toutes les entrées</a>
+        <a href="{{ url_for('delete_entry_form') }}">Pour supprimer une entrée</a>
+        <a href="{{ url_for('update_entry_form') }}">Pour mettre à jour une entrée</a>
+        <a href="{{ url_for('import_csv_form') }}">Importer un fichier CSV</a>
+    </div>
 </body>
-
-
-
-
 </html>
-
-    
