@@ -27,10 +27,6 @@ class Entry(db.Model): # Modèle de données de la table "entries"
 def home():
     return render_template("home.html")
 
-@app.route("/hello/")   
-@app.route("/hello/<name>")
-def hello(name=None):
-    return render_template("hello.html", name=name)
 
 
 @app.route("/create")
