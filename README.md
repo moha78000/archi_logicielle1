@@ -19,13 +19,13 @@ Commands:
   get          # Afficher une entrée spécifique
   get-all      # Afficher toutes les entrées
   import-csv   # Importer des données depuis un fichier CSV
-               # pdm run archilog import-csv --file "fichier.csv"
+               # pdm run archilog import-csv "fichier.csv"
   init-db      # Initialiser la base de données
   update       # Mettre à jour une entrée existante
                # pdm run archilog update --id ID --name "Nom" --amount "Montant" --category "Catégorie"
-
+               
 $ pdm run flask --app archilog.views --debug run  # Lancer l'application Flask en mode debug
-
+```  
 Course & examples : [https://kathode.neocities.org](https://kathode.neocities.org)
 
 # Archi-Logicielle1 - Gestion des Entrées
