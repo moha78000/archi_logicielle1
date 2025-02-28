@@ -80,14 +80,19 @@ def update_entry(id: uuid.UUID, name: str, amount: float, category: str | None =
         result = conn.execute(stmt)
         print(f"L'entrée avec l'ID {id} a été mise à jour.")
 
-def get_entry(id : uuid.UUID):
+def get_entry(id: uuid.UUID):
     with engine.connect() as conn:
         result = conn.execute(entries_table.select().where(entries_table.c.id == id)).fetchone()
         if result:
-            return f"ID: {result.id}, Name: {result.name}, Amount: {result.amount}, Category: {result.category}"
+            # Retourner un dictionnaire avec les données de l'entrée
+            return {
+                "id": result.id,
+                "name": result.name,
+                "amount": result.amount,
+                "category": result.category
+            }
         else:
-            return f"Pas d'entrée trouvée avec l'id {id}."        
-
+            return None  # Si l'entrée n'est pas trouvée, retourner None
 # Exemple d'utilisation de la fonction principale
 if __name__ == "__main__":
     # Initialisation de la base de données

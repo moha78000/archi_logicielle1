@@ -12,9 +12,16 @@
         <h1>Accueil</h1>
         <a href="{{ url_for('create_entry_form') }}">Créer une nouvelle entrée</a>
         <a href="{{ url_for('list_entries') }}">Voir toutes les entrées</a>
+         <!-- Formulaire pour rechercher une entrée par son ID -->
+        <form action="{{ url_for('get_entry') }}" method="get">
+            <label for="id">Rechercher une entrée par ID:</label>
+            <input type="text" id="id" name="id" required>
+            <button type="submit">Rechercher</button>
+        </form>
         <a href="{{ url_for('delete_entry_form') }}">Pour supprimer une entrée</a>
         <a href="{{ url_for('update_entry_form') }}">Pour mettre à jour une entrée</a>
         <a href="{{ url_for('import_csv_form') }}">Importer un fichier CSV</a>
+        
     </div>
 </body>
 </html>

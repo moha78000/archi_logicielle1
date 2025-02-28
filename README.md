@@ -33,6 +33,7 @@ pip install flask
 pdm flask 
 pdm add flask_sqlalchemy            
 pdm run flask --app archilog.views --debug run  # Lancer l'application Flask en mode debug
+  
 
 ```  
 Course & examples : [https://kathode.neocities.org](https://kathode.neocities.org)

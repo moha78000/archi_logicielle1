@@ -56,6 +56,31 @@ def list_entries():
     return render_template("entries.html", entries=entries)
 
 
+@app.route("/entry", methods=["GET"])
+def get_entry():
+    # Récupérer l'ID de la requête (c'est-à-dire l'ID entré dans le formulaire)
+    id = request.args.get("id")
+    if id:
+        try:
+            # Convertir l'ID en UUID
+            entry_id = uuid.UUID(id)
+            entry = models.get_entry(entry_id)  # Récupérer l'entrée dans la base de données
+            
+            if entry:
+                return render_template("entry.html", entry=entry)  # Afficher l'entrée correspondante
+            else:
+                flash("Entrée non trouvée.")  # Si l'entrée n'est pas trouvée
+                return redirect(url_for('home'))  # Rediriger vers la page d'accueil
+        except ValueError:
+            flash("ID invalide.")  # Si l'ID n'est pas valide
+            return redirect(url_for('home'))
+    else:
+        return redirect(url_for('home'))  # Rediriger vers la page d'accueil
+
+
+
+
+
 
 
 @app.route("/delete")
