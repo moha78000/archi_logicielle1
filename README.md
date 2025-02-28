@@ -23,8 +23,17 @@ Commands:
   init-db      # Initialiser la base de données
   update       # Mettre à jour une entrée existante
                # pdm run archilog update --id ID --name "Nom" --amount "Montant" --category "Catégorie"
-               
-$ pdm run flask --app archilog.views --debug run  # Lancer l'application Flask en mode debug
+cd ..\khaldi_mohamed\archilog-0.1 # Se mettre dans le bon répertoire
+pdm init # Initialiser le projet
+pip install click 
+pdm add click
+pip install sqlalchemy 
+pdm add sqlalchemy
+pip install flask
+pdm flask 
+pdm add flask_sqlalchemy            
+pdm run flask --app archilog.views --debug run  # Lancer l'application Flask en mode debug
+
 ```  
 Course & examples : [https://kathode.neocities.org](https://kathode.neocities.org)
 
