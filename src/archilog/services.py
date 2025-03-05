@@ -3,17 +3,15 @@ import dataclasses
 import io
 
 from archilog.models import create_entry, get_all_entries, Entry , engine , entries_table
-from dataclasses import asdict
-from sqlalchemy import select
+
 
 
 
 def export_to_csv(csv_file_path=None):
     csv_file = io.StringIO() if csv_file_path is None else open(csv_file_path, "w", newline="", encoding="utf-8")
 
-    with engine.connect() as conn:
-        result = conn.execute(select(entries_table)).fetchall()
-        entries = [Entry(*row) for row in result]
+
+    entries = get_all_entries()
 
     csv_writer = csv.DictWriter(csv_file, fieldnames=[f.name for f in dataclasses.fields(Entry)])
     csv_writer.writeheader()

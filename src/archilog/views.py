@@ -4,7 +4,9 @@ import uuid
 import archilog.models as models
 import archilog.services as services
 from flask import Flask, render_template , request, redirect, url_for, Response , flash
-from flask_sqlalchemy import SQLAlchemy
+from tabulate import tabulate
+
+
 
 import os
 from werkzeug.utils import secure_filename
@@ -13,14 +15,6 @@ import io
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"  # Connexion à la base de données SQLite
-db = SQLAlchemy(app)
-
-class Entry(db.Model): # Modèle de données de la table "entries"
-    __tablename__ = "entries"
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    amount = db.Column(db.Float, nullable=False)
-    category = db.Column(db.String(100), nullable=True)
 
 
 @app.route("/")
@@ -86,6 +80,7 @@ def get_entry():
 @app.route("/delete")
 def delete_entry_form():
     entries = models.get_all_entries()  # Récupérer toutes les entrées
+    print(tabulate(entries, headers="keys"))
 
     return render_template("delete.html" , entries=entries)
 
@@ -209,6 +204,9 @@ def get_all(as_csv: bool):
         click.echo(services.export_to_csv().getvalue())
     else:
         click.echo(models.get_all_entries())
+
+
+
 
 
 @cli.command()

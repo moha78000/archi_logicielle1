@@ -1,9 +1,7 @@
 import uuid
 from dataclasses import dataclass
 from sqlalchemy import create_engine, Table, Column, String, Float, MetaData
-from sqlalchemy import Uuid 
-from tabulate import tabulate
-
+from sqlalchemy import Uuid
 # Configuration de la base de données SQLite
 db_url = "sqlite:///data.db"
 engine = create_engine(db_url, echo=True)  # echo=True pour afficher les requêtes SQL exécutées
@@ -44,15 +42,11 @@ def create_entry(name: str, amount: float, category: str | None = None):
 def get_all_entries():
     with engine.connect() as conn:
         result = conn.execute(entries_table.select()).fetchall()
-        data = [(row[0], row[1], row[2], row[3]) for row in result]
-        
-        # Ajouter les en-têtes de colonne
-        headers = ["ID", "Name", "Amount", "Category"]
-        
-        # Afficher le tableau avec tabulate
-        print(tabulate(data, headers=headers, tablefmt="grid"))
+        # Convertir chaque ligne en une instance de Entry
+        entries = [Entry(id=row[0], name=row[1], amount=row[2], category=row[3]) for row in result]
 
-        return data
+    print(entries)
+    return entries
 
 def delete_entry(id : uuid.UUID) -> None: 
     """
