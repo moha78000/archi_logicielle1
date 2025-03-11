@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:2e1ab721b681bba8984140c0848cd10bf609b07a8d9d72ea093bf5683f6f68fc"
+content_hash = "sha256:4ee69cea5789396dee65b31de47b316ec9aeadd46d6f4e89a9a9392b12fd42ef"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -65,21 +65,6 @@ dependencies = [
 files = [
     {file = "flask-3.1.0-py3-none-any.whl", hash = "sha256:d667207822eb83f1c4b50949b1623c8fc8d51f2341d65f72e1a1815397551136"},
     {file = "flask-3.1.0.tar.gz", hash = "sha256:5f873c5184c897c8d9d1b05df1e3d01b14910ce69607a117bd3277098a5836ac"},
-]
-
-[[package]]
-name = "flask-sqlalchemy"
-version = "3.1.1"
-requires_python = ">=3.8"
-summary = "Add SQLAlchemy support to your Flask application."
-groups = ["default"]
-dependencies = [
-    "flask>=2.2.5",
-    "sqlalchemy>=2.0.16",
-]
-files = [
-    {file = "flask_sqlalchemy-3.1.1-py3-none-any.whl", hash = "sha256:4ba4be7f419dc72f4efd8802d69974803c37259dd42f3913b0dcf75c9447e0a0"},
-    {file = "flask_sqlalchemy-3.1.1.tar.gz", hash = "sha256:e4b68bb881802dda1a7d878b2fc84c06d1ee57fb40b874d3dc97dabfa36b8312"},
 ]
 
 [[package]]

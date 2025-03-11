@@ -93,7 +93,7 @@ def delete_entry_route(user_id):
    # Appeler la fonction pour supprimer une entrée dans la base de données à partir de son ID
     models.delete_entry(user_id)
     
-    print(f"Entrée avec l'id '{id}' à été supprimée.")
+    print(f"Entrée avec l'id '{user_id}' à été supprimée.")
     return redirect(url_for("home"))  # Redirection vers la page d'accueil
 
 
