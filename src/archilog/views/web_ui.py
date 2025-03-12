@@ -17,6 +17,29 @@ def list_entries():
     entries = models.get_all_entries()
     return render_template("entries.html", entries=entries)
 
+
+@web_ui.route("/entry", methods=["GET"])
+def get_entry():
+    # Récupérer l'ID de la requête (depuis le formulaire)   
+    entry_id = request.args.get("id")
+
+    if entry_id:
+        try:
+            # Convertir l'ID en UUID
+            entry_uuid = uuid.UUID(entry_id)
+            entry = models.get_entry(entry_uuid)  # Récupérer l'entrée dans la base de données
+            
+            if entry:
+                return render_template("entry.html", entry=entry)  # Afficher l'entrée trouvée
+            else:
+                flash("Entrée non trouvée.", "error")  # Si l'entrée n'est pas trouvée
+        except ValueError:
+            flash("ID invalide. Veuillez entrer un UUID valide.", "error")  # ID invalide
+    else:
+        flash("Veuillez entrer un ID.", "error")
+
+    return redirect(url_for("web_ui.home"))  # Redirection vers la page d'accueil
+
 @web_ui.route("/create")
 def create_entry_form():
     return render_template("create.html")

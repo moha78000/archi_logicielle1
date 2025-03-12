@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+src/archi_logicielle1.egg-info/PKG-INFO
+src/archi_logicielle1.egg-info/SOURCES.txt
+src/archi_logicielle1.egg-info/dependency_links.txt
+src/archi_logicielle1.egg-info/entry_points.txt
+src/archi_logicielle1.egg-info/requires.txt
+src/archi_logicielle1.egg-info/top_level.txt
+src/archilog/__init__.py
+src/archilog/models.py
+src/archilog/services.py
+src/archilog/views.py
+src/views/home.py
+src/views/web_ui.py

@@ -1,15 +1,19 @@
 [project]
-name = "archilog"
-version = "0.1"
-description = "A simple project for educational purpose."
+name = "archi_logicielle1"
+version = "0.1.0"
+description = "Default template for PDM package"
 readme = "README.md"
 dependencies = [
     "click>=8.1.8",
-    "sqlalchemy>=2.0.38",
+    "sqlalchemy>=2.0.39",
     "flask>=3.1.0",
     "tabulate>=0.9.0",
+    "flask-sqlalchemy>=3.1.1",
 ]
-requires-python = ">=3.10"
+requires-python = "==3.12.*"
+authors = [
+    {name = "22302683", email = "moh78078000@gmail.com"},
+]
 
 [project.license]
 text = "MIT"
@@ -17,9 +21,9 @@ text = "MIT"
 [project.scripts]
 archilog = "archilog.views:cli"
 
-[build-system]
-requires = [
-    "pdm-backend",
-]
-build-backend = "pdm.backend"
+[tool.pdm]
+distribution = true
 
+[tool.pdm.scripts]
+_.env_file ="dev.env"
+start = "flask --app archilog.views --debug run" # demarrer l'application 

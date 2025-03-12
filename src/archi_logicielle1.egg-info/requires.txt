@@ -1,0 +1,5 @@
+click>=8.1.8
+sqlalchemy>=2.0.39
+flask>=3.1.0
+tabulate>=0.9.0
+flask-sqlalchemy>=3.1.1

@@ -27,7 +27,7 @@
                 <td>{{ entry.category }}</td>
                 <td>
                     <!-- Formulaire de suppression -->
-                    <form action="{{ url_for('delete_entry_route', user_id=entry.id) }}" method="POST">
+                    <form action="{{ url_for('web_ui.delete_entry_route', user_id=entry.id) }}" method="POST">
                         <input type="hidden" name="id" value="{{ entry.id }}">
                         <button type="submit">Supprimer</button>
                     </form>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Modifier une Entrée</h1>
-    <form action="{{ url_for('update_entry_route') }}" method="POST">
+    <form action="{{ url_for('web_ui.update_entry_route') }}" method="POST">
         <label for="id">ID de l'entrée :</label>
         <input type="text" name="id" required>
 
@@ -23,6 +23,6 @@
 
         <button type="submit">Mettre à jour</button>
     </form>
-    <a href="{{ url_for('list_entries') }}">Retour à la liste</a>
+    <a href="{{ url_for('web_ui.list_entries') }}">Retour à la liste</a>
 </body>
 </html>

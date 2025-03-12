@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from flask import Flask
-from archilog.views import api, web_ui
+from archilog.views.web_ui import web_ui
 
 @dataclass
 class Config:
@@ -19,7 +19,6 @@ def create_app():
 
 
     # Enregistrement des blueprints
-    app.register_blueprint(api)
     app.register_blueprint(web_ui)
 
     return app
