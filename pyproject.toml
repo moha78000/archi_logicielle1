@@ -9,6 +9,7 @@ dependencies = [
     "flask>=3.1.0",
     "tabulate>=0.9.0",
     "flask-sqlalchemy>=3.1.1",
+    "flask-wtf>=1.2.2",
 ]
 requires-python = "==3.12.*"
 authors = [
@@ -26,4 +27,5 @@ distribution = true
 
 [tool.pdm.scripts]
 _.env_file ="dev.env"
-start = "flask --app archilog.views --debug run" # demarrer l'application 
+start = 
+ # demarrer l'application 

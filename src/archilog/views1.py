@@ -1,6 +1,5 @@
 import click
 import uuid
-
 import archilog.models as models
 import archilog.services as services
 from flask import Flask, render_template , request, redirect, url_for, Response , flash

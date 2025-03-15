@@ -8,6 +8,18 @@
 </head>
 <body>
     <h1>Liste des Entrées</h1>
+
+    <!-- Affichage des messages flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
     <table>
         <thead>
             <tr>
@@ -26,9 +38,10 @@
                 <td>{{ entry.amount }}</td>
                 <td>{{ entry.category }}</td>
                 <td>
-                    <!-- Formulaire de suppression -->
-                    <form action="{{ url_for('web_ui.delete_entry_route', user_id=entry.id) }}" method="POST">
-                        <input type="hidden" name="id" value="{{ entry.id }}">
+                    <!-- Formulaire de suppression avec WTForms -->
+                    <form method="POST">
+                        {{ form.hidden_tag() }}  <!-- Protection CSRF -->
+                        <input type="hidden" name="user_id" value="{{ entry.id }}">
                         <button type="submit">Supprimer</button>
                     </form>
                 </td>

@@ -2,9 +2,11 @@ import uuid
 from flask import Blueprint, render_template, request, redirect, url_for, flash, Response
 import archilog.models as models
 import archilog.services as services
+
 import os
 import io
 from werkzeug.utils import secure_filename
+from archilog.views.forms import CreateForm , DeleteForm , UpdateForm
 
 web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
@@ -40,9 +42,24 @@ def get_entry():
 
     return redirect(url_for("web_ui.home"))  # Redirection vers la page d'accueil
 
-@web_ui.route("/create")
+
+
+@web_ui.route("/create", methods=["GET", "POST"])
 def create_entry_form():
-    return render_template("create.html")
+    form = CreateForm()
+
+    if form.validate_on_submit():  # Vérifier si le formulaire a été soumis avec des données valides
+        name = form.name.data
+        amount = form.amount.data
+        category = form.category.data
+
+        # Message de succès
+        flash(f"Entrée créée: {name} ({amount}€) dans {category}", "success")
+        
+        # Rediriger vers la page d'accueil ou une autre page
+        return redirect(url_for("web_ui.home"))
+
+    return render_template("create.html", form=form)
 
 @web_ui.route("/create_entry", methods=["POST"])
 def create_entry_route():
@@ -52,19 +69,46 @@ def create_entry_route():
     models.create_entry(name, amount, category)
     return redirect(url_for("web_ui.home"))
 
-@web_ui.route("/delete")
+@web_ui.route("/delete", methods=["GET", "POST"])
 def delete_entry_form():
-    entries = models.get_all_entries()
-    return render_template("delete.html", entries=entries)
+    form = DeleteForm()  # WTForms
+    
+    entries = models.get_all_entries()  # Récupérer les entrées depuis la DB
 
-@web_ui.route("/delete_entry/<uuid:user_id>", methods=["POST"])
+    if form.validate_on_submit():
+        user_id = form.user_id.data
+        user_id = uuid.UUID(user_id)
+        models.delete_entry(user_id)
+        flash("Entrée supprimée avec succès.", "success")
+        return redirect(url_for("web_ui.delete_entry_form"))
+
+    return render_template("delete.html", form=form, entries=entries)
+
+
+@web_ui.route("/delete_entry/<user_id>", methods=["POST"])
 def delete_entry_route(user_id):
     models.delete_entry(user_id)
     return redirect(url_for("web_ui.home"))
 
+
 @web_ui.route("/update")
 def update_entry_form():
-    return render_template("update.html")
+    form = UpdateForm()
+    entries = models.get_all_entries()
+    if form.validate_on_submit():
+        try:
+            entry_id = form.id.data
+            name = form.name.data
+            amount = form.amount.data
+            category = form.category.data
+
+            models.update_entry(entry_id, name, amount, category)
+            flash("Entrée mise à jour avec succès!", "success")
+            return redirect(url_for('web_ui.home'))
+        except Exception as e:
+            flash(f"Erreur lors de la mise à jour : {str(e)}", "error")
+
+    return render_template("update.html", form=form, entries=entries)
 
 @web_ui.route("/update_entry", methods=["POST"])
 def update_entry_route():
@@ -72,6 +116,7 @@ def update_entry_route():
     name = request.form["name"]
     amount = float(request.form["amount"])
     category = request.form.get("category")
+
     models.update_entry(id, name, amount, category)
     return redirect(url_for("web_ui.home"))
 

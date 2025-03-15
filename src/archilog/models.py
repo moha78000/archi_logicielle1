@@ -35,7 +35,7 @@ def init_db():
 def create_entry(name: str, amount: float, category: str | None = None):
     stmt = entries_table.insert().values(name=name, amount=amount, category=category)
     with engine.begin() as conn:
-        result = conn.execute(stmt)
+        conn.execute(stmt)
     print(f"Entrée crée avec le nom '{name}' et le montant {amount}.")
 
 # Récupérer toutes les entrées contenues dans la table "entries"
@@ -71,7 +71,7 @@ def update_entry(id: uuid.UUID, name: str, amount: float, category: str | None =
 
     # Exécution de la requête
     with engine.begin() as conn:
-        result = conn.execute(stmt)
+        conn.execute(stmt)
         print(f"L'entrée avec l'ID {id} a été mise à jour.")
 
 def get_entry(id: uuid.UUID):
