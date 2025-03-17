@@ -11,4 +11,5 @@ src/archilog/services.py
 src/archilog/views1.py
 src/archilog/views/__init__.py
 src/archilog/views/cli.py
+src/archilog/views/forms.py
 src/archilog/views/web_ui.py
