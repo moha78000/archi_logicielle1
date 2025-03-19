@@ -1,2 +1,2 @@
 [console_scripts]
-archilog = archilog.views:cli
+archilog = archilog.views.cli:cli

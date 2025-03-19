@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Créer une entrée</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
 </head>
 <body>
     <h1>Créer une nouvelle entrée</h1>
 
-    <form method="POST" , action="{{ url_for('web_ui.create_entry_route') }}">
+    <form method="POST" , action="{{ url_for('web_ui.create_entry_form') }}">
         {{ form.hidden_tag() }}
         
         <p>{{ form.name.label }} {{ form.name }}</p>

@@ -1,12 +1,14 @@
 import uuid
-from flask import Blueprint, render_template, request, redirect, url_for, flash, Response
+from flask import Blueprint, render_template, request, redirect, url_for, flash, Response , abort
 import archilog.models as models
 import archilog.services as services
-
+from flask_wtf import FlaskForm
+from wtforms import StringField, DecimalField, SubmitField
+from wtforms.validators import DataRequired, Length, NumberRange, Optional
 import os
 import io
 from werkzeug.utils import secure_filename
-from archilog.views.forms import CreateForm , DeleteForm , UpdateForm
+
 
 web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
@@ -42,7 +44,11 @@ def get_entry():
 
     return redirect(url_for("web_ui.home"))  # Redirection vers la page d'accueil
 
-
+class CreateForm(FlaskForm):
+    name = StringField("Name", validators=[DataRequired(), Length(min=2, max=100)])
+    amount = DecimalField("Amount", validators=[DataRequired(), NumberRange(min=0)])
+    category = StringField("Category", validators=[Optional(), Length(min=2, max=50)])
+    submit = SubmitField("Valider") 
 
 @web_ui.route("/create", methods=["GET", "POST"])
 def create_entry_form():
@@ -52,73 +58,68 @@ def create_entry_form():
         name = form.name.data
         amount = form.amount.data
         category = form.category.data
-
+        models.create_entry(name, amount, category)
         # Message de succès
         flash(f"Entrée créée: {name} ({amount}€) dans {category}", "success")
+
+        
         
         # Rediriger vers la page d'accueil ou une autre page
         return redirect(url_for("web_ui.home"))
 
     return render_template("create.html", form=form)
 
-@web_ui.route("/create_entry", methods=["POST"])
-def create_entry_route():
-    name = request.form["name"]
-    amount = float(request.form["amount"])
-    category = request.form["category"]
-    models.create_entry(name, amount, category)
-    return redirect(url_for("web_ui.home"))
+
+
+class DeleteForm(FlaskForm):
+    user_id = StringField("ID de l'entrée à supprimer", validators=[DataRequired()])
+    submit = SubmitField("Supprimer")
 
 @web_ui.route("/delete", methods=["GET", "POST"])
 def delete_entry_form():
     form = DeleteForm()  # WTForms
     
-    entries = models.get_all_entries()  # Récupérer les entrées depuis la DB
 
     if form.validate_on_submit():
         user_id = form.user_id.data
         user_id = uuid.UUID(user_id)
         models.delete_entry(user_id)
         flash("Entrée supprimée avec succès.", "success")
-        return redirect(url_for("web_ui.delete_entry_form"))
+        return redirect(url_for("web_ui.home"))
 
-    return render_template("delete.html", form=form, entries=entries)
-
-
-@web_ui.route("/delete_entry/<user_id>", methods=["POST"])
-def delete_entry_route(user_id):
-    models.delete_entry(user_id)
-    return redirect(url_for("web_ui.home"))
+    return render_template("delete.html", form=form, entries= models.get_all_entries())
 
 
-@web_ui.route("/update")
+
+class UpdateForm(FlaskForm):
+    id = StringField("ID", validators=[DataRequired()])
+    name = StringField("Nom", validators=[DataRequired(), Length(min=2, max=100)])
+    amount = DecimalField("Montant", validators=[
+        DataRequired(),
+        NumberRange(min=0, message="Le montant doit être positif")
+    ])
+    category = StringField("Catégorie", validators=[Optional(), Length(max=50)])
+    submit = SubmitField("Mettre à jour")    
+
+@web_ui.route("/update" , methods=["POST" , "GET"] )
 def update_entry_form():
     form = UpdateForm()
-    entries = models.get_all_entries()
     if form.validate_on_submit():
+        
         try:
-            entry_id = form.id.data
+            entry_id = uuid.UUID(form.id.data)
             name = form.name.data
             amount = form.amount.data
             category = form.category.data
 
             models.update_entry(entry_id, name, amount, category)
             flash("Entrée mise à jour avec succès!", "success")
-            return redirect(url_for('web_ui.home'))
+            return redirect(url_for('home'))
         except Exception as e:
             flash(f"Erreur lors de la mise à jour : {str(e)}", "error")
 
-    return render_template("update.html", form=form, entries=entries)
+    return render_template("update.html", form=form, entries = models.get_all_entries())
 
-@web_ui.route("/update_entry", methods=["POST"])
-def update_entry_route():
-    id = uuid.UUID(request.form["id"])
-    name = request.form["name"]
-    amount = float(request.form["amount"])
-    category = request.form.get("category")
-
-    models.update_entry(id, name, amount, category)
-    return redirect(url_for("web_ui.home"))
 
 @web_ui.route("/export_csv")
 def export_csv():
@@ -147,7 +148,7 @@ def import_csv():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file_path = os.path.join(UPLOAD_FOLDER, filename)
-        file.save(file_path)
+        file.save(file_path) # a retirer ajuste pour le fichier soit en mmémoire pour le csv 
 
         with open(file_path, "r", encoding="utf-8") as f:
             csv_file = io.StringIO(f.read())
@@ -157,3 +158,15 @@ def import_csv():
 
     flash("Fichier invalide, veuillez télécharger un fichier CSV.")
     return redirect(url_for("web_ui.import_csv"))
+
+
+
+@web_ui.get("/users/create")
+def users_create_form():
+    abort(500)
+    return render_template("users_create_form.html")    
+
+@web_ui.errorhandler(500)
+def handle_internal_error(error):
+    flash("Erreur interne du serveur", "error")
+    return redirect(url_for("web_ui.home"))

@@ -21,7 +21,7 @@ authors = [
 text = "MIT"
 
 [project.scripts]
-archilog = "archilog.views:cli"
+archilog = "archilog.views.cli:cli"
 
 [tool.pdm]
 distribution = true
