@@ -3,7 +3,16 @@ from dataclasses import dataclass
 from sqlalchemy import create_engine, Table, Column, String, Float, MetaData
 from sqlalchemy import Uuid
 # Configuration de la base de données SQLite
-db_url = "sqlite:///data.db"
+
+
+
+
+db_url = "sqlite:///data.db" # replace par config database URL 
+
+
+
+
+
 engine = create_engine(db_url, echo=True)  # echo=True pour afficher les requêtes SQL exécutées
 metadata = MetaData()
 
