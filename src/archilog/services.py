@@ -27,16 +27,19 @@ def export_to_csv(csv_file_path=None):
         print(f"Exportation réussie vers {csv_file_path} !")
         
 
-def import_from_csv(csv_file: io.StringIO) -> None:
-    # L'ordre des colonnes attendues
-    fieldnames = ["name", "amount", "category"]
-    csv_reader = csv.DictReader(csv_file, fieldnames=fieldnames)
-    
-    next(csv_reader)
-    
+def import_from_csv(csv_file) -> None:
+    content = csv_file.read()
+
+    # Vérifie si on doit décoder
+    if isinstance(content, bytes):
+        content = content.decode("utf-8")
+
+    file_stream = io.StringIO(content)
+
+    csv_reader = csv.DictReader(file_stream)
     for row in csv_reader:
         create_entry(
             name=row["name"],
             amount=float(row["amount"]),
-            category=row["category"],
+            category=row["category"]
         )

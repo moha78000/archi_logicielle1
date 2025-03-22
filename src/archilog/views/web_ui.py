@@ -10,6 +10,7 @@ import io
 from werkzeug.utils import secure_filename
 
 
+
 web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
 @web_ui.route("/")
@@ -130,35 +131,23 @@ def export_csv():
         headers={"Content-Disposition": "attachment;filename=export.csv"}
     )
 
-UPLOAD_FOLDER = "uploads"
-ALLOWED_EXTENSIONS = {"csv"}
 
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
 
-def allowed_file(filename):
-    return filename.endswith(".csv")
 
 @web_ui.route("/import_csv", methods=["GET", "POST"])
 def import_csv():
     if request.method == "GET":
-        return render_template("import_csv.html")
+        return render_template("import_csv.html")  # Affiche le formulaire d'import
 
-    file = request.files["csv_file"]
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file_path = os.path.join(UPLOAD_FOLDER, filename)
-        file.save(file_path) # a retirer ajuste pour le fichier soit en mmémoire pour le csv 
+    file = request.files.get("csv_file")
+    
+    if file and file.filename.endswith(".csv"):
+        services.import_from_csv(file)
+        flash("Fichier CSV importé avec succès!")
+        return redirect(url_for("web_ui.home"))  # Redirige après succès
 
-        with open(file_path, "r", encoding="utf-8") as f:
-            csv_file = io.StringIO(f.read())
-            services.import_from_csv(csv_file)
-        
-        return redirect(url_for("web_ui.home"))
-
-    flash("Fichier invalide, veuillez télécharger un fichier CSV.")
-    return redirect(url_for("web_ui.import_csv"))
-
+    flash("Le fichier doit être au format CSV.")
+    return render_template("import_csv.html")  # Reste sur la page en cas d'erreur
 
 
 @web_ui.get("/users/create")
