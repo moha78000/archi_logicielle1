@@ -2,13 +2,15 @@ import uuid
 from dataclasses import dataclass
 from sqlalchemy import create_engine, Table, Column, String, Float, MetaData
 from sqlalchemy import Uuid
+from dotenv import load_dotenv
+import os
+
+
+# Charger les variables d'environnement depuis le fichier .env
+load_dotenv()
+
 # Configuration de la base de données SQLite
-
-
-
-
-db_url = "sqlite:///data.db" # replace par config database URL 
-
+db_url = os.getenv("ARCHILOG_DATABASE_URL")
 
 
 
