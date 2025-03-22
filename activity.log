@@ -1,0 +1,165 @@
+2025-03-22 13:08:02,667 [WARNING]  * Debugger is active!
+2025-03-22 13:08:02,669 [INFO]  * Debugger PIN: 201-715-300
+2025-03-22 13:08:11,839 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\src\archilog\views\web_ui.py", line 153, in users_create_form
+    abort(500)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "C:\Users\moh78\Projet_archilog1.0\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-22 13:08:11,873 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:11] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-03-22 13:08:11,882 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:11] "GET / HTTP/1.1" 200 -
+2025-03-22 13:08:12,138 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:12] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-22 13:08:41,707 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:41] "GET /create HTTP/1.1" 200 -
+2025-03-22 13:08:41,781 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:41] "[36mGET /static/css/create.css HTTP/1.1[0m" 304 -
+2025-03-22 13:08:56,863 [INFO] BEGIN (implicit)
+2025-03-22 13:08:56,865 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-03-22 13:08:56,865 [INFO] [generated in 0.00050s] ('278bbbfa366c4724875f66d9cd9a6e80', '12', 44.0, '')
+2025-03-22 13:08:56,867 [INFO] COMMIT
+2025-03-22 13:08:56,870 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:56] "[32mPOST /create HTTP/1.1[0m" 302 -
+2025-03-22 13:08:57,177 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:57] "GET / HTTP/1.1" 200 -
+2025-03-22 13:08:57,489 [INFO] 127.0.0.1 - - [22/Mar/2025 13:08:57] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-22 14:46:01,856 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-22 14:46:02,370 [WARNING]  * Debugger is active!
+2025-03-22 14:46:02,373 [INFO]  * Debugger PIN: 201-715-300
+2025-03-22 14:46:03,420 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-22 14:46:03,932 [WARNING]  * Debugger is active!
+2025-03-22 14:46:03,934 [INFO]  * Debugger PIN: 201-715-300
+2025-03-22 14:46:16,625 [INFO] Accès au formulaire de création d'entrée.
+2025-03-22 14:46:16,631 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:16] "GET /create HTTP/1.1" 200 -
+2025-03-22 14:46:16,726 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:16] "[36mGET /static/css/create.css HTTP/1.1[0m" 304 -
+2025-03-22 14:46:24,443 [INFO] Accès à la page d'accueil.
+2025-03-22 14:46:24,447 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:24] "GET / HTTP/1.1" 200 -
+2025-03-22 14:46:25,219 [INFO] Récupération de la liste des entrées.
+2025-03-22 14:46:25,221 [INFO] BEGIN (implicit)
+2025-03-22 14:46:25,221 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:46:25,222 [INFO] [generated in 0.00099s] ()
+2025-03-22 14:46:25,223 [INFO] ROLLBACK
+2025-03-22 14:46:25,224 [INFO] 11 entrées récupérées.
+2025-03-22 14:46:25,227 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:25] "GET /entries HTTP/1.1" 200 -
+2025-03-22 14:46:25,533 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:25] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-03-22 14:46:31,155 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:46:31,156 [INFO] BEGIN (implicit)
+2025-03-22 14:46:31,157 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:46:31,157 [INFO] [cached since 5.936s ago] ()
+2025-03-22 14:46:31,158 [INFO] ROLLBACK
+2025-03-22 14:46:31,162 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:31] "GET /delete HTTP/1.1" 200 -
+2025-03-22 14:46:31,172 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:31] "[36mGET /static/css/delete.css HTTP/1.1[0m" 304 -
+2025-03-22 14:46:43,992 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:46:43,994 [INFO] Suppression de l'entrée avec ID: 278bbbfa-366c-4724-875f-66d9cd9a6e80
+2025-03-22 14:46:43,995 [INFO] BEGIN (implicit)
+2025-03-22 14:46:43,996 [INFO] DELETE FROM entries WHERE entries.id = ?
+2025-03-22 14:46:43,996 [INFO] [generated in 0.00036s] ('278bbbfa366c4724875f66d9cd9a6e80',)
+2025-03-22 14:46:43,998 [INFO] COMMIT
+2025-03-22 14:46:44,001 [INFO] Entrée avec ID 278bbbfa-366c-4724-875f-66d9cd9a6e80 supprimée.
+2025-03-22 14:46:44,002 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:44] "[32mPOST /delete HTTP/1.1[0m" 302 -
+2025-03-22 14:46:44,005 [INFO] Accès à la page d'accueil.
+2025-03-22 14:46:44,005 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:44] "GET / HTTP/1.1" 200 -
+2025-03-22 14:46:44,256 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:44] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-22 14:46:52,449 [INFO] Accès au formulaire de mise à jour d'entrée.
+2025-03-22 14:46:52,449 [INFO] BEGIN (implicit)
+2025-03-22 14:46:52,450 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:46:52,450 [INFO] [cached since 27.23s ago] ()
+2025-03-22 14:46:52,451 [INFO] ROLLBACK
+2025-03-22 14:46:52,471 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:52] "GET /update HTTP/1.1" 200 -
+2025-03-22 14:46:52,503 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:52] "GET /static/css/update.css HTTP/1.1" 200 -
+2025-03-22 14:46:58,426 [INFO] Accès à la page d'accueil.
+2025-03-22 14:46:58,427 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:58] "GET / HTTP/1.1" 200 -
+2025-03-22 14:46:59,267 [INFO] Accès au formulaire d'importation CSV.
+2025-03-22 14:46:59,269 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:59] "GET /import_csv HTTP/1.1" 200 -
+2025-03-22 14:46:59,574 [INFO] 127.0.0.1 - - [22/Mar/2025 14:46:59] "[36mGET /static/css/import_csv.css HTTP/1.1[0m" 304 -
+2025-03-22 14:47:02,698 [INFO] Accès au formulaire d'importation CSV.
+2025-03-22 14:47:02,700 [INFO] Importation du fichier CSV: data.csv
+2025-03-22 14:47:02,700 [INFO] BEGIN (implicit)
+2025-03-22 14:47:02,701 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-03-22 14:47:02,702 [INFO] [generated in 0.00057s] ('d706047474a14faf884028ff70b8ed84', 'Henry', 20.0, 'Sport')
+2025-03-22 14:47:02,703 [INFO] COMMIT
+2025-03-22 14:47:02,706 [INFO] Fichier CSV importé avec succès.
+2025-03-22 14:47:02,706 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:02] "[32mPOST /import_csv HTTP/1.1[0m" 302 -
+2025-03-22 14:47:02,709 [INFO] Accès à la page d'accueil.
+2025-03-22 14:47:02,710 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:02] "GET / HTTP/1.1" 200 -
+2025-03-22 14:47:02,961 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:02] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-22 14:47:15,583 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:47:15,584 [INFO] BEGIN (implicit)
+2025-03-22 14:47:15,584 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:47:15,584 [INFO] [cached since 50.36s ago] ()
+2025-03-22 14:47:15,585 [INFO] ROLLBACK
+2025-03-22 14:47:15,587 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:15] "GET /delete HTTP/1.1" 200 -
+2025-03-22 14:47:15,645 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:15] "[36mGET /static/css/delete.css HTTP/1.1[0m" 304 -
+2025-03-22 14:47:17,363 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:47:17,364 [INFO] Suppression de l'entrée avec ID: d7060474-74a1-4faf-8840-28ff70b8ed84
+2025-03-22 14:47:17,364 [INFO] BEGIN (implicit)
+2025-03-22 14:47:17,364 [INFO] DELETE FROM entries WHERE entries.id = ?
+2025-03-22 14:47:17,365 [INFO] [cached since 33.37s ago] ('d706047474a14faf884028ff70b8ed84',)
+2025-03-22 14:47:17,366 [INFO] COMMIT
+2025-03-22 14:47:17,368 [INFO] Entrée avec ID d7060474-74a1-4faf-8840-28ff70b8ed84 supprimée.
+2025-03-22 14:47:17,369 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:17] "[32mPOST /delete HTTP/1.1[0m" 302 -
+2025-03-22 14:47:17,668 [INFO] Accès à la page d'accueil.
+2025-03-22 14:47:17,669 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:17] "GET / HTTP/1.1" 200 -
+2025-03-22 14:47:17,995 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:17] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-22 14:47:19,019 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:47:19,019 [INFO] BEGIN (implicit)
+2025-03-22 14:47:19,020 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:47:19,020 [INFO] [cached since 53.8s ago] ()
+2025-03-22 14:47:19,021 [INFO] ROLLBACK
+2025-03-22 14:47:19,022 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:19] "GET /delete HTTP/1.1" 200 -
+2025-03-22 14:47:19,331 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:19] "[36mGET /static/css/delete.css HTTP/1.1[0m" 304 -
+2025-03-22 14:47:20,139 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:47:20,140 [INFO] Suppression de l'entrée avec ID: 19201092-4069-4ec3-af6b-cfa74a938670
+2025-03-22 14:47:20,140 [INFO] BEGIN (implicit)
+2025-03-22 14:47:20,140 [INFO] DELETE FROM entries WHERE entries.id = ?
+2025-03-22 14:47:20,141 [INFO] [cached since 36.14s ago] ('1920109240694ec3af6bcfa74a938670',)
+2025-03-22 14:47:20,143 [INFO] COMMIT
+2025-03-22 14:47:20,145 [INFO] Entrée avec ID 19201092-4069-4ec3-af6b-cfa74a938670 supprimée.
+2025-03-22 14:47:20,146 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:20] "[32mPOST /delete HTTP/1.1[0m" 302 -
+2025-03-22 14:47:20,148 [INFO] Accès à la page d'accueil.
+2025-03-22 14:47:20,149 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:20] "GET / HTTP/1.1" 200 -
+2025-03-22 14:47:20,388 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:20] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-22 14:47:21,860 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:47:21,861 [INFO] BEGIN (implicit)
+2025-03-22 14:47:21,861 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:47:21,862 [INFO] [cached since 56.64s ago] ()
+2025-03-22 14:47:21,862 [INFO] ROLLBACK
+2025-03-22 14:47:21,864 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:21] "GET /delete HTTP/1.1" 200 -
+2025-03-22 14:47:21,907 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:21] "[36mGET /static/css/delete.css HTTP/1.1[0m" 304 -
+2025-03-22 14:47:22,683 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-22 14:47:22,684 [INFO] Suppression de l'entrée avec ID: 848795af-812e-412c-b77b-3058e0439778
+2025-03-22 14:47:22,684 [INFO] BEGIN (implicit)
+2025-03-22 14:47:22,685 [INFO] DELETE FROM entries WHERE entries.id = ?
+2025-03-22 14:47:22,685 [INFO] [cached since 38.69s ago] ('848795af812e412cb77b3058e0439778',)
+2025-03-22 14:47:22,687 [INFO] COMMIT
+2025-03-22 14:47:22,689 [INFO] Entrée avec ID 848795af-812e-412c-b77b-3058e0439778 supprimée.
+2025-03-22 14:47:22,690 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:22] "[32mPOST /delete HTTP/1.1[0m" 302 -
+2025-03-22 14:47:22,988 [INFO] Accès à la page d'accueil.
+2025-03-22 14:47:22,989 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:22] "GET / HTTP/1.1" 200 -
+2025-03-22 14:47:23,317 [INFO] 127.0.0.1 - - [22/Mar/2025 14:47:23] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-22 14:48:24,382 [INFO] Récupération de la liste des entrées.
+2025-03-22 14:48:24,382 [INFO] BEGIN (implicit)
+2025-03-22 14:48:24,383 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:48:24,383 [INFO] [cached since 119.2s ago] ()
+2025-03-22 14:48:24,384 [INFO] ROLLBACK
+2025-03-22 14:48:24,384 [INFO] 8 entrées récupérées.
+2025-03-22 14:48:24,385 [INFO] 127.0.0.1 - - [22/Mar/2025 14:48:24] "GET /entries HTTP/1.1" 200 -
+2025-03-22 14:48:24,444 [INFO] 127.0.0.1 - - [22/Mar/2025 14:48:24] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-03-22 14:48:25,145 [INFO] Exportation des données en CSV.
+2025-03-22 14:48:25,146 [INFO] BEGIN (implicit)
+2025-03-22 14:48:25,146 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-22 14:48:25,147 [INFO] [cached since 119.9s ago] ()
+2025-03-22 14:48:25,147 [INFO] ROLLBACK
+2025-03-22 14:48:25,148 [INFO] 127.0.0.1 - - [22/Mar/2025 14:48:25] "GET /export_csv HTTP/1.1" 200 -

@@ -5,9 +5,7 @@ import archilog.services as services
 from flask_wtf import FlaskForm
 from wtforms import StringField, DecimalField, SubmitField
 from wtforms.validators import DataRequired, Length, NumberRange, Optional
-import os
-import io
-from werkzeug.utils import secure_filename
+import logging
 
 
 
@@ -15,11 +13,14 @@ web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
 @web_ui.route("/")
 def home():
+    logging.info("Accès à la page d'accueil.")
     return render_template("home.html")
 
 @web_ui.route("/entries")
 def list_entries():
+    logging.info("Récupération de la liste des entrées.")
     entries = models.get_all_entries()
+    logging.info(f"{len(entries)} entrées récupérées.")
     return render_template("entries.html", entries=entries)
 
 
@@ -27,6 +28,7 @@ def list_entries():
 def get_entry():
     # Récupérer l'ID de la requête (depuis le formulaire)   
     entry_id = request.args.get("id")
+    logging.info(f"Demande de récupération de l'entrée avec ID: {entry_id}")
 
     if entry_id:
         try:
@@ -35,13 +37,17 @@ def get_entry():
             entry = models.get_entry(entry_uuid)  # Récupérer l'entrée dans la base de données
             
             if entry:
+                logging.info(f"Entrée trouvée: {entry}")
                 return render_template("entry.html", entry=entry)  # Afficher l'entrée trouvée
             else:
                 flash("Entrée non trouvée.", "error")  # Si l'entrée n'est pas trouvée
+                logging.warning(f"Entrée non trouvée pour ID: {entry_id}")
         except ValueError:
             flash("ID invalide. Veuillez entrer un UUID valide.", "error")  # ID invalide
+            logging.error(f"ID invalide reçu : {entry_id}")
     else:
         flash("Veuillez entrer un ID.", "error")
+        logging.warning("Aucun ID fourni.")
 
     return redirect(url_for("web_ui.home"))  # Redirection vers la page d'accueil
 
@@ -53,18 +59,20 @@ class CreateForm(FlaskForm):
 
 @web_ui.route("/create", methods=["GET", "POST"])
 def create_entry_form():
+    logging.info("Accès au formulaire de création d'entrée.")
     form = CreateForm()
 
     if form.validate_on_submit():  # Vérifier si le formulaire a été soumis avec des données valides
         name = form.name.data
         amount = form.amount.data
         category = form.category.data
+        logging.info(f"Création d'une nouvelle entrée: {name}, {amount}, {category}")
         models.create_entry(name, amount, category)
         # Message de succès
         flash(f"Entrée créée: {name} ({amount}€) dans {category}", "success")
 
         
-        
+        logging.info(f"Entrée créée avec succès: {name}")
         # Rediriger vers la page d'accueil ou une autre page
         return redirect(url_for("web_ui.home"))
 
@@ -78,14 +86,17 @@ class DeleteForm(FlaskForm):
 
 @web_ui.route("/delete", methods=["GET", "POST"])
 def delete_entry_form():
+    logging.info("Accès au formulaire de suppression d'entrée.")
     form = DeleteForm()  # WTForms
     
 
     if form.validate_on_submit():
         user_id = form.user_id.data
+        logging.info(f"Suppression de l'entrée avec ID: {user_id}")
         user_id = uuid.UUID(user_id)
         models.delete_entry(user_id)
         flash("Entrée supprimée avec succès.", "success")
+        logging.info(f"Entrée avec ID {user_id} supprimée.")
         return redirect(url_for("web_ui.home"))
 
     return render_template("delete.html", form=form, entries= models.get_all_entries())
@@ -104,6 +115,7 @@ class UpdateForm(FlaskForm):
 
 @web_ui.route("/update" , methods=["POST" , "GET"] )
 def update_entry_form():
+    logging.info("Accès au formulaire de mise à jour d'entrée.")
     form = UpdateForm()
     if form.validate_on_submit():
         
@@ -112,18 +124,21 @@ def update_entry_form():
             name = form.name.data
             amount = form.amount.data
             category = form.category.data
-
+            logging.info(f"Mise à jour de l'entrée: ID={entry_id}, Nom={name}, Montant={amount}, Catégorie={category}")
             models.update_entry(entry_id, name, amount, category)
             flash("Entrée mise à jour avec succès!", "success")
+            logging.info(f"Entrée mise à jour avec succès: {entry_id}")
             return redirect(url_for('home'))
         except Exception as e:
             flash(f"Erreur lors de la mise à jour : {str(e)}", "error")
+            logging.error(f"Erreur lors de la mise à jour de l'entrée: {e}")
 
     return render_template("update.html", form=form, entries = models.get_all_entries())
 
 
 @web_ui.route("/export_csv")
 def export_csv():
+    logging.info("Exportation des données en CSV.")
     csv_file = services.export_to_csv()
     return Response(
         csv_file.getvalue(), 
@@ -136,26 +151,39 @@ def export_csv():
 
 @web_ui.route("/import_csv", methods=["GET", "POST"])
 def import_csv():
+    logging.info("Accès au formulaire d'importation CSV.")
     if request.method == "GET":
         return render_template("import_csv.html")  # Affiche le formulaire d'import
 
     file = request.files.get("csv_file")
     
     if file and file.filename.endswith(".csv"):
+        logging.info(f"Importation du fichier CSV: {file.filename}")
         services.import_from_csv(file)
         flash("Fichier CSV importé avec succès!")
+        logging.info("Fichier CSV importé avec succès.")
         return redirect(url_for("web_ui.home"))  # Redirige après succès
 
     flash("Le fichier doit être au format CSV.")
+    logging.warning("Le fichier téléchargé n'est pas au format CSV.")
     return render_template("import_csv.html")  # Reste sur la page en cas d'erreur
 
 
 @web_ui.get("/users/create")
 def users_create_form():
+    logging.info("Accès à la page de création d'utilisateur.")
     abort(500)
     return render_template("users_create_form.html")    
 
 @web_ui.errorhandler(500)
 def handle_internal_error(error):
     flash("Erreur interne du serveur", "error")
+    logging.exception(error)
     return redirect(url_for("web_ui.home"))
+
+
+@web_ui.errorhandler(404)
+def handle_404_error(error):
+    flash("Page non trouvée", "error")
+    logging.error("Erreur 404: Page introuvable.")
+    return render_template("404.html"), 404
