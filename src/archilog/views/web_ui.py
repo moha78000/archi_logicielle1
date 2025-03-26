@@ -7,11 +7,47 @@ from wtforms import StringField, DecimalField, SubmitField
 from wtforms.validators import DataRequired, Length, NumberRange, Optional
 import logging
 
+from flask_httpauth import HTTPBasicAuth
+from werkzeug.security import generate_password_hash
+from werkzeug.security import check_password_hash
+
+
 
 
 web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 
+auth = HTTPBasicAuth()
+
+
+
+@web_ui.route("/logout")
+def logout():
+    flash("Déconnexion réussie.", "info")
+    return redirect(url_for("auth_ui.login"))
+
+
+users = {
+    "admin": {
+        "password": generate_password_hash("admin"),
+        "role": "admin"
+    },
+    "user": {
+        "password": generate_password_hash("user"),
+        "role": "user"
+    }   
+}
+
+
+
+@auth.verify_password
+def verify_password(username, password):
+    if username in users and check_password_hash(users[username]["password"], password):
+        return username
+    
+
+
 @web_ui.route("/")
+@auth.login_required
 def home():
     logging.info("Accès à la page d'accueil.")
     return render_template("home.html")
@@ -187,3 +223,12 @@ def handle_404_error(error):
     flash("Page non trouvée", "error")
     logging.error("Erreur 404: Page introuvable.")
     return render_template("404.html"), 404
+
+
+
+
+
+
+
+
+

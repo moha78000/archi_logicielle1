@@ -163,3 +163,306 @@ FROM entries
 2025-03-22 14:48:25,147 [INFO] [cached since 119.9s ago] ()
 2025-03-22 14:48:25,147 [INFO] ROLLBACK
 2025-03-22 14:48:25,148 [INFO] 127.0.0.1 - - [22/Mar/2025 14:48:25] "GET /export_csv HTTP/1.1" 200 -
+2025-03-26 13:16:54,770 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-26 13:16:54,771 [INFO] [33mPress CTRL+C to quit[0m
+2025-03-26 13:16:54,793 [INFO]  * Restarting with stat
+2025-03-26 13:16:58,172 [WARNING]  * Debugger is active!
+2025-03-26 13:16:58,177 [INFO]  * Debugger PIN: 601-509-238
+2025-03-26 13:17:05,132 [INFO] Accès à la page d'accueil.
+2025-03-26 13:17:05,189 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:05] "GET / HTTP/1.1" 200 -
+2025-03-26 13:17:05,247 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:05] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-03-26 13:17:05,254 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-26 13:17:13,644 [INFO] Récupération de la liste des entrées.
+2025-03-26 13:17:13,667 [INFO] BEGIN (implicit)
+2025-03-26 13:17:13,669 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 13:17:13,670 [INFO] [generated in 0.00310s] ()
+2025-03-26 13:17:13,674 [INFO] ROLLBACK
+2025-03-26 13:17:13,675 [INFO] 8 entrées récupérées.
+2025-03-26 13:17:13,713 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:13] "GET /entries HTTP/1.1" 200 -
+2025-03-26 13:17:13,742 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:13] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-03-26 13:17:21,633 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-26 13:17:21,635 [INFO] BEGIN (implicit)
+2025-03-26 13:17:21,637 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 13:17:21,639 [INFO] [cached since 7.972s ago] ()
+2025-03-26 13:17:21,641 [INFO] ROLLBACK
+2025-03-26 13:17:21,689 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:21] "GET /delete HTTP/1.1" 200 -
+2025-03-26 13:17:21,720 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:21] "GET /static/css/delete.css HTTP/1.1" 200 -
+2025-03-26 13:17:22,693 [INFO] Accès au formulaire de suppression d'entrée.
+2025-03-26 13:17:22,730 [INFO] Suppression de l'entrée avec ID: 078759b7-d554-4683-9ff1-775686459608
+2025-03-26 13:17:22,733 [INFO] BEGIN (implicit)
+2025-03-26 13:17:22,737 [INFO] DELETE FROM entries WHERE entries.id = ?
+2025-03-26 13:17:22,738 [INFO] [generated in 0.00165s] ('078759b7d55446839ff1775686459608',)
+2025-03-26 13:17:22,753 [INFO] COMMIT
+2025-03-26 13:17:22,856 [INFO] Entrée avec ID 078759b7-d554-4683-9ff1-775686459608 supprimée.
+2025-03-26 13:17:22,861 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:22] "[32mPOST /delete HTTP/1.1[0m" 302 -
+2025-03-26 13:17:22,867 [INFO] Accès à la page d'accueil.
+2025-03-26 13:17:22,873 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:22] "GET / HTTP/1.1" 200 -
+2025-03-26 13:17:22,890 [INFO] 127.0.0.1 - - [26/Mar/2025 13:17:22] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 13:27:05,331 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-26 13:27:05,373 [INFO]  * Restarting with stat
+2025-03-26 13:27:09,132 [WARNING]  * Debugger is active!
+2025-03-26 13:27:09,138 [INFO]  * Debugger PIN: 884-259-399
+2025-03-26 13:27:14,657 [INFO] 127.0.0.1 - - [26/Mar/2025 13:27:14] "[35m[1mGET /admin HTTP/1.1[0m" 500 -
+2025-03-26 13:27:14,702 [INFO] 127.0.0.1 - - [26/Mar/2025 13:27:14] "GET /admin?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-26 13:27:14,715 [INFO] 127.0.0.1 - - [26/Mar/2025 13:27:14] "GET /admin?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-26 13:27:14,746 [INFO] 127.0.0.1 - - [26/Mar/2025 13:27:14] "GET /admin?__debugger__=yes&cmd=resource&f=console.png&s=Azf6AQHIXmSnwh07xeSH HTTP/1.1" 200 -
+2025-03-26 13:27:14,752 [INFO] 127.0.0.1 - - [26/Mar/2025 13:27:14] "GET /admin?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-26 13:45:26,972 [INFO] 127.0.0.1 - - [26/Mar/2025 13:45:26] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-03-26 13:45:26,985 [INFO] 127.0.0.1 - - [26/Mar/2025 13:45:26] "GET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-26 13:45:26,997 [INFO] 127.0.0.1 - - [26/Mar/2025 13:45:26] "GET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-26 13:45:27,007 [INFO] 127.0.0.1 - - [26/Mar/2025 13:45:27] "GET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=Azf6AQHIXmSnwh07xeSH HTTP/1.1" 200 -
+2025-03-26 13:45:27,012 [INFO] 127.0.0.1 - - [26/Mar/2025 13:45:27] "GET /users/create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-26 13:46:56,683 [INFO] 127.0.0.1 - - [26/Mar/2025 13:46:56] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-03-26 13:46:56,696 [INFO] 127.0.0.1 - - [26/Mar/2025 13:46:56] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 13:46:56,717 [INFO] 127.0.0.1 - - [26/Mar/2025 13:46:56] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 13:46:56,727 [INFO] 127.0.0.1 - - [26/Mar/2025 13:46:56] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=Azf6AQHIXmSnwh07xeSH HTTP/1.1[0m" 304 -
+2025-03-26 13:47:45,581 [INFO] 127.0.0.1 - - [26/Mar/2025 13:47:45] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-03-26 13:47:45,599 [INFO] 127.0.0.1 - - [26/Mar/2025 13:47:45] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 13:47:45,617 [INFO] 127.0.0.1 - - [26/Mar/2025 13:47:45] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 13:47:45,629 [INFO] 127.0.0.1 - - [26/Mar/2025 13:47:45] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=Azf6AQHIXmSnwh07xeSH HTTP/1.1[0m" 304 -
+2025-03-26 13:48:11,137 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:11] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-03-26 13:48:11,166 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:11] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 13:48:11,369 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:11] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 13:48:11,382 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:11] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=Azf6AQHIXmSnwh07xeSH HTTP/1.1[0m" 304 -
+2025-03-26 13:48:24,775 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:24] "[35m[1mGET /users/create HTTP/1.1[0m" 500 -
+2025-03-26 13:48:24,786 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:24] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 13:48:24,805 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:24] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 13:48:25,029 [INFO] 127.0.0.1 - - [26/Mar/2025 13:48:25] "[36mGET /users/create?__debugger__=yes&cmd=resource&f=console.png&s=Azf6AQHIXmSnwh07xeSH HTTP/1.1[0m" 304 -
+2025-03-26 13:50:26,122 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-26 13:50:26,123 [INFO] [33mPress CTRL+C to quit[0m
+2025-03-26 13:50:26,149 [INFO]  * Restarting with stat
+2025-03-26 13:50:31,906 [WARNING]  * Debugger is active!
+2025-03-26 13:50:31,914 [INFO]  * Debugger PIN: 601-509-238
+2025-03-26 13:50:32,305 [INFO] Accès à la page de création d'utilisateur.
+2025-03-26 13:50:32,306 [INFO] Accès à la page d'accueil.
+2025-03-26 13:50:32,306 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\192.168.24.10\STUDENTS\22302683\archi_logicielle1\src\archilog\views\web_ui.py", line 186, in users_create_form
+    abort(500)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-26 13:50:32,333 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:32] "GET / HTTP/1.1" 200 -
+2025-03-26 13:50:32,389 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:32] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-03-26 13:50:32,429 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:32] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 13:50:39,641 [INFO] Accès à la page de création d'utilisateur.
+2025-03-26 13:50:39,642 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\192.168.24.10\STUDENTS\22302683\archi_logicielle1\src\archilog\views\web_ui.py", line 186, in users_create_form
+    abort(500)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-26 13:50:39,648 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:39] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-03-26 13:50:39,651 [INFO] Accès à la page d'accueil.
+2025-03-26 13:50:39,655 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:39] "GET / HTTP/1.1" 200 -
+2025-03-26 13:50:39,665 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:39] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 13:50:49,787 [INFO] Accès à la page de création d'utilisateur.
+2025-03-26 13:50:49,789 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\192.168.24.10\STUDENTS\22302683\archi_logicielle1\src\archilog\views\web_ui.py", line 186, in users_create_form
+    abort(500)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-26 13:50:49,795 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:49] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-03-26 13:50:49,798 [INFO] Accès à la page d'accueil.
+2025-03-26 13:50:49,801 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:49] "GET / HTTP/1.1" 200 -
+2025-03-26 13:50:49,816 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:49] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 13:50:51,825 [INFO] Accès à la page d'accueil.
+2025-03-26 13:50:51,834 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:51] "GET / HTTP/1.1" 200 -
+2025-03-26 13:50:52,057 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:52] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 13:50:55,016 [INFO] Récupération de la liste des entrées.
+2025-03-26 13:50:55,459 [INFO] BEGIN (implicit)
+2025-03-26 13:50:55,462 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 13:50:55,463 [INFO] [generated in 0.00380s] ()
+2025-03-26 13:50:55,467 [INFO] ROLLBACK
+2025-03-26 13:50:55,469 [INFO] 7 entrées récupérées.
+2025-03-26 13:50:55,488 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:55] "GET /entries HTTP/1.1" 200 -
+2025-03-26 13:50:55,506 [INFO] 127.0.0.1 - - [26/Mar/2025 13:50:55] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-03-26 13:56:33,212 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-26 13:56:33,253 [INFO]  * Restarting with stat
+2025-03-26 13:56:36,547 [WARNING]  * Debugger is active!
+2025-03-26 13:56:36,555 [INFO]  * Debugger PIN: 884-259-399
+2025-03-26 14:03:57,524 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-26 14:03:57,562 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:57] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-26 14:03:57,575 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:57] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-26 14:03:57,621 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:57] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=52ZTB4fecmhVECmRAi1M HTTP/1.1" 200 -
+2025-03-26 14:03:57,627 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:57] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-26 14:03:58,722 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-26 14:03:58,731 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:58] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 14:03:58,731 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:58] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 14:03:58,740 [INFO] 127.0.0.1 - - [26/Mar/2025 14:03:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=52ZTB4fecmhVECmRAi1M HTTP/1.1[0m" 304 -
+2025-03-26 14:04:43,638 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-26 14:04:43,682 [INFO]  * Restarting with stat
+2025-03-26 14:04:46,574 [WARNING]  * Debugger is active!
+2025-03-26 14:04:46,579 [INFO]  * Debugger PIN: 601-509-238
+2025-03-26 14:04:47,084 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-26 14:04:47,115 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 14:04:47,122 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 14:04:47,130 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=VwSqTMeEvBcvuImd9rwL HTTP/1.1" 200 -
+2025-03-26 14:04:47,793 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-26 14:04:47,802 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 14:04:47,802 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 14:04:47,810 [INFO] 127.0.0.1 - - [26/Mar/2025 14:04:47] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VwSqTMeEvBcvuImd9rwL HTTP/1.1[0m" 304 -
+2025-03-26 14:07:52,936 [INFO] 127.0.0.1 - - [26/Mar/2025 14:07:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-26 14:07:52,949 [INFO] 127.0.0.1 - - [26/Mar/2025 14:07:52] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-26 14:07:52,965 [INFO] 127.0.0.1 - - [26/Mar/2025 14:07:52] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-26 14:07:52,976 [INFO] 127.0.0.1 - - [26/Mar/2025 14:07:52] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VwSqTMeEvBcvuImd9rwL HTTP/1.1[0m" 304 -
+2025-03-26 14:08:48,620 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-26 14:08:48,663 [INFO]  * Restarting with stat
+2025-03-26 14:08:51,657 [WARNING]  * Debugger is active!
+2025-03-26 14:08:51,661 [INFO]  * Debugger PIN: 601-509-238
+2025-03-26 14:08:52,076 [INFO] 127.0.0.1 - - [26/Mar/2025 14:08:52] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:09:31,159 [INFO] Accès à la page d'accueil.
+2025-03-26 14:09:31,169 [INFO] 127.0.0.1 - - [26/Mar/2025 14:09:31] "GET / HTTP/1.1" 200 -
+2025-03-26 14:09:31,211 [INFO] 127.0.0.1 - - [26/Mar/2025 14:09:31] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:09:54,554 [INFO] Accès à la page d'accueil.
+2025-03-26 14:09:54,557 [INFO] 127.0.0.1 - - [26/Mar/2025 14:09:54] "GET / HTTP/1.1" 200 -
+2025-03-26 14:09:54,568 [INFO] 127.0.0.1 - - [26/Mar/2025 14:09:54] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:09:58,317 [INFO] Accès à la page de création d'utilisateur.
+2025-03-26 14:09:58,318 [ERROR] 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Traceback (most recent call last):
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "\\192.168.24.10\STUDENTS\22302683\archi_logicielle1\src\archilog\views\web_ui.py", line 204, in users_create_form
+    abort(500)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\flask\helpers.py", line 284, in abort
+    current_app.aborter(code, *args, **kwargs)
+  File "U:\archi_logicielle1\.venv\Lib\site-packages\werkzeug\exceptions.py", line 876, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.InternalServerError: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2025-03-26 14:09:58,402 [INFO] 127.0.0.1 - - [26/Mar/2025 14:09:58] "[32mGET /users/create HTTP/1.1[0m" 302 -
+2025-03-26 14:10:02,450 [INFO] Accès à la page d'accueil.
+2025-03-26 14:10:02,454 [INFO] 127.0.0.1 - - [26/Mar/2025 14:10:02] "GET / HTTP/1.1" 200 -
+2025-03-26 14:10:02,468 [INFO] 127.0.0.1 - - [26/Mar/2025 14:10:02] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:11:16,104 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-26 14:11:16,105 [INFO] [33mPress CTRL+C to quit[0m
+2025-03-26 14:11:16,119 [INFO]  * Restarting with stat
+2025-03-26 14:11:18,459 [WARNING]  * Debugger is active!
+2025-03-26 14:11:18,464 [INFO]  * Debugger PIN: 601-509-238
+2025-03-26 14:11:29,869 [INFO] Accès à la page d'accueil.
+2025-03-26 14:11:29,880 [INFO] 127.0.0.1 - - [26/Mar/2025 14:11:29] "GET / HTTP/1.1" 200 -
+2025-03-26 14:11:29,919 [INFO] 127.0.0.1 - - [26/Mar/2025 14:11:29] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:11:54,055 [INFO] Accès à la page d'accueil.
+2025-03-26 14:11:54,057 [INFO] 127.0.0.1 - - [26/Mar/2025 14:11:54] "GET / HTTP/1.1" 200 -
+2025-03-26 14:11:54,068 [INFO] 127.0.0.1 - - [26/Mar/2025 14:11:54] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:12:07,878 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-26 14:12:07,919 [INFO]  * Restarting with stat
+2025-03-26 14:12:10,923 [WARNING]  * Debugger is active!
+2025-03-26 14:12:10,927 [INFO]  * Debugger PIN: 601-509-238
+2025-03-26 14:12:11,396 [INFO] Accès à la page d'accueil.
+2025-03-26 14:12:11,405 [INFO] 127.0.0.1 - - [26/Mar/2025 14:12:11] "GET / HTTP/1.1" 200 -
+2025-03-26 14:12:11,434 [INFO] 127.0.0.1 - - [26/Mar/2025 14:12:11] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:28:34,178 [INFO] Accès à la page d'accueil.
+2025-03-26 14:28:34,181 [INFO] 127.0.0.1 - - [26/Mar/2025 14:28:34] "GET / HTTP/1.1" 200 -
+2025-03-26 14:28:34,194 [INFO] 127.0.0.1 - - [26/Mar/2025 14:28:34] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:28:43,940 [INFO] Récupération de la liste des entrées.
+2025-03-26 14:28:43,949 [INFO] BEGIN (implicit)
+2025-03-26 14:28:43,950 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 14:28:43,951 [INFO] [generated in 0.00188s] ()
+2025-03-26 14:28:43,954 [INFO] ROLLBACK
+2025-03-26 14:28:43,954 [INFO] 7 entrées récupérées.
+2025-03-26 14:28:43,962 [INFO] 127.0.0.1 - - [26/Mar/2025 14:28:43] "GET /entries HTTP/1.1" 200 -
+2025-03-26 14:28:43,978 [INFO] 127.0.0.1 - - [26/Mar/2025 14:28:43] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-03-26 14:28:50,715 [INFO] Accès au formulaire de mise à jour d'entrée.
+2025-03-26 14:28:50,717 [INFO] BEGIN (implicit)
+2025-03-26 14:28:50,720 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 14:28:50,722 [INFO] [cached since 6.773s ago] ()
+2025-03-26 14:28:50,725 [INFO] ROLLBACK
+2025-03-26 14:28:50,766 [INFO] 127.0.0.1 - - [26/Mar/2025 14:28:50] "GET /update HTTP/1.1" 200 -
+2025-03-26 14:28:50,881 [INFO] 127.0.0.1 - - [26/Mar/2025 14:28:50] "GET /static/css/update.css HTTP/1.1" 200 -
+2025-03-26 14:29:46,837 [INFO] Récupération de la liste des entrées.
+2025-03-26 14:29:46,838 [INFO] BEGIN (implicit)
+2025-03-26 14:29:46,839 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 14:29:46,840 [INFO] [cached since 62.89s ago] ()
+2025-03-26 14:29:46,843 [INFO] ROLLBACK
+2025-03-26 14:29:46,844 [INFO] 7 entrées récupérées.
+2025-03-26 14:29:46,848 [INFO] 127.0.0.1 - - [26/Mar/2025 14:29:46] "GET /entries HTTP/1.1" 200 -
+2025-03-26 14:29:46,874 [INFO] 127.0.0.1 - - [26/Mar/2025 14:29:46] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-03-26 14:30:05,410 [INFO] Récupération de la liste des entrées.
+2025-03-26 14:30:05,411 [INFO] BEGIN (implicit)
+2025-03-26 14:30:05,411 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 14:30:05,412 [INFO] [cached since 81.46s ago] ()
+2025-03-26 14:30:05,413 [INFO] ROLLBACK
+2025-03-26 14:30:05,413 [INFO] 7 entrées récupérées.
+2025-03-26 14:30:05,416 [INFO] 127.0.0.1 - - [26/Mar/2025 14:30:05] "GET /entries HTTP/1.1" 200 -
+2025-03-26 14:30:05,431 [INFO] 127.0.0.1 - - [26/Mar/2025 14:30:05] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-03-26 14:30:09,198 [INFO] Accès au formulaire de mise à jour d'entrée.
+2025-03-26 14:30:09,199 [INFO] BEGIN (implicit)
+2025-03-26 14:30:09,200 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 14:30:09,201 [INFO] [cached since 85.25s ago] ()
+2025-03-26 14:30:09,203 [INFO] ROLLBACK
+2025-03-26 14:30:09,207 [INFO] 127.0.0.1 - - [26/Mar/2025 14:30:09] "GET /update HTTP/1.1" 200 -
+2025-03-26 14:30:09,232 [INFO] 127.0.0.1 - - [26/Mar/2025 14:30:09] "[36mGET /static/css/update.css HTTP/1.1[0m" 304 -
+2025-03-26 14:48:59,209 [INFO] Accès au formulaire de mise à jour d'entrée.
+2025-03-26 14:48:59,214 [INFO] BEGIN (implicit)
+2025-03-26 14:48:59,216 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-03-26 14:48:59,221 [INFO] [cached since 1215s ago] ()
+2025-03-26 14:48:59,235 [INFO] ROLLBACK
+2025-03-26 14:48:59,248 [INFO] 127.0.0.1 - - [26/Mar/2025 14:48:59] "GET /update HTTP/1.1" 200 -
+2025-03-26 14:48:59,282 [INFO] 127.0.0.1 - - [26/Mar/2025 14:48:59] "GET /static/css/update.css HTTP/1.1" 200 -
+2025-03-26 14:49:01,101 [INFO] 127.0.0.1 - - [26/Mar/2025 14:49:01] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:49:31,587 [INFO] 127.0.0.1 - - [26/Mar/2025 14:49:31] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:49:45,490 [INFO] 127.0.0.1 - - [26/Mar/2025 14:49:45] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:49:49,159 [INFO] Accès à la page d'accueil.
+2025-03-26 14:49:49,162 [INFO] 127.0.0.1 - - [26/Mar/2025 14:49:49] "GET / HTTP/1.1" 200 -
+2025-03-26 14:49:49,197 [INFO] 127.0.0.1 - - [26/Mar/2025 14:49:49] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-03-26 14:50:53,769 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-03-26 14:50:53,812 [INFO]  * Restarting with stat
+2025-03-26 14:50:59,743 [WARNING]  * Debugger is active!
+2025-03-26 14:50:59,748 [INFO]  * Debugger PIN: 601-509-238
+2025-03-26 14:51:00,254 [INFO] Accès à la page d'accueil.
+2025-03-26 14:51:00,278 [INFO] 127.0.0.1 - - [26/Mar/2025 14:51:00] "GET / HTTP/1.1" 200 -
+2025-03-26 14:51:00,310 [INFO] 127.0.0.1 - - [26/Mar/2025 14:51:00] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-03-26 14:52:07,540 [INFO] 127.0.0.1 - - [26/Mar/2025 14:52:07] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:52:09,005 [INFO] 127.0.0.1 - - [26/Mar/2025 14:52:09] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:52:45,922 [INFO] 127.0.0.1 - - [26/Mar/2025 14:52:45] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:52:47,556 [INFO] 127.0.0.1 - - [26/Mar/2025 14:52:47] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:58:23,855 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:23] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:58:27,905 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:27] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:58:29,086 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:29] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:58:30,173 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:30] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:58:35,454 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:35] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:58:37,013 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:37] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 14:59:00,355 [INFO] 127.0.0.1 - - [26/Mar/2025 14:59:00] "[31m[1mGET / HTTP/1.1[0m" 401 -
