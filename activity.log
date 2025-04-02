@@ -926,3 +926,54 @@ FROM entries
 2025-04-02 14:16:09,054 [INFO]  * Restarting with stat
 2025-04-02 14:16:12,102 [WARNING]  * Debugger is active!
 2025-04-02 14:16:12,114 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:41:05,017 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 14:41:05,017 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-02 14:41:05,033 [INFO]  * Restarting with stat
+2025-04-02 14:41:08,364 [WARNING]  * Debugger is active!
+2025-04-02 14:41:08,380 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:41:09,185 [INFO] Accès à la page d'accueil.
+2025-04-02 14:41:09,206 [INFO] 127.0.0.1 - - [02/Apr/2025 14:41:09] "GET / HTTP/1.1" 200 -
+2025-04-02 14:41:09,241 [INFO] 127.0.0.1 - - [02/Apr/2025 14:41:09] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 14:41:12,100 [INFO] 127.0.0.1 - - [02/Apr/2025 14:41:12] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:41:14,497 [INFO] 127.0.0.1 - - [02/Apr/2025 14:41:14] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:43:42,460 [INFO] 127.0.0.1 - - [02/Apr/2025 14:43:42] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-02 14:43:42,487 [INFO] 127.0.0.1 - - [02/Apr/2025 14:43:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-02 14:49:01,722 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api_route.py', reloading
+2025-04-02 14:49:01,785 [INFO]  * Restarting with stat
+2025-04-02 14:49:04,966 [WARNING]  * Debugger is active!
+2025-04-02 14:49:04,977 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:53:57,433 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-02 14:53:57,483 [INFO]  * Restarting with stat
+2025-04-02 14:54:02,626 [WARNING]  * Debugger is active!
+2025-04-02 14:54:02,628 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:54:03,085 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:03] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:04,445 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:04] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:04,858 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:04] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:05,314 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:05] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:05,718 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:05] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:11,912 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:11] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:12,561 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:12] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:13,051 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:13] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:13,423 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:13] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:13,770 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:13] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:14,058 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:14] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:14,355 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:14] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:14,623 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:14] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:14,906 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:14] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:15,139 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:15] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:15,412 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:15] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:15,666 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:15] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:15,925 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:15] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:16,158 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:16] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:16,426 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:16] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:54:16,667 [INFO] 127.0.0.1 - - [02/Apr/2025 14:54:16] "[33mGET /api/users HTTP/1.1[0m" 404 -
+2025-04-02 14:56:03,931 [INFO] 127.0.0.1 - - [02/Apr/2025 14:56:03] "[33mGET /api/ HTTP/1.1[0m" 404 -
+2025-04-02 14:56:04,971 [INFO] 127.0.0.1 - - [02/Apr/2025 14:56:04] "[33mGET /api/ HTTP/1.1[0m" 404 -
+2025-04-02 14:56:13,459 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 14:56:13,459 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-02 14:56:13,475 [INFO]  * Restarting with stat
+2025-04-02 14:56:15,794 [WARNING]  * Debugger is active!
+2025-04-02 14:56:15,794 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:56:16,216 [INFO] 127.0.0.1 - - [02/Apr/2025 14:56:16] "[33mGET /api/ HTTP/1.1[0m" 404 -
