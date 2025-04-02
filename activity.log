@@ -466,3 +466,463 @@ FROM entries
 2025-03-26 14:58:35,454 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:35] "[31m[1mGET / HTTP/1.1[0m" 401 -
 2025-03-26 14:58:37,013 [INFO] 127.0.0.1 - - [26/Mar/2025 14:58:37] "[31m[1mGET / HTTP/1.1[0m" 401 -
 2025-03-26 14:59:00,355 [INFO] 127.0.0.1 - - [26/Mar/2025 14:59:00] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-03-26 15:17:20,914 [WARNING]  * Debugger is active!
+2025-03-26 15:17:20,918 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:04:57,656 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 13:04:57,656 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-02 13:04:57,672 [INFO]  * Restarting with stat
+2025-04-02 13:05:00,950 [WARNING]  * Debugger is active!
+2025-04-02 13:05:00,998 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:05:05,088 [INFO] 127.0.0.1 - - [02/Apr/2025 13:05:05] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:05:09,742 [INFO] 127.0.0.1 - - [02/Apr/2025 13:05:09] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:05:10,711 [INFO] 127.0.0.1 - - [02/Apr/2025 13:05:10] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:05:23,240 [INFO] Accès à la page d'accueil.
+2025-04-02 13:05:23,303 [INFO] 127.0.0.1 - - [02/Apr/2025 13:05:23] "GET / HTTP/1.1" 200 -
+2025-04-02 13:05:23,421 [INFO] 127.0.0.1 - - [02/Apr/2025 13:05:23] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:05:23,447 [INFO] 127.0.0.1 - - [02/Apr/2025 13:05:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-02 13:10:31,810 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 13:10:31,901 [INFO]  * Restarting with stat
+2025-04-02 13:10:46,121 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 13:10:46,132 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-02 13:10:46,148 [INFO]  * Restarting with stat
+2025-04-02 13:10:50,263 [WARNING]  * Debugger is active!
+2025-04-02 13:10:50,279 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:10:52,430 [INFO] Accès à la page d'accueil.
+2025-04-02 13:10:52,455 [INFO] 127.0.0.1 - - [02/Apr/2025 13:10:52] "GET / HTTP/1.1" 200 -
+2025-04-02 13:10:52,484 [INFO] 127.0.0.1 - - [02/Apr/2025 13:10:52] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:10:53,367 [INFO] Accès à la page d'accueil.
+2025-04-02 13:10:53,369 [INFO] 127.0.0.1 - - [02/Apr/2025 13:10:53] "GET / HTTP/1.1" 200 -
+2025-04-02 13:10:53,379 [INFO] 127.0.0.1 - - [02/Apr/2025 13:10:53] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:11:00,629 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:00] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:11:33,145 [INFO] Accès à la page d'accueil.
+2025-04-02 13:11:33,145 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:33] "GET / HTTP/1.1" 200 -
+2025-04-02 13:11:33,180 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:33] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:11:34,146 [INFO] Récupération de la liste des entrées.
+2025-04-02 13:11:34,163 [INFO] BEGIN (implicit)
+2025-04-02 13:11:34,163 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:11:34,163 [INFO] [generated in 0.00157s] ()
+2025-04-02 13:11:34,163 [INFO] ROLLBACK
+2025-04-02 13:11:34,163 [INFO] 7 entrées récupérées.
+2025-04-02 13:11:34,216 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:34] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:11:34,241 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:34] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:11:35,841 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:35] "[31m[1mGET /delete HTTP/1.1[0m" 403 -
+2025-04-02 13:11:41,297 [INFO] Récupération de la liste des entrées.
+2025-04-02 13:11:41,297 [INFO] BEGIN (implicit)
+2025-04-02 13:11:41,297 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:11:41,297 [INFO] [cached since 7.143s ago] ()
+2025-04-02 13:11:41,313 [INFO] ROLLBACK
+2025-04-02 13:11:41,313 [INFO] 7 entrées récupérées.
+2025-04-02 13:11:41,313 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:41] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:11:41,327 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:41] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:11:42,188 [INFO] Exportation des données en CSV.
+2025-04-02 13:11:42,190 [INFO] BEGIN (implicit)
+2025-04-02 13:11:42,192 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:11:42,194 [INFO] [cached since 8.028s ago] ()
+2025-04-02 13:11:42,197 [INFO] ROLLBACK
+2025-04-02 13:11:42,197 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:42] "GET /export_csv HTTP/1.1" 200 -
+2025-04-02 13:11:47,333 [INFO] Accès au formulaire de création d'entrée.
+2025-04-02 13:11:47,381 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:47] "GET /create HTTP/1.1" 200 -
+2025-04-02 13:11:47,411 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:47] "GET /static/css/create.css HTTP/1.1" 200 -
+2025-04-02 13:11:49,670 [INFO] Accès au formulaire de mise à jour d'entrée.
+2025-04-02 13:11:49,671 [INFO] BEGIN (implicit)
+2025-04-02 13:11:49,672 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:11:49,673 [INFO] [cached since 15.51s ago] ()
+2025-04-02 13:11:49,674 [INFO] ROLLBACK
+2025-04-02 13:11:49,714 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:49] "GET /update HTTP/1.1" 200 -
+2025-04-02 13:11:49,763 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:49] "GET /static/css/update.css HTTP/1.1" 200 -
+2025-04-02 13:11:53,837 [INFO] Accès au formulaire d'importation CSV.
+2025-04-02 13:11:53,873 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:53] "GET /import_csv HTTP/1.1" 200 -
+2025-04-02 13:11:53,903 [INFO] 127.0.0.1 - - [02/Apr/2025 13:11:53] "GET /static/css/import_csv.css HTTP/1.1" 200 -
+2025-04-02 13:15:23,073 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 13:15:23,161 [INFO]  * Restarting with stat
+2025-04-02 13:15:26,729 [WARNING]  * Debugger is active!
+2025-04-02 13:15:26,729 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:15:32,024 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:32] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:15:36,650 [INFO] Accès à la page d'accueil.
+2025-04-02 13:15:36,662 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:36] "GET / HTTP/1.1" 200 -
+2025-04-02 13:15:36,707 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:36] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:15:37,710 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:37] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:15:43,060 [INFO] Récupération de la liste des entrées.
+2025-04-02 13:15:43,073 [INFO] BEGIN (implicit)
+2025-04-02 13:15:43,074 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:15:43,074 [INFO] [generated in 0.00175s] ()
+2025-04-02 13:15:43,077 [INFO] ROLLBACK
+2025-04-02 13:15:43,077 [INFO] 7 entrées récupérées.
+2025-04-02 13:15:43,085 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:43] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:15:43,098 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:43] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:15:45,393 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:45] "[31m[1mGET /delete HTTP/1.1[0m" 403 -
+2025-04-02 13:15:47,143 [INFO] Accès au formulaire de mise à jour d'entrée.
+2025-04-02 13:15:47,145 [INFO] BEGIN (implicit)
+2025-04-02 13:15:47,146 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:15:47,147 [INFO] [cached since 4.074s ago] ()
+2025-04-02 13:15:47,148 [INFO] ROLLBACK
+2025-04-02 13:15:47,159 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:47] "GET /update HTTP/1.1" 200 -
+2025-04-02 13:15:47,171 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:47] "GET /static/css/update.css HTTP/1.1" 200 -
+2025-04-02 13:15:49,446 [INFO] Accès au formulaire d'importation CSV.
+2025-04-02 13:15:49,454 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:49] "GET /import_csv HTTP/1.1" 200 -
+2025-04-02 13:15:49,465 [INFO] 127.0.0.1 - - [02/Apr/2025 13:15:49] "GET /static/css/import_csv.css HTTP/1.1" 200 -
+2025-04-02 13:16:23,886 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 13:16:23,925 [INFO]  * Restarting with stat
+2025-04-02 13:16:27,679 [WARNING]  * Debugger is active!
+2025-04-02 13:16:27,689 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:16:41,876 [INFO] 127.0.0.1 - - [02/Apr/2025 13:16:41] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:16:46,436 [INFO] Accès à la page d'accueil.
+2025-04-02 13:16:46,459 [INFO] 127.0.0.1 - - [02/Apr/2025 13:16:46] "GET / HTTP/1.1" 200 -
+2025-04-02 13:16:46,501 [INFO] 127.0.0.1 - - [02/Apr/2025 13:16:46] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:16:49,062 [INFO] 127.0.0.1 - - [02/Apr/2025 13:16:49] "[31m[1mGET /import_csv HTTP/1.1[0m" 403 -
+2025-04-02 13:17:44,414 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 13:17:44,442 [INFO]  * Restarting with stat
+2025-04-02 13:17:47,788 [WARNING]  * Debugger is active!
+2025-04-02 13:17:47,805 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:17:48,294 [INFO] Consultation des entrées par user
+2025-04-02 13:17:48,302 [INFO] BEGIN (implicit)
+2025-04-02 13:17:48,303 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:17:48,304 [INFO] [generated in 0.00148s] ()
+2025-04-02 13:17:48,305 [INFO] ROLLBACK
+2025-04-02 13:17:48,306 [INFO] 7 entrées récupérées.
+2025-04-02 13:17:48,313 [INFO] 127.0.0.1 - - [02/Apr/2025 13:17:48] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:17:48,338 [INFO] 127.0.0.1 - - [02/Apr/2025 13:17:48] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:19:08,111 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:08] "[31m[1mGET /entries HTTP/1.1[0m" 401 -
+2025-04-02 13:19:12,781 [INFO] Consultation des entrées par admin
+2025-04-02 13:19:12,782 [INFO] BEGIN (implicit)
+2025-04-02 13:19:12,783 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:19:12,784 [INFO] [cached since 84.48s ago] ()
+2025-04-02 13:19:12,787 [INFO] ROLLBACK
+2025-04-02 13:19:12,788 [INFO] 7 entrées récupérées.
+2025-04-02 13:19:12,791 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:12] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:19:12,811 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:12] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:19:17,276 [INFO] Accès à la page d'accueil.
+2025-04-02 13:19:17,286 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:17] "GET / HTTP/1.1" 200 -
+2025-04-02 13:19:17,299 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:17] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:19:18,100 [INFO] Consultation des entrées par admin
+2025-04-02 13:19:18,102 [INFO] BEGIN (implicit)
+2025-04-02 13:19:18,103 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:19:18,104 [INFO] [cached since 89.8s ago] ()
+2025-04-02 13:19:18,107 [INFO] ROLLBACK
+2025-04-02 13:19:18,107 [INFO] 7 entrées récupérées.
+2025-04-02 13:19:18,110 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:18] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:19:18,122 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:18] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:19:20,669 [INFO] Accès au formulaire de création d'entrée.
+2025-04-02 13:19:20,679 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:20] "GET /create HTTP/1.1" 200 -
+2025-04-02 13:19:20,692 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:20] "GET /static/css/create.css HTTP/1.1" 200 -
+2025-04-02 13:19:22,044 [INFO] Accès au formulaire de suppression d'entrée.
+2025-04-02 13:19:22,046 [INFO] BEGIN (implicit)
+2025-04-02 13:19:22,048 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:19:22,049 [INFO] [cached since 93.74s ago] ()
+2025-04-02 13:19:22,050 [INFO] ROLLBACK
+2025-04-02 13:19:22,101 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:22] "GET /delete HTTP/1.1" 200 -
+2025-04-02 13:19:22,129 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:22] "[36mGET /static/css/delete.css HTTP/1.1[0m" 304 -
+2025-04-02 13:19:23,599 [INFO] Accès au formulaire de mise à jour d'entrée.
+2025-04-02 13:19:23,600 [INFO] BEGIN (implicit)
+2025-04-02 13:19:23,601 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:19:23,602 [INFO] [cached since 95.3s ago] ()
+2025-04-02 13:19:23,606 [INFO] ROLLBACK
+2025-04-02 13:19:23,616 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:23] "GET /update HTTP/1.1" 200 -
+2025-04-02 13:19:23,631 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:23] "GET /static/css/update.css HTTP/1.1" 200 -
+2025-04-02 13:19:28,659 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:28] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:19:32,916 [INFO] Accès à la page d'accueil.
+2025-04-02 13:19:32,919 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:32] "GET / HTTP/1.1" 200 -
+2025-04-02 13:19:32,941 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:32] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:19:33,803 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:33] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:19:36,292 [INFO] Consultation des entrées par user
+2025-04-02 13:19:36,293 [INFO] BEGIN (implicit)
+2025-04-02 13:19:36,293 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:19:36,293 [INFO] [cached since 108s ago] ()
+2025-04-02 13:19:36,293 [INFO] ROLLBACK
+2025-04-02 13:19:36,293 [INFO] 7 entrées récupérées.
+2025-04-02 13:19:36,293 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:36] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:19:36,313 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:36] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:19:38,563 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:38] "[31m[1mGET /delete HTTP/1.1[0m" 403 -
+2025-04-02 13:19:40,163 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:40] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:19:41,813 [INFO] 127.0.0.1 - - [02/Apr/2025 13:19:41] "[31m[1mGET /import_csv HTTP/1.1[0m" 403 -
+2025-04-02 13:20:41,226 [INFO] Consultation des entrées par user
+2025-04-02 13:20:41,226 [INFO] BEGIN (implicit)
+2025-04-02 13:20:41,226 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:20:41,226 [INFO] [cached since 172.9s ago] ()
+2025-04-02 13:20:41,226 [INFO] ROLLBACK
+2025-04-02 13:20:41,226 [INFO] 7 entrées récupérées.
+2025-04-02 13:20:41,243 [INFO] 127.0.0.1 - - [02/Apr/2025 13:20:41] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:20:41,254 [INFO] 127.0.0.1 - - [02/Apr/2025 13:20:41] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:20:42,785 [INFO] 127.0.0.1 - - [02/Apr/2025 13:20:42] "[31m[1mGET /delete HTTP/1.1[0m" 403 -
+2025-04-02 13:24:24,141 [INFO] Accès à la page d'accueil.
+2025-04-02 13:24:24,141 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:24] "GET / HTTP/1.1" 200 -
+2025-04-02 13:24:24,167 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:24] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:24:24,673 [INFO] Accès à la page d'accueil.
+2025-04-02 13:24:24,673 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:24] "GET / HTTP/1.1" 200 -
+2025-04-02 13:24:24,692 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:24] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:24:25,057 [INFO] Accès à la page d'accueil.
+2025-04-02 13:24:25,073 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:25] "GET / HTTP/1.1" 200 -
+2025-04-02 13:24:25,082 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:25] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:24:34,662 [INFO] Accès à la page d'accueil.
+2025-04-02 13:24:35,988 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:35] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:24:53,223 [INFO] 127.0.0.1 - - [02/Apr/2025 13:24:53] "GET / HTTP/1.1" 200 -
+2025-04-02 13:25:00,092 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-02 13:25:00,092 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-02 13:25:00,108 [INFO]  * Restarting with stat
+2025-04-02 13:25:02,443 [WARNING]  * Debugger is active!
+2025-04-02 13:25:02,459 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:25:02,948 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:02] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:25:03,726 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:03] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:25:09,026 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:09] "[31m[1mGET /create HTTP/1.1[0m" 401 -
+2025-04-02 13:25:12,744 [INFO] Accès au formulaire de création d'entrée.
+2025-04-02 13:25:12,760 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:12] "GET /create HTTP/1.1" 200 -
+2025-04-02 13:25:12,813 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:12] "GET /static/css/create.css HTTP/1.1" 200 -
+2025-04-02 13:25:17,343 [INFO] Accès à la page d'accueil.
+2025-04-02 13:25:17,368 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:17] "GET / HTTP/1.1" 200 -
+2025-04-02 13:25:17,382 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:17] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:25:19,343 [INFO] Consultation des entrées par admin
+2025-04-02 13:25:19,360 [INFO] BEGIN (implicit)
+2025-04-02 13:25:19,360 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:25:19,360 [INFO] [generated in 0.00194s] ()
+2025-04-02 13:25:19,360 [INFO] ROLLBACK
+2025-04-02 13:25:19,360 [INFO] 7 entrées récupérées.
+2025-04-02 13:25:19,393 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:19] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:25:19,408 [INFO] 127.0.0.1 - - [02/Apr/2025 13:25:19] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:27:05,572 [INFO] Accès à la page d'accueil.
+2025-04-02 13:27:05,572 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:05] "GET / HTTP/1.1" 200 -
+2025-04-02 13:27:05,590 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:05] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:27:12,049 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:12] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:27:15,493 [INFO] Accès à la page d'accueil.
+2025-04-02 13:27:15,493 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:15] "GET / HTTP/1.1" 200 -
+2025-04-02 13:27:15,522 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:15] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:27:16,892 [INFO] Accès au formulaire de création d'entrée.
+2025-04-02 13:27:16,895 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:16] "GET /create HTTP/1.1" 200 -
+2025-04-02 13:27:16,908 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:16] "GET /static/css/create.css HTTP/1.1" 200 -
+2025-04-02 13:27:27,826 [INFO] Consultation des entrées par admin
+2025-04-02 13:27:27,826 [INFO] BEGIN (implicit)
+2025-04-02 13:27:27,826 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:27:27,826 [INFO] [cached since 128.5s ago] ()
+2025-04-02 13:27:27,826 [INFO] ROLLBACK
+2025-04-02 13:27:27,826 [INFO] 7 entrées récupérées.
+2025-04-02 13:27:27,826 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:27] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:27:27,854 [INFO] 127.0.0.1 - - [02/Apr/2025 13:27:27] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:29:37,177 [INFO] Consultation des entrées par admin
+2025-04-02 13:29:37,177 [INFO] BEGIN (implicit)
+2025-04-02 13:29:37,177 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:29:37,177 [INFO] [cached since 257.8s ago] ()
+2025-04-02 13:29:37,177 [INFO] ROLLBACK
+2025-04-02 13:29:37,177 [INFO] 7 entrées récupérées.
+2025-04-02 13:29:37,177 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:37] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:29:37,199 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:37] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:29:37,710 [INFO] Consultation des entrées par admin
+2025-04-02 13:29:37,710 [INFO] BEGIN (implicit)
+2025-04-02 13:29:37,710 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:29:37,710 [INFO] [cached since 258.4s ago] ()
+2025-04-02 13:29:37,710 [INFO] ROLLBACK
+2025-04-02 13:29:37,726 [INFO] 7 entrées récupérées.
+2025-04-02 13:29:37,727 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:37] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:29:37,727 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:37] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:29:37,894 [INFO] Consultation des entrées par admin
+2025-04-02 13:29:37,894 [INFO] BEGIN (implicit)
+2025-04-02 13:29:37,894 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:29:37,894 [INFO] [cached since 258.5s ago] ()
+2025-04-02 13:29:37,909 [INFO] ROLLBACK
+2025-04-02 13:29:37,910 [INFO] 7 entrées récupérées.
+2025-04-02 13:29:37,910 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:37] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:29:37,928 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:37] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:29:38,049 [INFO] Consultation des entrées par admin
+2025-04-02 13:29:38,049 [INFO] BEGIN (implicit)
+2025-04-02 13:29:38,049 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:29:38,056 [INFO] [cached since 258.7s ago] ()
+2025-04-02 13:29:38,056 [INFO] ROLLBACK
+2025-04-02 13:29:38,056 [INFO] 7 entrées récupérées.
+2025-04-02 13:29:38,056 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:38] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:29:38,283 [INFO] 127.0.0.1 - - [02/Apr/2025 13:29:38] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:35:01,688 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 13:35:01,755 [INFO]  * Restarting with stat
+2025-04-02 13:35:04,751 [WARNING]  * Debugger is active!
+2025-04-02 13:35:04,752 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:35:05,252 [INFO] Consultation des entrées par admin
+2025-04-02 13:35:05,256 [INFO] BEGIN (implicit)
+2025-04-02 13:35:05,256 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:35:05,258 [INFO] [generated in 0.00123s] ()
+2025-04-02 13:35:05,258 [INFO] ROLLBACK
+2025-04-02 13:35:05,259 [INFO] 7 entrées récupérées.
+2025-04-02 13:35:05,267 [INFO] 127.0.0.1 - - [02/Apr/2025 13:35:05] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:35:05,285 [INFO] 127.0.0.1 - - [02/Apr/2025 13:35:05] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 13:36:21,864 [INFO] 127.0.0.1 - - [02/Apr/2025 13:36:21] "[31m[1mGET /entries HTTP/1.1[0m" 401 -
+2025-04-02 13:36:28,503 [INFO] Consultation des entrées par user
+2025-04-02 13:36:28,505 [INFO] BEGIN (implicit)
+2025-04-02 13:36:28,506 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:36:28,507 [INFO] [cached since 83.25s ago] ()
+2025-04-02 13:36:28,515 [INFO] ROLLBACK
+2025-04-02 13:36:28,516 [INFO] 7 entrées récupérées.
+2025-04-02 13:36:28,519 [INFO] 127.0.0.1 - - [02/Apr/2025 13:36:28] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:36:28,540 [INFO] 127.0.0.1 - - [02/Apr/2025 13:36:28] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:36:31,986 [INFO] Accès à la page d'accueil.
+2025-04-02 13:36:32,000 [INFO] 127.0.0.1 - - [02/Apr/2025 13:36:32] "GET / HTTP/1.1" 200 -
+2025-04-02 13:36:32,015 [INFO] 127.0.0.1 - - [02/Apr/2025 13:36:32] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:36:32,728 [INFO] 127.0.0.1 - - [02/Apr/2025 13:36:32] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:37:26,440 [INFO] 127.0.0.1 - - [02/Apr/2025 13:37:26] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:38:45,060 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 13:38:45,134 [INFO]  * Restarting with stat
+2025-04-02 13:38:48,307 [WARNING]  * Debugger is active!
+2025-04-02 13:38:48,307 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 13:38:49,104 [INFO] 127.0.0.1 - - [02/Apr/2025 13:38:49] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:38:49,104 [INFO] 127.0.0.1 - - [02/Apr/2025 13:38:49] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:38:49,104 [INFO] 127.0.0.1 - - [02/Apr/2025 13:38:49] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:38:49,104 [INFO] 127.0.0.1 - - [02/Apr/2025 13:38:49] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:38:49,104 [INFO] 127.0.0.1 - - [02/Apr/2025 13:38:49] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:38:49,454 [INFO] 127.0.0.1 - - [02/Apr/2025 13:38:49] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:38:49,870 [INFO] 127.0.0.1 - - [02/Apr/2025 13:38:49] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:39:16,709 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:16] "[31m[1mGET /update HTTP/1.1[0m" 401 -
+2025-04-02 13:39:22,808 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:22] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:39:24,907 [INFO] Accès à la page d'accueil.
+2025-04-02 13:39:24,923 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:24] "GET / HTTP/1.1" 200 -
+2025-04-02 13:39:25,002 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:25] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:39:27,758 [INFO] Accès à la page d'accueil.
+2025-04-02 13:39:27,776 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:27] "GET / HTTP/1.1" 200 -
+2025-04-02 13:39:27,786 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:27] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:39:31,232 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:31] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:39:34,308 [INFO] Accès à la page d'accueil.
+2025-04-02 13:39:34,308 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:34] "GET / HTTP/1.1" 200 -
+2025-04-02 13:39:34,344 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:34] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:39:37,104 [INFO] 127.0.0.1 - - [02/Apr/2025 13:39:37] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 13:41:43,094 [INFO] 127.0.0.1 - - [02/Apr/2025 13:41:43] "[31m[1mGET /update HTTP/1.1[0m" 401 -
+2025-04-02 13:41:44,271 [INFO] 127.0.0.1 - - [02/Apr/2025 13:41:44] "[31m[1mGET /update HTTP/1.1[0m" 401 -
+2025-04-02 13:41:46,142 [INFO] 127.0.0.1 - - [02/Apr/2025 13:41:46] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:41:49,189 [INFO] Accès à la page d'accueil.
+2025-04-02 13:41:49,191 [INFO] 127.0.0.1 - - [02/Apr/2025 13:41:49] "GET / HTTP/1.1" 200 -
+2025-04-02 13:41:49,215 [INFO] 127.0.0.1 - - [02/Apr/2025 13:41:49] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:41:51,701 [INFO] 127.0.0.1 - - [02/Apr/2025 13:41:51] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:42:02,525 [INFO] 127.0.0.1 - - [02/Apr/2025 13:42:02] "[31m[1mGET /create HTTP/1.1[0m" 403 -
+2025-04-02 13:42:03,986 [INFO] Consultation des entrées par user
+2025-04-02 13:42:03,995 [INFO] BEGIN (implicit)
+2025-04-02 13:42:03,995 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 13:42:03,996 [INFO] [generated in 0.00145s] ()
+2025-04-02 13:42:03,998 [INFO] ROLLBACK
+2025-04-02 13:42:03,999 [INFO] 7 entrées récupérées.
+2025-04-02 13:42:04,009 [INFO] 127.0.0.1 - - [02/Apr/2025 13:42:04] "GET /entries HTTP/1.1" 200 -
+2025-04-02 13:42:04,024 [INFO] 127.0.0.1 - - [02/Apr/2025 13:42:04] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 13:50:33,351 [INFO] Accès à la page d'accueil.
+2025-04-02 13:50:33,351 [INFO] 127.0.0.1 - - [02/Apr/2025 13:50:33] "GET / HTTP/1.1" 200 -
+2025-04-02 13:50:33,361 [INFO] 127.0.0.1 - - [02/Apr/2025 13:50:33] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 13:59:11,933 [INFO] 127.0.0.1 - - [02/Apr/2025 13:59:11] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 13:59:15,734 [INFO] Accès à la page d'accueil.
+2025-04-02 13:59:15,737 [INFO] 127.0.0.1 - - [02/Apr/2025 13:59:15] "GET / HTTP/1.1" 200 -
+2025-04-02 13:59:15,758 [INFO] 127.0.0.1 - - [02/Apr/2025 13:59:15] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 13:59:20,869 [INFO] 127.0.0.1 - - [02/Apr/2025 13:59:20] "[31m[1mGET /delete HTTP/1.1[0m" 403 -
+2025-04-02 13:59:22,639 [INFO] 127.0.0.1 - - [02/Apr/2025 13:59:22] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 14:00:24,806 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:00:24,870 [INFO]  * Restarting with stat
+2025-04-02 14:00:27,955 [WARNING]  * Debugger is active!
+2025-04-02 14:00:27,971 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:00:29,937 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:00:29,980 [INFO]  * Restarting with stat
+2025-04-02 14:00:32,304 [WARNING]  * Debugger is active!
+2025-04-02 14:00:32,304 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:00:32,899 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:00:32,931 [INFO]  * Restarting with stat
+2025-04-02 14:00:35,272 [WARNING]  * Debugger is active!
+2025-04-02 14:00:35,272 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:00:35,771 [INFO] 127.0.0.1 - - [02/Apr/2025 14:00:35] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 14:00:36,777 [INFO] Accès à la page d'accueil.
+2025-04-02 14:00:36,788 [INFO] 127.0.0.1 - - [02/Apr/2025 14:00:36] "GET / HTTP/1.1" 200 -
+2025-04-02 14:00:36,822 [INFO] 127.0.0.1 - - [02/Apr/2025 14:00:36] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 14:00:38,910 [INFO] 127.0.0.1 - - [02/Apr/2025 14:00:38] "[31m[1mGET /update HTTP/1.1[0m" 403 -
+2025-04-02 14:00:55,302 [INFO] Accès à la page d'accueil.
+2025-04-02 14:00:55,302 [INFO] 127.0.0.1 - - [02/Apr/2025 14:00:55] "GET / HTTP/1.1" 200 -
+2025-04-02 14:00:55,334 [INFO] 127.0.0.1 - - [02/Apr/2025 14:00:55] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 14:01:00,474 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:00] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-02 14:01:04,840 [INFO] Accès à la page d'accueil.
+2025-04-02 14:01:04,840 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:04] "GET / HTTP/1.1" 200 -
+2025-04-02 14:01:04,872 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:04] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-02 14:01:33,350 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:01:33,414 [INFO]  * Restarting with stat
+2025-04-02 14:01:36,554 [WARNING]  * Debugger is active!
+2025-04-02 14:01:36,554 [INFO]  * Debugger PIN: 884-259-399
+2025-04-02 14:01:44,636 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:01:44,705 [INFO]  * Restarting with stat
+2025-04-02 14:01:47,613 [WARNING]  * Debugger is active!
+2025-04-02 14:01:47,621 [INFO]  * Debugger PIN: 884-259-399
+2025-04-02 14:01:48,122 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-02 14:01:48,156 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:48] "[35m[1mGET /entries HTTP/1.1[0m" 500 -
+2025-04-02 14:01:48,203 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:48] "GET /entries?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-02 14:01:48,203 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:48] "GET /entries?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-02 14:01:48,240 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:48] "GET /entries?__debugger__=yes&cmd=resource&f=console.png&s=xEjreVkpW9qoKxaOt0AR HTTP/1.1" 200 -
+2025-04-02 14:01:48,248 [INFO] 127.0.0.1 - - [02/Apr/2025 14:01:48] "GET /entries?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-02 14:02:42,520 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:02:42,588 [INFO]  * Restarting with stat
+2025-04-02 14:02:45,687 [WARNING]  * Debugger is active!
+2025-04-02 14:02:45,694 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:02:46,198 [INFO] Consultation des entrées par user
+2025-04-02 14:02:46,201 [INFO] BEGIN (implicit)
+2025-04-02 14:02:46,201 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 14:02:46,201 [INFO] [generated in 0.00131s] ()
+2025-04-02 14:02:46,201 [INFO] ROLLBACK
+2025-04-02 14:02:46,201 [INFO] 7 entrées récupérées.
+2025-04-02 14:02:46,215 [INFO] 127.0.0.1 - - [02/Apr/2025 14:02:46] "GET /entries HTTP/1.1" 200 -
+2025-04-02 14:02:46,247 [INFO] 127.0.0.1 - - [02/Apr/2025 14:02:46] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-02 14:08:21,195 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:08:21,258 [INFO]  * Restarting with stat
+2025-04-02 14:08:24,345 [WARNING]  * Debugger is active!
+2025-04-02 14:08:24,353 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:08:24,810 [INFO] Consultation des entrées par user
+2025-04-02 14:08:24,810 [INFO] BEGIN (implicit)
+2025-04-02 14:08:24,822 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 14:08:24,822 [INFO] [generated in 0.00664s] ()
+2025-04-02 14:08:24,822 [INFO] ROLLBACK
+2025-04-02 14:08:24,825 [INFO] 7 entrées récupérées.
+2025-04-02 14:08:24,827 [INFO] 127.0.0.1 - - [02/Apr/2025 14:08:24] "GET /entries HTTP/1.1" 200 -
+2025-04-02 14:08:24,869 [INFO] 127.0.0.1 - - [02/Apr/2025 14:08:24] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 14:08:25,877 [INFO] Accès à la page d'accueil.
+2025-04-02 14:08:25,877 [INFO] 127.0.0.1 - - [02/Apr/2025 14:08:25] "GET / HTTP/1.1" 200 -
+2025-04-02 14:08:25,894 [INFO] 127.0.0.1 - - [02/Apr/2025 14:08:25] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 14:09:01,940 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:09:02,003 [INFO]  * Restarting with stat
+2025-04-02 14:09:05,144 [WARNING]  * Debugger is active!
+2025-04-02 14:09:05,158 [INFO]  * Debugger PIN: 601-509-238
+2025-04-02 14:09:05,610 [INFO] Consultation des entrées par user
+2025-04-02 14:09:05,610 [INFO] Accès à la page d'accueil.
+2025-04-02 14:09:05,610 [INFO] BEGIN (implicit)
+2025-04-02 14:09:05,610 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 14:09:05,610 [INFO] [generated in 0.00139s] ()
+2025-04-02 14:09:05,610 [INFO] ROLLBACK
+2025-04-02 14:09:05,610 [INFO] 7 entrées récupérées.
+2025-04-02 14:09:05,610 [INFO] 127.0.0.1 - - [02/Apr/2025 14:09:05] "GET / HTTP/1.1" 200 -
+2025-04-02 14:09:05,626 [INFO] 127.0.0.1 - - [02/Apr/2025 14:09:05] "GET /entries HTTP/1.1" 200 -
+2025-04-02 14:09:05,659 [INFO] 127.0.0.1 - - [02/Apr/2025 14:09:05] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 14:09:59,609 [INFO] Accès à la page d'accueil.
+2025-04-02 14:09:59,611 [INFO] 127.0.0.1 - - [02/Apr/2025 14:09:59] "GET / HTTP/1.1" 200 -
+2025-04-02 14:09:59,626 [INFO] 127.0.0.1 - - [02/Apr/2025 14:09:59] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-02 14:10:00,548 [INFO] Consultation des entrées par user
+2025-04-02 14:10:00,548 [INFO] BEGIN (implicit)
+2025-04-02 14:10:00,548 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-02 14:10:00,548 [INFO] [cached since 54.94s ago] ()
+2025-04-02 14:10:00,562 [INFO] ROLLBACK
+2025-04-02 14:10:00,562 [INFO] 7 entrées récupérées.
+2025-04-02 14:10:00,562 [INFO] 127.0.0.1 - - [02/Apr/2025 14:10:00] "GET /entries HTTP/1.1" 200 -
+2025-04-02 14:10:00,579 [INFO] 127.0.0.1 - - [02/Apr/2025 14:10:00] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-02 14:16:08,999 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-02 14:16:09,054 [INFO]  * Restarting with stat
+2025-04-02 14:16:12,102 [WARNING]  * Debugger is active!
+2025-04-02 14:16:12,114 [INFO]  * Debugger PIN: 601-509-238

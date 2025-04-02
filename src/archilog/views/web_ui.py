@@ -20,6 +20,8 @@ auth = HTTPBasicAuth()
 
 
 
+
+
 @web_ui.route("/logout")
 def logout():
     flash("Déconnexion réussie.", "info")
@@ -41,9 +43,16 @@ users = {
 
 @auth.verify_password
 def verify_password(username, password):
+    """ Vérifie les identifiants de l'utilisateur """
     if username in users and check_password_hash(users[username]["password"], password):
-        return username
-    
+        return username  # Retourne l'utilisateur connecté
+
+
+@auth.get_user_roles
+def get_user_roles(username):
+    return username.roles
+
+
 
 
 @web_ui.route("/")
@@ -53,8 +62,9 @@ def home():
     return render_template("home.html")
 
 @web_ui.route("/entries")
+@auth.login_required
 def list_entries():
-    logging.info("Récupération de la liste des entrées.")
+    logging.info(f"Consultation des entrées par {auth.current_user()}")
     entries = models.get_all_entries()
     logging.info(f"{len(entries)} entrées récupérées.")
     return render_template("entries.html", entries=entries)
@@ -94,8 +104,9 @@ class CreateForm(FlaskForm):
     submit = SubmitField("Valider") 
 
 @web_ui.route("/create", methods=["GET", "POST"])
+@auth.login_required(role="admin")
 def create_entry_form():
-    logging.info("Accès au formulaire de création d'entrée.")
+    logging.info(f"Accès au formulaire de création d'entrée. {auth.current_user()}")
     form = CreateForm()
 
     if form.validate_on_submit():  # Vérifier si le formulaire a été soumis avec des données valides
@@ -121,8 +132,9 @@ class DeleteForm(FlaskForm):
     submit = SubmitField("Supprimer")
 
 @web_ui.route("/delete", methods=["GET", "POST"])
+@auth.login_required(role="admin")
 def delete_entry_form():
-    logging.info("Accès au formulaire de suppression d'entrée.")
+    logging.info(f"Accès au formulaire de suppression d'entrée. {auth.current_user()} ")
     form = DeleteForm()  # WTForms
     
 
@@ -149,10 +161,13 @@ class UpdateForm(FlaskForm):
     category = StringField("Catégorie", validators=[Optional(), Length(max=50)])
     submit = SubmitField("Mettre à jour")    
 
-@web_ui.route("/update" , methods=["POST" , "GET"] )
+@web_ui.route("/update" , methods=["POST" , "GET"])
+@auth.login_required(role="admin")
 def update_entry_form():
-    logging.info("Accès au formulaire de mise à jour d'entrée.")
+    
+
     form = UpdateForm()
+
     if form.validate_on_submit():
         
         try:
@@ -173,6 +188,7 @@ def update_entry_form():
 
 
 @web_ui.route("/export_csv")
+@auth.login_required(role="user")
 def export_csv():
     logging.info("Exportation des données en CSV.")
     csv_file = services.export_to_csv()
@@ -186,6 +202,7 @@ def export_csv():
 
 
 @web_ui.route("/import_csv", methods=["GET", "POST"])
+@auth.login_required(role="admin")
 def import_csv():
     logging.info("Accès au formulaire d'importation CSV.")
     if request.method == "GET":
