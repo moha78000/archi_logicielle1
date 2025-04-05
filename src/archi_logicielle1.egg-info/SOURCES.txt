@@ -10,5 +10,6 @@ src/archilog/__init__.py
 src/archilog/models.py
 src/archilog/services.py
 src/archilog/views/__init__.py
+src/archilog/views/api.py
 src/archilog/views/cli.py
 src/archilog/views/web_ui.py

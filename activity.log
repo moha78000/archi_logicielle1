@@ -977,3 +977,771 @@ FROM entries
 2025-04-02 14:56:15,794 [WARNING]  * Debugger is active!
 2025-04-02 14:56:15,794 [INFO]  * Debugger PIN: 601-509-238
 2025-04-02 14:56:16,216 [INFO] 127.0.0.1 - - [02/Apr/2025 14:56:16] "[33mGET /api/ HTTP/1.1[0m" 404 -
+2025-04-05 12:13:44,785 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 12:13:44,785 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 12:13:44,785 [INFO]  * Restarting with stat
+2025-04-05 12:13:46,079 [WARNING]  * Debugger is active!
+2025-04-05 12:13:46,079 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 12:14:11,933 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:11] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-05 12:14:12,123 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:12] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-05 12:14:16,719 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:16] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-05 12:14:21,143 [INFO] Accès à la page d'accueil.
+2025-04-05 12:14:21,159 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:21] "GET / HTTP/1.1" 200 -
+2025-04-05 12:14:21,232 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:21] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-05 12:14:21,243 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 12:14:22,722 [INFO] Consultation des entrées par admin
+2025-04-05 12:14:22,732 [INFO] BEGIN (implicit)
+2025-04-05 12:14:22,732 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-05 12:14:22,733 [INFO] [generated in 0.00108s] ()
+2025-04-05 12:14:22,736 [INFO] ROLLBACK
+2025-04-05 12:14:22,736 [INFO] 7 entrées récupérées.
+2025-04-05 12:14:22,739 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:22] "GET /entries HTTP/1.1" 200 -
+2025-04-05 12:14:22,764 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:22] "[36mGET /static/css/entries.css HTTP/1.1[0m" 304 -
+2025-04-05 12:14:25,814 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:25] "[35m[1mGET /create HTTP/1.1[0m" 500 -
+2025-04-05 12:14:25,837 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:25] "GET /create?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-05 12:14:25,843 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:25] "GET /create?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-05 12:14:25,866 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:25] "GET /create?__debugger__=yes&cmd=resource&f=console.png&s=sIfD2J5aHMXR0Ki4tw0U HTTP/1.1" 200 -
+2025-04-05 12:14:25,894 [INFO] 127.0.0.1 - - [05/Apr/2025 12:14:25] "GET /create?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-05 12:20:46,259 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-05 12:20:46,328 [INFO]  * Restarting with stat
+2025-04-05 12:20:47,562 [WARNING]  * Debugger is active!
+2025-04-05 12:20:47,564 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 12:20:51,621 [INFO] 127.0.0.1 - - [05/Apr/2025 12:20:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 12:20:51,798 [INFO] 127.0.0.1 - - [05/Apr/2025 12:20:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 12:20:51,853 [INFO] 127.0.0.1 - - [05/Apr/2025 12:20:51] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-05 12:20:51,856 [INFO] 127.0.0.1 - - [05/Apr/2025 12:20:51] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-05 12:20:51,865 [INFO] 127.0.0.1 - - [05/Apr/2025 12:20:51] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=h0ua2hjVzpoqr2JTSyh6 HTTP/1.1" 200 -
+2025-04-05 12:20:51,873 [INFO] 127.0.0.1 - - [05/Apr/2025 12:20:51] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-05 12:25:06,439 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-05 12:25:06,490 [INFO]  * Restarting with stat
+2025-04-05 12:25:07,702 [WARNING]  * Debugger is active!
+2025-04-05 12:25:07,704 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 12:25:10,091 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 12:25:10,137 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:10] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 12:25:10,138 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:10] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 12:25:10,154 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:10] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1" 200 -
+2025-04-05 12:25:55,363 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 12:25:55,365 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:55] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 12:25:55,365 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:55] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 12:25:55,380 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:55] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 12:25:58,354 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 12:25:58,366 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:58] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 12:25:58,366 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:58] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 12:25:58,371 [INFO] 127.0.0.1 - - [05/Apr/2025 12:25:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:05:20,967 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:20] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:05:20,985 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:20] "GET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-05 14:05:20,990 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:20] "GET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-05 14:05:20,997 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:20] "GET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1" 200 -
+2025-04-05 14:05:21,049 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:21] "GET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-05 14:05:23,150 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:05:23,163 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:05:23,163 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:05:23,175 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:05:23,710 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:05:23,721 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:05:23,721 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:05:23,731 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:05:24,184 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:05:24,193 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:05:24,193 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:05:24,203 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:05:24,551 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:05:24,562 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:05:24,562 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:05:24,574 [INFO] 127.0.0.1 - - [05/Apr/2025 14:05:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:07:03,505 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:03,516 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:03] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:03,516 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:03] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:03,520 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:03] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:07:04,128 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:04,138 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:04,139 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:04,150 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:07:04,609 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:04,619 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:04,620 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:04,631 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:07:05,018 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:05,029 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:05,029 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:05,042 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:07:05,419 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:05,429 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:05,430 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:05,441 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:05] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=2nojlByR9LexVWH8xSbM HTTP/1.1[0m" 304 -
+2025-04-05 14:07:07,447 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\__init__.py', reloading
+2025-04-05 14:07:07,505 [INFO]  * Restarting with stat
+2025-04-05 14:07:08,802 [WARNING]  * Debugger is active!
+2025-04-05 14:07:08,803 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 14:07:09,850 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-05 14:07:09,902 [INFO]  * Restarting with stat
+2025-04-05 14:07:11,320 [WARNING]  * Debugger is active!
+2025-04-05 14:07:11,330 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 14:07:11,620 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:11,676 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:11] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:11,678 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:11] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:11,685 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:11] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1" 200 -
+2025-04-05 14:07:12,252 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:12,261 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:12,264 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:12,266 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:12,805 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:12,810 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:12,810 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:12,818 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:12] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:13,381 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:13,389 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:13,389 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:13,395 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:13,933 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:13,943 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:13,946 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:13,949 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:14,382 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:14,392 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:14,395 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:14,399 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:14,768 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:14,769 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:14,769 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:14,786 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:14] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:15,422 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:15,432 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:15,435 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:15,440 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:15,737 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:15,747 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:15,747 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:15,755 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:15] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:16,056 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:16,065 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:16,065 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:16,073 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:07:16,409 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:07:16,420 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:07:16,420 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:07:16,429 [INFO] 127.0.0.1 - - [05/Apr/2025 14:07:16] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:13:54,686 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:13:54,696 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:54] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:13:54,698 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:54] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:13:54,708 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:54] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:13:55,542 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:13:55,550 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:55] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:13:55,550 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:55] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:13:55,564 [INFO] 127.0.0.1 - - [05/Apr/2025 14:13:55] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:14:46,190 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:14:46,201 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:14:46,202 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:14:46,213 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:14:46,871 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:14:46,883 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:14:46,883 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:14:46,902 [INFO] 127.0.0.1 - - [05/Apr/2025 14:14:46] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=xIQ3TcEkiDkGsB92IFKh HTTP/1.1[0m" 304 -
+2025-04-05 14:15:14,138 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 14:15:14,138 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 14:15:14,154 [INFO]  * Restarting with stat
+2025-04-05 14:15:15,280 [WARNING]  * Debugger is active!
+2025-04-05 14:15:15,280 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 14:15:17,020 [INFO] Accès à la page d'accueil.
+2025-04-05 14:15:17,035 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:17] "GET / HTTP/1.1" 200 -
+2025-04-05 14:15:17,069 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:17] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-05 14:15:19,232 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:19] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:20,288 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:20] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:21,168 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:21] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:21,752 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:21] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:22,360 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:22] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:22,784 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:22] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:23,528 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:23] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:23,864 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:23] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:24,216 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:24] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:15:24,672 [INFO] 127.0.0.1 - - [05/Apr/2025 14:15:24] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:16:09,313 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\__init__.py', reloading
+2025-04-05 14:16:09,372 [INFO]  * Restarting with stat
+2025-04-05 14:16:10,686 [WARNING]  * Debugger is active!
+2025-04-05 14:16:10,686 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 14:16:14,577 [INFO] 127.0.0.1 - - [05/Apr/2025 14:16:14] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:16:15,072 [INFO] 127.0.0.1 - - [05/Apr/2025 14:16:15] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:16:15,440 [INFO] 127.0.0.1 - - [05/Apr/2025 14:16:15] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:16:15,735 [INFO] 127.0.0.1 - - [05/Apr/2025 14:16:15] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:16:16,015 [INFO] 127.0.0.1 - - [05/Apr/2025 14:16:16] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:16:16,288 [INFO] 127.0.0.1 - - [05/Apr/2025 14:16:16] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:18:11,936 [INFO] 127.0.0.1 - - [05/Apr/2025 14:18:11] "[33mGET /apidoc/swagge HTTP/1.1[0m" 404 -
+2025-04-05 14:18:13,616 [INFO] 127.0.0.1 - - [05/Apr/2025 14:18:13] "[33mGET /apidoc/swagg HTTP/1.1[0m" 404 -
+2025-04-05 14:18:18,088 [INFO] 127.0.0.1 - - [05/Apr/2025 14:18:18] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:22:41,043 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\__init__.py', reloading
+2025-04-05 14:22:41,102 [INFO]  * Restarting with stat
+2025-04-05 14:22:43,265 [WARNING]  * Debugger is active!
+2025-04-05 14:22:43,268 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 14:24:59,303 [INFO] 127.0.0.1 - - [05/Apr/2025 14:24:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:24:59,349 [INFO] 127.0.0.1 - - [05/Apr/2025 14:24:59] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:24:59,367 [INFO] 127.0.0.1 - - [05/Apr/2025 14:24:59] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:24:59,384 [INFO] 127.0.0.1 - - [05/Apr/2025 14:24:59] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1" 200 -
+2025-04-05 14:24:59,390 [INFO] 127.0.0.1 - - [05/Apr/2025 14:24:59] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-05 14:32:19,688 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:19] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:19,708 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:19] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:19,708 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:19] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:19,721 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:19] "GET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1" 200 -
+2025-04-05 14:32:19,724 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:19] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-05 14:32:20,282 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:20,292 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:20,294 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:20,299 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:20,803 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:20,808 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:20,815 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:20,820 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:20] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,179 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:21,189 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,189 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,197 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,522 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:21,531 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,534 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,538 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,854 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:21,865 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,865 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:21,878 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:21] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,157 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:22,167 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,167 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,179 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,458 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:22,467 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,467 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,475 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,766 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:22,778 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,779 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:22,794 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:22] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,079 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:23,089 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,089 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,099 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,400 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:23,410 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,411 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,422 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,983 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:23,996 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:23,996 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:23] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:24,008 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:24,353 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:24,362 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:24,366 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:24,378 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:24,713 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:24,723 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:24,726 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:24,739 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:24] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:32:25,033 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:25] "[35m[1mGET /apidoc/swagger HTTP/1.1[0m" 500 -
+2025-04-05 14:32:25,043 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:25] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:32:25,043 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:25] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:32:25,059 [INFO] 127.0.0.1 - - [05/Apr/2025 14:32:25] "[36mGET /apidoc/swagger?__debugger__=yes&cmd=resource&f=console.png&s=JdGb1KIGi3MG8aDyE9ZG HTTP/1.1[0m" 304 -
+2025-04-05 14:35:49,010 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\__init__.py', reloading
+2025-04-05 14:35:49,080 [INFO]  * Restarting with stat
+2025-04-05 14:35:50,413 [WARNING]  * Debugger is active!
+2025-04-05 14:35:50,413 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 14:35:57,254 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:35:57,440 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:35:57,498 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:35:57,500 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:35:57,509 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:57] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=fYBwTuUPfOtfiobud5g8 HTTP/1.1" 200 -
+2025-04-05 14:35:58,897 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-05 14:35:58,905 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:58] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-05 14:35:58,905 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:58] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-05 14:35:58,914 [INFO] 127.0.0.1 - - [05/Apr/2025 14:35:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=fYBwTuUPfOtfiobud5g8 HTTP/1.1[0m" 304 -
+2025-04-05 14:37:20,919 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 14:37:20,919 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 14:37:20,921 [INFO]  * Restarting with stat
+2025-04-05 14:37:22,176 [WARNING]  * Debugger is active!
+2025-04-05 14:37:22,176 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 14:37:24,836 [INFO] Accès à la page d'accueil.
+2025-04-05 14:37:24,851 [INFO] 127.0.0.1 - - [05/Apr/2025 14:37:24] "GET / HTTP/1.1" 200 -
+2025-04-05 14:37:24,896 [INFO] 127.0.0.1 - - [05/Apr/2025 14:37:24] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-05 14:37:40,316 [INFO] 127.0.0.1 - - [05/Apr/2025 14:37:40] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:23,151 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 14:39:23,218 [INFO]  * Restarting with stat
+2025-04-05 14:39:24,620 [WARNING]  * Debugger is active!
+2025-04-05 14:39:24,621 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 14:39:27,633 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:27] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:28,240 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:28] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:28,695 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:28] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:37,023 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 14:39:37,024 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 14:39:37,025 [INFO]  * Restarting with stat
+2025-04-05 14:39:38,358 [WARNING]  * Debugger is active!
+2025-04-05 14:39:38,358 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 14:39:38,688 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:38] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:39,559 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:39] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:39,999 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:39] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:40,335 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:40] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:40,663 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:40] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:40,951 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:40] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:41,263 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:41] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:41,599 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:41] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:39:56,261 [INFO] Accès à la page d'accueil.
+2025-04-05 14:39:56,261 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:56] "GET / HTTP/1.1" 200 -
+2025-04-05 14:39:56,310 [INFO] 127.0.0.1 - - [05/Apr/2025 14:39:56] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-05 14:45:18,008 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 14:45:18,008 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 14:45:18,008 [INFO]  * Restarting with stat
+2025-04-05 14:45:19,277 [WARNING]  * Debugger is active!
+2025-04-05 14:45:19,277 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 14:45:22,496 [INFO] Accès à la page d'accueil.
+2025-04-05 14:45:22,496 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:22] "GET / HTTP/1.1" 200 -
+2025-04-05 14:45:22,539 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:22] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+2025-04-05 14:45:24,683 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:24] "[33mGET /apidoc/swagger HTTP/1.1[0m" 404 -
+2025-04-05 14:45:36,141 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:36] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:45:38,625 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:38] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:45:38,635 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 14:45:38,801 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:38] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:45:38,813 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 14:45:38,976 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:38] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:45:38,989 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 14:45:39,120 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:39] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:45:39,133 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 14:45:39,265 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:39] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:45:39,276 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 14:45:39,355 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:39] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:45:39,371 [INFO] 127.0.0.1 - - [05/Apr/2025 14:45:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 14:46:25,782 [INFO] 127.0.0.1 - - [05/Apr/2025 14:46:25] "[32mGET /api/apidoc/swagger HTTP/1.1[0m" 308 -
+2025-04-05 14:46:25,785 [INFO] 127.0.0.1 - - [05/Apr/2025 14:46:25] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 14:46:26,084 [INFO] 127.0.0.1 - - [05/Apr/2025 14:46:26] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 14:47:28,879 [INFO] 127.0.0.1 - - [05/Apr/2025 14:47:28] "[33mGET /apidoc/swagger/ HTTP/1.1[0m" 404 -
+2025-04-05 14:47:31,292 [INFO] 127.0.0.1 - - [05/Apr/2025 14:47:31] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 14:47:31,356 [INFO] 127.0.0.1 - - [05/Apr/2025 14:47:31] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 14:48:09,810 [INFO] 127.0.0.1 - - [05/Apr/2025 14:48:09] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:48:10,904 [INFO] 127.0.0.1 - - [05/Apr/2025 14:48:10] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 14:48:16,953 [INFO] 127.0.0.1 - - [05/Apr/2025 14:48:16] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 14:48:16,991 [INFO] 127.0.0.1 - - [05/Apr/2025 14:48:16] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 14:49:09,838 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\__init__.py', reloading
+2025-04-05 14:49:09,898 [INFO]  * Restarting with stat
+2025-04-05 14:49:11,359 [WARNING]  * Debugger is active!
+2025-04-05 14:49:11,361 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 15:01:08,563 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:01:08,563 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:01:08,568 [INFO]  * Restarting with stat
+2025-04-05 15:01:09,852 [WARNING]  * Debugger is active!
+2025-04-05 15:01:09,859 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:01:20,650 [INFO] 127.0.0.1 - - [05/Apr/2025 15:01:20] "[31m[1mGET /api/ HTTP/1.1[0m" 401 -
+2025-04-05 15:01:22,810 [INFO] 127.0.0.1 - - [05/Apr/2025 15:01:22] "[33mGET /api/user HTTP/1.1[0m" 404 -
+2025-04-05 15:01:39,054 [INFO] 127.0.0.1 - - [05/Apr/2025 15:01:39] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:01:39,106 [INFO] 127.0.0.1 - - [05/Apr/2025 15:01:39] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:10,243 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:10:10,244 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:10:10,245 [INFO]  * Restarting with stat
+2025-04-05 15:10:11,536 [WARNING]  * Debugger is active!
+2025-04-05 15:10:11,546 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:10:14,379 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:14] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:14,420 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:14] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:33,754 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:33] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:33,814 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:33] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:34,354 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:34] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:34,392 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:34] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:34,930 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:34] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:34,964 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:34] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:35,314 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:35] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:35,347 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:35] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:35,642 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:35] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:35,678 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:35] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:35,970 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:35] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:36,004 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:36] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:36,330 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:36] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:36,364 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:36] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:36,705 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:36] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:36,735 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:36] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:10:37,050 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:37] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:10:37,083 [INFO] 127.0.0.1 - - [05/Apr/2025 15:10:37] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:11:28,970 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:11:28,970 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:11:28,983 [INFO]  * Restarting with stat
+2025-04-05 15:11:30,223 [WARNING]  * Debugger is active!
+2025-04-05 15:11:30,223 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:11:32,842 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:32] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:11:32,880 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:32] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:11:33,881 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:33] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:11:33,919 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:33] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:11:34,225 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:34] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:11:34,260 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:34] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:11:34,601 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:34] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:11:34,635 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:34] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:11:34,921 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:34] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:11:34,959 [INFO] 127.0.0.1 - - [05/Apr/2025 15:11:34] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:10,303 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:10] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:10,951 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:10] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:11,231 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:11] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:11,398 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:11] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:11,534 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:11] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:11,686 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:11] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:11,806 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:11] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:11,935 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:11] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:12,063 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:12] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:12:12,198 [INFO] 127.0.0.1 - - [05/Apr/2025 15:12:12] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:15:43,687 [INFO] 127.0.0.1 - - [05/Apr/2025 15:15:43] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:15:43,756 [INFO] 127.0.0.1 - - [05/Apr/2025 15:15:43] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:15:44,254 [INFO] 127.0.0.1 - - [05/Apr/2025 15:15:44] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:15:44,291 [INFO] 127.0.0.1 - - [05/Apr/2025 15:15:44] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:15:44,606 [INFO] 127.0.0.1 - - [05/Apr/2025 15:15:44] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:15:44,643 [INFO] 127.0.0.1 - - [05/Apr/2025 15:15:44] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:15:46,422 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 15:15:46,482 [INFO]  * Restarting with stat
+2025-04-05 15:15:47,873 [WARNING]  * Debugger is active!
+2025-04-05 15:15:47,888 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 15:15:48,952 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 15:15:49,022 [INFO]  * Restarting with stat
+2025-04-05 15:16:47,616 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:16:47,616 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:16:47,617 [INFO]  * Restarting with stat
+2025-04-05 15:16:48,900 [WARNING]  * Debugger is active!
+2025-04-05 15:16:48,900 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:16:50,704 [INFO] 127.0.0.1 - - [05/Apr/2025 15:16:50] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:16:50,745 [INFO] 127.0.0.1 - - [05/Apr/2025 15:16:50] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:17:31,994 [ERROR] 422 Request Validation Error: Profile - [{'type': 'missing', 'loc': ('age',), 'msg': 'Field required', 'input': {'amount': 10.0, 'category': 'foot', 'name': 'paul'}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 15:17:31,994 [INFO] 127.0.0.1 - - [05/Apr/2025 15:17:31] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 15:17:36,053 [ERROR] 422 Request Validation Error: Profile - [{'type': 'missing', 'loc': ('age',), 'msg': 'Field required', 'input': {'amount': 10.0, 'category': 'foot', 'name': 'paul'}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 15:17:36,054 [INFO] 127.0.0.1 - - [05/Apr/2025 15:17:36] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 15:17:48,518 [INFO] 127.0.0.1 - - [05/Apr/2025 15:17:48] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:17:48,583 [INFO] 127.0.0.1 - - [05/Apr/2025 15:17:48] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:25:55,033 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 15:25:55,108 [INFO]  * Restarting with stat
+2025-04-05 15:25:56,438 [WARNING]  * Debugger is active!
+2025-04-05 15:25:56,440 [INFO]  * Debugger PIN: 133-606-123
+2025-04-05 15:31:48,862 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 15:31:48,913 [INFO]  * Restarting with stat
+2025-04-05 15:31:50,233 [WARNING]  * Debugger is active!
+2025-04-05 15:31:50,233 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:31:58,101 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:31:58,101 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:31:58,103 [INFO]  * Restarting with stat
+2025-04-05 15:31:59,331 [WARNING]  * Debugger is active!
+2025-04-05 15:31:59,333 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:32:03,804 [INFO] 127.0.0.1 - - [05/Apr/2025 15:32:03] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:32:03,846 [INFO] 127.0.0.1 - - [05/Apr/2025 15:32:03] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:32:32,934 [ERROR] 422 Request Validation Error: Profile - [{'type': 'missing', 'loc': ('age',), 'msg': 'Field required', 'input': {'amount': 14.0, 'category': 'it', 'name': 'paul'}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 15:32:32,935 [INFO] 127.0.0.1 - - [05/Apr/2025 15:32:32] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 15:34:13,503 [INFO] 127.0.0.1 - - [05/Apr/2025 15:34:13] "[31m[1mGET /api/profiles HTTP/1.1[0m" 401 -
+2025-04-05 15:34:57,140 [ERROR] 422 Request Validation Error: Profile - [{'type': 'missing', 'loc': ('age',), 'msg': 'Field required', 'input': {'amount': 140000.0, 'category': 'IT', 'name': 'momo'}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 15:34:57,141 [INFO] 127.0.0.1 - - [05/Apr/2025 15:34:57] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 15:34:59,199 [ERROR] 422 Request Validation Error: Profile - [{'type': 'missing', 'loc': ('age',), 'msg': 'Field required', 'input': {'amount': 140000.0, 'category': 'IT', 'name': 'momo'}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 15:34:59,200 [INFO] 127.0.0.1 - - [05/Apr/2025 15:34:59] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 15:39:38,508 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:39:38,508 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:39:38,508 [INFO]  * Restarting with stat
+2025-04-05 15:39:39,809 [WARNING]  * Debugger is active!
+2025-04-05 15:39:39,809 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:39:45,041 [INFO] 127.0.0.1 - - [05/Apr/2025 15:39:45] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:39:45,207 [INFO] 127.0.0.1 - - [05/Apr/2025 15:39:45] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:40:38,676 [ERROR] 422 Request Validation Error: Profile - [{'type': 'missing', 'loc': ('age',), 'msg': 'Field required', 'input': {'amount': 12.0, 'category': 'it', 'name': 'test'}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 15:40:38,676 [INFO] 127.0.0.1 - - [05/Apr/2025 15:40:38] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 15:46:32,082 [INFO] 127.0.0.1 - - [05/Apr/2025 15:46:32] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:46:32,157 [INFO] 127.0.0.1 - - [05/Apr/2025 15:46:32] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:48:16,252 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 15:48:16,317 [INFO]  * Restarting with stat
+2025-04-05 15:48:17,880 [WARNING]  * Debugger is active!
+2025-04-05 15:48:17,883 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:48:28,983 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:48:28,983 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:48:28,983 [INFO]  * Restarting with stat
+2025-04-05 15:48:30,233 [WARNING]  * Debugger is active!
+2025-04-05 15:48:30,233 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:48:32,041 [INFO] 127.0.0.1 - - [05/Apr/2025 15:48:32] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:48:32,139 [INFO] 127.0.0.1 - - [05/Apr/2025 15:48:32] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:48:56,490 [INFO] 127.0.0.1 - - [05/Apr/2025 15:48:56] "[31m[1mPOST /api/user HTTP/1.1[0m" 401 -
+2025-04-05 15:50:05,616 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 15:50:05,667 [INFO]  * Restarting with stat
+2025-04-05 15:50:07,063 [WARNING]  * Debugger is active!
+2025-04-05 15:50:07,063 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:50:15,773 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 15:50:15,773 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 15:50:15,773 [INFO]  * Restarting with stat
+2025-04-05 15:50:17,059 [WARNING]  * Debugger is active!
+2025-04-05 15:50:17,059 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 15:50:21,030 [INFO] 127.0.0.1 - - [05/Apr/2025 15:50:21] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:50:21,088 [INFO] 127.0.0.1 - - [05/Apr/2025 15:50:21] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:50:51,728 [INFO] 127.0.0.1 - - [05/Apr/2025 15:50:51] "[31m[1mPOST /api/user HTTP/1.1[0m" 401 -
+2025-04-05 15:51:55,238 [INFO] 127.0.0.1 - - [05/Apr/2025 15:51:55] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:51:55,307 [INFO] 127.0.0.1 - - [05/Apr/2025 15:51:55] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 15:52:14,543 [INFO] 127.0.0.1 - - [05/Apr/2025 15:52:14] "[31m[1mPOST /api/user HTTP/1.1[0m" 401 -
+2025-04-05 15:54:33,728 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:33] code 400, message Bad request version ('{ÑÈ\x81LÏ«|\\\x87±')
+2025-04-05 15:54:33,729 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:33] code 400, message Bad request version ('::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06¥\x8a\x8a\x00\x00\x00')
+2025-04-05 15:54:33,729 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:33] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03Å¬º°16ÊÎQ0y9\x90Û¼ÖÃ\x9a\x89¤N=\x86ýJ>\x06÷\x92¥íó /\x85ýwi¾\x0f\x0c{ÑÈ\x81LÏ«|\\\x87±[0m" 400 -
+2025-04-05 15:54:33,729 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:33] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03ö\x16M\x1dZà<*ÑúàOÛ\x03[\x80Ù*\x13ì\x94-Ø ø+e\x02;g«¶ º\x13B8\x04\x06³g\x87\x1f'\x1fì\x81ñÌ\x9fe\x8d~\x959\x91u"\x17âÈ\x0d\x0f9Å\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06¥\x8a\x8a\x00\x00\x00[0m" 400 -
+2025-04-05 15:54:33,983 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:33] code 400, message Bad request version ('\x00\x02\x01\x00\x00-\x00\x02\x01\x01\x00')
+2025-04-05 15:54:33,983 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:33] "[31m[1m\x16\x03\x01\x06ò\x01\x00\x06î\x03\x03ÈÊªL\x14²LhÔ:n\x81°×\x1bO\x13Ä!."l\x04\x1cB\x1d\x87\x9aO'\x10¦ \x9e\x93\x0d}>ç¬§¶ò<Àd³¼·\x91ýË\x83\x8fÄ\x88Á_\x09\x14{hu\x1c!\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x85\x9a\x9a\x00\x00ÿ\x01\x00\x01\x00\x00+\x00\x07\x06úú\x03\x04\x03\x03\x00\x17\x00\x00\x00\x0b\x00\x02\x01\x00\x00-\x00\x02\x01\x01\x00[0m" 400 -
+2025-04-05 15:54:34,031 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:34] code 400, message Bad request version ('´')
+2025-04-05 15:54:34,031 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:34] "[31m[1m\x16\x03\x01\x06²\x01\x00\x06®\x03\x03$z±\x9e ÖùÌµ\x04ÎZ ìÈ:ÀÑ×Ä%\x05%\x16 íFs\x1fÆ´= ´[0m" 400 -
+2025-04-05 15:54:34,031 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:34] code 400, message Bad request version ("fl\x14¶ûg+\x8aÑµùúy/pcÓ¥\x0e\x9aÊ9'XÏDc¿G")
+2025-04-05 15:54:34,031 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:34] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03Ô\x1aÏBâq\x7f \x0d[\x95OÖì¥å\x08±t´ãf¡Ssió\x96Æk`ä §$¶íËwÒsz\x06.¸\x0eKÍY#x¿ðÉ\x11:\x0cÊ6U¹ë\x10â´\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06¥**\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\x09localhost\x00\x12\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x0b\x00\x02\x01\x00\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x003\x04ï\x04íªª\x00\x01\x00\x11ì\x04ÀÔ©:qeQÂ']§\x94\x05\x09\x8cÁUsd¢<nX\x87®Të\x05û1\x8fF[\x01l\x0cfl\x14¶ûg+\x8aÑµùúy/pcÓ¥\x0e\x9aÊ9'XÏDc¿G[0m" 400 -
+2025-04-05 15:54:34,288 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:34] code 400, message Bad request version (',\x19óÔ§à\x05Î]4\x9a9G+\x07ì3')
+2025-04-05 15:54:34,288 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:34] "[31m[1m\x16\x03\x01\x06²\x01\x00\x06®\x03\x03×\x10±\x1faÚ¸h¶¹Azv\x18\x88§X\x87S£¹§~Ü¢Ý8\x9a§õªu VÅV"·2\x96O\x11 \x7f\x95êw\x9b\x9etñî\x81/®cÃÚ¯q1 \x86#\x98\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Ejj\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01\x8f\x00  ñ'B÷Q\x17`\x9bÅÒÝñ\x98\x1b\x9bOÓ0=Òv6åNd\x09Ý$\x1fèQ\x00\x90®ìv¦.ï\x06\x9aù5\x9f\x82BX¶\x02ûø\x06\x86¯\x93\x9dÎ\x7f\x0eªRiô\x11\x1e\x8f·Z\x80`Áã±åîg,ÚP\x9a^\x18F\x1bºÚLFÝ\x88ÞWP\x7fÛ\x1c ïYÒq\x83\x8aZWË\x982ëâ2DúA-å.Lù\x93L§æ°ü\x1d\x8e=\x83V>\x88ÂSfy|$±×és7xüß\x95ÐG\x13ÞÑû6¥þ¸´\x0d#\x1f½Ï,+Ð»\x97\x17"õe\x98-ô|u\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x00\x00\x0e\x00\x0c\x00\x00\x09localhost\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00\x00#\x00\x00\x003\x04ï\x04íêê\x00\x01\x00\x11ì\x04Àëp\x15\x16Ê\x82`\x1bC­¥\x1f\x1aGD|·\x0e¬VÉ\x02;}\x09,\x19óÔ§à\x05Î]4\x9a9G+\x07ì3[0m" 400 -
+2025-04-05 15:54:36,568 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:36] code 400, message Bad request syntax ('\x16\x03\x01\x06²\x01\x00\x06®\x03\x03')
+2025-04-05 15:54:36,568 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:36] "[31m[1m\x16\x03\x01\x06²\x01\x00\x06®\x03\x03[0m" 400 -
+2025-04-05 15:54:36,568 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:36] code 400, message Bad request version ('\x12UÝú\x8a¼\x8a\x90~¨ò')
+2025-04-05 15:54:36,568 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:36] "[31m[1m\x16\x03\x01\x06ò\x01\x00\x06î\x03\x03~£\x10ålÒkµ\x81IH¨¿Dæ}\x95ÕÁµ\x82h%d2ø4\x1c¯\x05\x01e \x12UÝú\x8a¼\x8a\x90~¨ò[0m" 400 -
+2025-04-05 15:54:36,884 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:36] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06ò\x01\x00\x06î\x03\x03Ab]\x97§\x98')
+2025-04-05 15:54:36,884 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:36] "[31m[1m\x16\x03\x01\x06ò\x01\x00\x06î\x03\x03Ab]\x97§\x98\x1f³[0m" 400 -
+2025-04-05 15:54:36,884 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:36] code 400, message Bad request version ('=ÃÆ\\ÇÀxY\x92ö\x87Ùë\x04ÐÕNnW±tÈ\x04¥È±\x12')
+2025-04-05 15:54:36,884 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:36] "[31m[1m\x16\x03\x01\x06²\x01\x00\x06®\x03\x03\x94^ßu\x94íAí(Ág}@ùW\x18Vqô<§9Ï7\x17Úøí\x80P\x8c\x14 +XÏEÙ]3\x12ü>+â\x83á½_íúxô\x80½ÆMöjSák¬üv\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06E::\x00\x00\x00\x12\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00+\x00\x07\x06jj\x03\x04\x03\x03\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1þ\x0d\x00º\x00\x00\x01\x00\x01\x09\x00 ©\x0eÎ¹HÿPÚ´\x13\x94,éûÖ«öÜ_\x0f¦õ®\x03DcX^\x9fãqQ\x00\x90\x00\x97Îó³ätÒI?ÿ\x8bùh¸23J\x0e2°\x94X\x92Þ_¹'D\x14]/§\x87|Ô1ò-½\x16å ZI.\x80ó*ëUFÖeOÂá$ÒÜÒ&\x85þ41ê´ö\x0b=ÃÆ\\ÇÀxY\x92ö\x87Ùë\x04ÐÕNnW±tÈ\x04¥È±\x12[0m" 400 -
+2025-04-05 15:54:37,877 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:37] code 400, message Bad request version ('H\x96èÝ\x11oì}\x04¨\x11´\x88`y`ÄzT\x15Ý·þÐ]<Í1\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x17\x00\x00\x00')
+2025-04-05 15:54:37,877 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:37] code 400, message Bad request version ('*r3ÃÜ&O\x93¾ñ(')
+2025-04-05 15:54:37,878 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:37] "[31m[1m\x16\x03\x01\x06Ò\x01\x00\x06Î\x03\x03Ùüÿÿ.¡ª\x05\x91³\x99_(ñ\x8dÉ\x9cG{ðx=\x80Õê\x0c\x8fÀK\x15\x88ß ®\x94$kã´ã\x93Uÿ\x9dL\x1emýÏòÎ\x07È²ä0\x17\x84ä"\x92 \\ñ\x88\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06ejj\x00\x00ÿ\x01\x00\x01\x00þ\x0d\x00Ú\x00\x00\x01\x00\x01\x92\x00 }\x9dxÅ'Ûr=\x86Pc\x8b\x92°\x81@Ç\x88d+\x13Xf\x02'1\x9cE_\x8a@Y\x00°cÞQt\x96\x07\x01\x0eÜN\x9cä-\x86\x89ÀOè½H÷@fÉýpâR\x90ó\x07?¬\x17îR\x97\x18\x01\x0fþê«²\x8csAyï5\x05õlñÈ\x9eó\x95ò\x01\x99\x16\x1c\x150¢ýZB1fL\x08ø\x16\x1aÛá²J(>V#vâeÅ\x11£\x8d"\x19d\\$\x04J\x1d~\x87¾ïXgê©©ÚüFR\x976¡Ç¬\x01f\x84\x02ð\x1bvÂ\x08=¨\x1f\x84\x06Y\x17Vjµ ,Ö\x11ûâ\x16\x1b8½½\x0bH\x96èÝ\x11oì}\x04¨\x11´\x88`y`ÄzT\x15Ý·þÐ]<Í1\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x17\x00\x00\x00[0m" 400 -
+2025-04-05 15:54:37,878 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:37] "[31m[1m\x16\x03\x01\x06²\x01\x00\x06®\x03\x03éº\x1d\x03+AS.ò9¢\x1cÃgjãÞñïÞ\x19Xú\x87¢ªÄ\x80¹\x05÷ó b´\x94¶ª#z´0|\x93Ø\x88;&{lgPW Ùü\x9a W\x17\x86(Ûy\x0c\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06E\x8a\x8a\x00\x00\x00-\x00\x02\x01\x01\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x00\x00\x0e\x00\x0c\x00\x00\x09localhost\x00#\x00\x00ÿ\x01\x00\x01\x00\x003\x04ï\x04íªª\x00\x01\x00\x11ì\x04À\x1ad$C7=<¹\x89\x19¢Éi¼\x92¨±A*\x17E.#/§¼Ã\x8aÙ2n¨\x04ë\x87 *r3ÃÜ&O\x93¾ñ([0m" 400 -
+2025-04-05 15:54:38,184 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:38] code 400, message Bad request version ('ý\x12¿\x00')
+2025-04-05 15:54:38,184 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:38] code 400, message Bad request version ('§!Î|Z®ì§$ø\x05\x7f')
+2025-04-05 15:54:38,184 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:38] "[31m[1m\x16\x03\x01\x06Ò\x01\x00\x06Î\x03\x03\x06\x0d\x80üç\x8d\x18-þP\x8cÏ¬\x95z\x80´\x95Íáð_\x9b=zjæ7\x8fDB9 E¡åkÍ÷ª»;/÷UÂm\x81=\x8fÐ\x9bhø«\x89Y\x02DVC ý\x12¿\x00 [0m" 400 -
+2025-04-05 15:54:38,184 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:38] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03\x05a\x94Ã\x08ç\x82)ô\x9c`\x0dmgçq\x8e·ã\x9e)ä¡ð\x96¥ÌÏÓ)c\x8c Ñ3ÏÙï_¤\x7föáõ^¾8 \x1cRÇLï\x9bF½Yb\x1eQÏ\x9dB+B\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06¥ÊÊ\x00\x00\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00\x0b\x00\x02\x01\x00\x003\x04ï\x04íúú\x00\x01\x00\x11ì\x04Àíà0¯Ì2À×x¾ê2¤³\x0b\x1e\x09U\x8f\x0b\x1e\x93÷=ÅË8>zxÖ¦\x8e\x9d3\x06=A §!Î|Z®ì§$ø\x05\x7f[0m" 400 -
+2025-04-05 15:54:45,102 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:54:45] code 400, message Bad request version ("\x98Uü;\x86\x96Ø%\x80\x88sº\x959GO$»å(Wvi,\x03F\x01\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À")
+2025-04-05 15:54:45,102 [INFO] 127.0.0.1 - - [05/Apr/2025 15:54:45] "[31m[1m\x16\x03\x01\x01\x14\x01\x00\x01\x10\x03\x03ý\x84¡ËsÔ$lÒ\x1ee¨§ú\x15¯Èu%\x16ríÖ÷\x94Pü\x85\x1aAq\x87 #\x96\x98\x87\x0d\x98Uü;\x86\x96Ø%\x80\x88sº\x959GO$»å(Wvi,\x03F\x01\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À[0m" 400 -
+2025-04-05 15:55:20,355 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:55:20] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x01\x14\x01\x00\x01\x10\x03\x03\x7f]{\x9fÞµ\x83A%\x12\x93åÀ3ùàËË\x15ºó{Æ§&6\x8c8\x9f-¼')
+2025-04-05 15:55:20,355 [INFO] 127.0.0.1 - - [05/Apr/2025 15:55:20] "[31m[1m\x16\x03\x01\x01\x14\x01\x00\x01\x10\x03\x03\x7f]{\x9fÞµ\x83A%\x12\x93åÀ3ùàËË\x15ºó{Æ§&6\x8c8\x9f-¼  âáòö¾ì)öL\x01xs4ôòn\x92Îo\x97\x87·a¢Úì¤ÜJ£xD\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À[0m" 400 -
+2025-04-05 15:56:15,964 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:56:15] code 400, message Bad request version ("ô\x0fó9\x7f\x15\x80\x9bPÓ\x16)-\x946²b\x9dYÆK´|¼\x93ÿð&%ÓS\xad\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À")
+2025-04-05 15:56:15,964 [INFO] 127.0.0.1 - - [05/Apr/2025 15:56:15] "[31m[1m\x16\x03\x01\x01\x14\x01\x00\x01\x10\x03\x03\x0d\x88n¼\x0c\x92«\x04\x02¶^CÚ#\x8bG\x02Í;E\x1fNê,f!\x14øÐ~û\x8e ô\x0fó9\x7f\x15\x80\x9bPÓ\x16)-\x946²b\x9dYÆK´|¼\x93ÿð&%ÓS­\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À[0m" 400 -
+2025-04-05 15:56:25,948 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:56:25] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00#\x00\x00\x00')
+2025-04-05 15:56:25,948 [INFO] 127.0.0.1 - - [05/Apr/2025 15:56:25] "[31m[1m\x16\x03\x01\x06Ò\x01\x00\x06Î\x03\x03Sæk\x10Àó\x1d\x1c$±\x1a\x04|\x9e¨2`ÂÏOR\x95\x04ÚH]\x1biDxw» Á\x16Ò´U]\x05\x96À¥þ\x9d\x1f¯)£Ù«\x85_E­WÎ\x8d¢!f\x19n\x1eÆ\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06eªª\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00#\x00\x00\x00[0m" 400 -
+2025-04-05 15:56:26,253 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:56:26] code 400, message Bad request version ('\x11\x12Ø²,°\x08IKí\x97\\ï\x1a\x012Eë74s\x99³ý1\x1bA\x00')
+2025-04-05 15:56:26,253 [INFO] 127.0.0.1 - - [05/Apr/2025 15:56:26] "[31m[1m\x16\x03\x01\x07\x12\x01\x00\x07\x0e\x03\x03 a:ý@v\x14\x8d¯\x90l\x99\x0dú\x1b«~NÉè¤¥\x03ÂñÑÞ&sÍ\x18¡ µÖî/\x1d\x11\x12Ø²,°\x08IKí\x97\\ï\x1a\x012Eë74s\x99³ý1\x1bA\x00 [0m" 400 -
+2025-04-05 15:57:57,020 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:57:57] code 400, message Bad request version ("\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À")
+2025-04-05 15:57:57,020 [INFO] 127.0.0.1 - - [05/Apr/2025 15:57:57] "[31m[1m\x16\x03\x01\x01\x1d\x01\x00\x01\x19\x03\x03y\x17ï\x88\x8c?k¹2x2\x8b¨OÙKÒÝÎêÉZßçn\x94Ú¨\x12\x8b§Ç íÀÇs½4hï·´\x83¤ï°m\x9d/Wôþzü\x95¸\x09\x93$õ´\x088\x1c\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À[0m" 400 -
+2025-04-05 15:57:59,064 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:57:59] code 400, message Bad request version ("Rð==/\x99\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À")
+2025-04-05 15:57:59,064 [INFO] 127.0.0.1 - - [05/Apr/2025 15:57:59] "[31m[1m\x16\x03\x01\x01\x1d\x01\x00\x01\x19\x03\x03íp¨u\x11\x00ìwÜä\x0bc^\x18\x15\x04\x05h\x8a4R6Tà@\x06ñÜ7d#f ö\x8eØt\x8bõ-Ä\x02[\x8d.VSª\x0e\x05\x8aõ7Ù¿u¸z\x1fRð==/\x99\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À[0m" 400 -
+2025-04-05 15:58:18,023 [ERROR] 127.0.0.1 - - [05/Apr/2025 15:58:18] code 400, message Bad request version ("q;d\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À")
+2025-04-05 15:58:18,023 [INFO] 127.0.0.1 - - [05/Apr/2025 15:58:18] "[31m[1m\x16\x03\x01\x01\x14\x01\x00\x01\x10\x03\x03ð\x9aA Úà\x02c\x17\x02µ\x06]ºl7;Î0êÍê­Ûw'äîÑ¡£5 \x9f×©\x13rãH"¨}½iãçÊðv\x18\x8aÎ?´éM6'Mx\x0cq;d\x00(\x13\x02\x13\x01À,À+À0À/À$À#À(À'À[0m" 400 -
+2025-04-05 15:59:01,618 [INFO] 127.0.0.1 - - [05/Apr/2025 15:59:01] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 15:59:01,706 [INFO] 127.0.0.1 - - [05/Apr/2025 15:59:01] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:00:06,495 [INFO] BEGIN (implicit)
+2025-04-05 16:00:06,497 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-05 16:00:06,497 [INFO] [generated in 0.00027s] ('49576faa410f46feb106e7c14662e52d', 'paul', 54.1, 'it')
+2025-04-05 16:00:06,499 [INFO] COMMIT
+2025-04-05 16:00:06,500 [INFO] 127.0.0.1 - - [05/Apr/2025 16:00:06] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-05 16:03:47,531 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 16:03:47,593 [INFO]  * Restarting with stat
+2025-04-05 16:03:48,932 [WARNING]  * Debugger is active!
+2025-04-05 16:03:48,932 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:03:53,055 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:03:53,055 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:03:53,055 [INFO]  * Restarting with stat
+2025-04-05 16:03:54,302 [WARNING]  * Debugger is active!
+2025-04-05 16:03:54,302 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:03:58,101 [INFO] 127.0.0.1 - - [05/Apr/2025 16:03:58] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:03:58,195 [INFO] 127.0.0.1 - - [05/Apr/2025 16:03:58] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:04:37,410 [INFO] BEGIN (implicit)
+2025-04-05 16:04:37,413 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-05 16:04:37,414 [INFO] [generated in 0.00083s] ('ecd529e74ada468fb8220e19bb8f91d2', 'paul', 1.0, 'it')
+2025-04-05 16:04:37,415 [INFO] COMMIT
+2025-04-05 16:04:37,415 [INFO] 127.0.0.1 - - [05/Apr/2025 16:04:37] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-05 16:05:02,195 [INFO] BEGIN (implicit)
+2025-04-05 16:05:02,199 [INFO] ROLLBACK
+2025-04-05 16:05:02,223 [INFO] 127.0.0.1 - - [05/Apr/2025 16:05:02] "[35m[1mPUT /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:21:51,371 [INFO] 127.0.0.1 - - [05/Apr/2025 16:21:51] "[31m[1mGET /api/user/1 HTTP/1.1[0m" 405 -
+2025-04-05 16:23:05,143 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 16:23:05,199 [INFO]  * Restarting with stat
+2025-04-05 16:23:06,690 [WARNING]  * Debugger is active!
+2025-04-05 16:23:06,690 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:23:12,877 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:23:12,883 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:23:12,883 [INFO]  * Restarting with stat
+2025-04-05 16:23:14,147 [WARNING]  * Debugger is active!
+2025-04-05 16:23:14,158 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:23:15,958 [INFO] 127.0.0.1 - - [05/Apr/2025 16:23:15] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:23:16,047 [INFO] 127.0.0.1 - - [05/Apr/2025 16:23:16] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:23:53,899 [INFO] BEGIN (implicit)
+2025-04-05 16:23:53,899 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-05 16:23:53,899 [INFO] [generated in 0.00026s] ('8150415cfed046afa133e630e3228403', 'paul', 14.0, 'string')
+2025-04-05 16:23:53,904 [INFO] COMMIT
+2025-04-05 16:23:53,906 [INFO] 127.0.0.1 - - [05/Apr/2025 16:23:53] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-05 16:24:18,467 [INFO] BEGIN (implicit)
+2025-04-05 16:24:18,467 [INFO] ROLLBACK
+2025-04-05 16:24:18,475 [INFO] 127.0.0.1 - - [05/Apr/2025 16:24:18] "[35m[1mPUT /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:33:26,061 [INFO] BEGIN (implicit)
+2025-04-05 16:33:26,062 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-05 16:33:26,062 [INFO] [cached since 572.2s ago] ('9c869a777b6a410eb968ac7065f55f77', 'louis', 44.0, 'it')
+2025-04-05 16:33:26,063 [INFO] COMMIT
+2025-04-05 16:33:26,065 [INFO] 127.0.0.1 - - [05/Apr/2025 16:33:26] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-05 16:34:05,026 [INFO] BEGIN (implicit)
+2025-04-05 16:34:05,027 [INFO] ROLLBACK
+2025-04-05 16:34:05,035 [INFO] 127.0.0.1 - - [05/Apr/2025 16:34:05] "[35m[1mPUT /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:34:47,925 [INFO] BEGIN (implicit)
+2025-04-05 16:34:47,925 [INFO] ROLLBACK
+2025-04-05 16:34:47,935 [INFO] 127.0.0.1 - - [05/Apr/2025 16:34:47] "[35m[1mPUT /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:35:29,437 [ERROR] 422 Request Validation Error: UpdateEntry - [{'type': 'float_parsing', 'loc': ('amount',), 'msg': 'Input should be a valid number, unable to parse string as a number', 'input': 'edouard', 'url': 'https://errors.pydantic.dev/2.11/v/float_parsing'}]
+2025-04-05 16:35:29,437 [INFO] 127.0.0.1 - - [05/Apr/2025 16:35:29] "[31m[1mPUT /api/user/1 HTTP/1.1[0m" 422 -
+2025-04-05 16:35:57,818 [INFO] BEGIN (implicit)
+2025-04-05 16:35:57,818 [INFO] ROLLBACK
+2025-04-05 16:35:57,818 [INFO] 127.0.0.1 - - [05/Apr/2025 16:35:57] "[35m[1mPUT /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:40:36,330 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 16:40:36,397 [INFO]  * Restarting with stat
+2025-04-05 16:40:37,755 [WARNING]  * Debugger is active!
+2025-04-05 16:40:37,765 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:40:41,050 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:40:41,050 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:40:41,050 [INFO]  * Restarting with stat
+2025-04-05 16:40:42,365 [WARNING]  * Debugger is active!
+2025-04-05 16:40:42,365 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:40:46,925 [INFO] 127.0.0.1 - - [05/Apr/2025 16:40:46] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:40:47,015 [INFO] 127.0.0.1 - - [05/Apr/2025 16:40:47] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:41:39,536 [ERROR] 422 Request Validation Error: CreateEntry - [{'type': 'uuid_type', 'loc': ('id',), 'msg': 'UUID input should be a string, bytes or UUID object', 'input': 1, 'url': 'https://errors.pydantic.dev/2.11/v/uuid_type'}]
+2025-04-05 16:41:39,536 [INFO] 127.0.0.1 - - [05/Apr/2025 16:41:39] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 16:42:10,769 [ERROR] 422 Request Validation Error: CreateEntry - [{'type': 'missing', 'loc': ('name',), 'msg': 'Field required', 'input': {}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}, {'type': 'missing', 'loc': ('amount',), 'msg': 'Field required', 'input': {}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}, {'type': 'missing', 'loc': ('category',), 'msg': 'Field required', 'input': {}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 16:42:10,769 [INFO] 127.0.0.1 - - [05/Apr/2025 16:42:10] "[31m[1mPOST /api/user HTTP/1.1[0m" 422 -
+2025-04-05 16:42:49,649 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:42:49,649 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:42:49,649 [INFO]  * Restarting with stat
+2025-04-05 16:42:50,897 [WARNING]  * Debugger is active!
+2025-04-05 16:42:50,897 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:42:54,132 [INFO] 127.0.0.1 - - [05/Apr/2025 16:42:54] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:42:54,232 [INFO] 127.0.0.1 - - [05/Apr/2025 16:42:54] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:43:08,549 [INFO] 127.0.0.1 - - [05/Apr/2025 16:43:08] "[31m[1mPOST /api/user HTTP/1.1[0m" 401 -
+2025-04-05 16:43:31,602 [INFO] BEGIN (implicit)
+2025-04-05 16:43:31,602 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-05 16:43:31,602 [INFO] [generated in 0.00026s] ('7c1239b94bd84076872ea215e5c948d8', 'string', 1.0, 'fou')
+2025-04-05 16:43:31,605 [INFO] COMMIT
+2025-04-05 16:43:31,605 [INFO] 127.0.0.1 - - [05/Apr/2025 16:43:31] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-05 16:43:42,309 [INFO] 127.0.0.1 - - [05/Apr/2025 16:43:42] "[35m[1mDELETE /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:44:09,860 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 16:44:09,918 [INFO]  * Restarting with stat
+2025-04-05 16:44:11,219 [WARNING]  * Debugger is active!
+2025-04-05 16:44:11,221 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:44:15,768 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:44:15,768 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:44:15,768 [INFO]  * Restarting with stat
+2025-04-05 16:44:17,006 [WARNING]  * Debugger is active!
+2025-04-05 16:44:17,006 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:44:19,847 [INFO] BEGIN (implicit)
+2025-04-05 16:44:19,847 [INFO] ROLLBACK
+2025-04-05 16:44:19,847 [INFO] 127.0.0.1 - - [05/Apr/2025 16:44:19] "[35m[1mDELETE /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:44:34,545 [INFO] 127.0.0.1 - - [05/Apr/2025 16:44:34] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:44:34,618 [INFO] 127.0.0.1 - - [05/Apr/2025 16:44:34] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:44:53,469 [INFO] BEGIN (implicit)
+2025-04-05 16:44:53,469 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-05 16:44:53,469 [INFO] [generated in 0.00025s] ('c2f18a10c8e14ab4af259c75ecb86daf', 'string', 1.0, 'it')
+2025-04-05 16:44:53,473 [INFO] COMMIT
+2025-04-05 16:44:53,475 [INFO] 127.0.0.1 - - [05/Apr/2025 16:44:53] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-05 16:45:03,020 [INFO] BEGIN (implicit)
+2025-04-05 16:45:03,020 [INFO] ROLLBACK
+2025-04-05 16:45:03,035 [INFO] 127.0.0.1 - - [05/Apr/2025 16:45:03] "[35m[1mDELETE /api/user/1 HTTP/1.1[0m" 500 -
+2025-04-05 16:47:50,158 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 16:47:50,229 [INFO]  * Restarting with stat
+2025-04-05 16:47:51,598 [WARNING]  * Debugger is active!
+2025-04-05 16:47:51,598 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:47:55,067 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:47:55,067 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:47:55,067 [INFO]  * Restarting with stat
+2025-04-05 16:47:56,389 [WARNING]  * Debugger is active!
+2025-04-05 16:47:56,389 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:47:56,989 [INFO] 127.0.0.1 - - [05/Apr/2025 16:47:56] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:47:57,064 [INFO] 127.0.0.1 - - [05/Apr/2025 16:47:57] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:48:56,873 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:48:56,873 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:48:56,875 [INFO]  * Restarting with stat
+2025-04-05 16:48:58,136 [WARNING]  * Debugger is active!
+2025-04-05 16:48:58,145 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:48:59,182 [INFO] 127.0.0.1 - - [05/Apr/2025 16:48:59] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:48:59,223 [INFO] 127.0.0.1 - - [05/Apr/2025 16:48:59] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:49:20,826 [INFO] BEGIN (implicit)
+2025-04-05 16:49:20,826 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-05 16:49:20,826 [INFO] [generated in 0.00025s] ('b2018f2413e04cb78f003a138bdcb23e', 'moha', 1.0, 'it')
+2025-04-05 16:49:20,826 [INFO] COMMIT
+2025-04-05 16:49:20,826 [INFO] 127.0.0.1 - - [05/Apr/2025 16:49:20] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-05 16:50:49,619 [ERROR] 422 Request Validation Error: UpdateEntry - [{'type': 'missing', 'loc': ('id',), 'msg': 'Field required', 'input': {}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}, {'type': 'missing', 'loc': ('name',), 'msg': 'Field required', 'input': {}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}, {'type': 'missing', 'loc': ('amount',), 'msg': 'Field required', 'input': {}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}, {'type': 'missing', 'loc': ('category',), 'msg': 'Field required', 'input': {}, 'url': 'https://errors.pydantic.dev/2.11/v/missing'}]
+2025-04-05 16:50:49,620 [INFO] 127.0.0.1 - - [05/Apr/2025 16:50:49] "[31m[1mPUT /api/user/b2018f2413e04cb78f003a138bdcb23e HTTP/1.1[0m" 422 -
+2025-04-05 16:52:59,948 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 16:53:00,008 [INFO]  * Restarting with stat
+2025-04-05 16:53:01,355 [WARNING]  * Debugger is active!
+2025-04-05 16:53:01,365 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:53:06,577 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 16:53:06,577 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 16:53:06,577 [INFO]  * Restarting with stat
+2025-04-05 16:53:07,802 [WARNING]  * Debugger is active!
+2025-04-05 16:53:07,802 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 16:53:10,466 [INFO] 127.0.0.1 - - [05/Apr/2025 16:53:10] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 16:53:10,538 [INFO] 127.0.0.1 - - [05/Apr/2025 16:53:10] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 16:54:15,555 [INFO] BEGIN (implicit)
+2025-04-05 16:54:15,555 [INFO] UPDATE entries SET name=?, amount=?, category=? WHERE entries.id = ?
+2025-04-05 16:54:15,555 [INFO] [generated in 0.00019s] ('string', 14.5, 'string', '3fa85f6457174562b3fc2c963f66afa6')
+2025-04-05 16:54:15,555 [INFO] COMMIT
+2025-04-05 16:54:15,555 [INFO] 127.0.0.1 - - [05/Apr/2025 16:54:15] "PUT /api/user/b2018f2413e04cb78f003a138bdcb23e%20 HTTP/1.1" 200 -
+2025-04-05 16:54:57,382 [INFO] BEGIN (implicit)
+2025-04-05 16:54:57,383 [INFO] UPDATE entries SET name=?, amount=?, category=? WHERE entries.id = ?
+2025-04-05 16:54:57,383 [INFO] [cached since 41.83s ago] ('abdul', 14.5, 'string', '3fa85f6457174562b3fc2c963f66afa6')
+2025-04-05 16:54:57,383 [INFO] COMMIT
+2025-04-05 16:54:57,383 [INFO] 127.0.0.1 - - [05/Apr/2025 16:54:57] "PUT /api/user/b2018f2413e04cb78f003a138bdcb23e%20 HTTP/1.1" 200 -
+2025-04-05 16:55:21,350 [INFO] BEGIN (implicit)
+2025-04-05 16:55:21,351 [INFO] UPDATE entries SET name=?, amount=?, category=? WHERE entries.id = ?
+2025-04-05 16:55:21,351 [INFO] [cached since 65.79s ago] ('abdul', 14.5, 'string', 'b2018f2413e04cb78f003a138bdcb23e')
+2025-04-05 16:55:21,353 [INFO] COMMIT
+2025-04-05 16:55:21,353 [INFO] 127.0.0.1 - - [05/Apr/2025 16:55:21] "PUT /api/user/b2018f2413e04cb78f003a138bdcb23e%20 HTTP/1.1" 200 -
+2025-04-05 16:55:48,248 [INFO] 127.0.0.1 - - [05/Apr/2025 16:55:48] "[35m[1mDELETE /api/user/b2018f2413e04cb78f003a138bdcb23e%20 HTTP/1.1[0m" 500 -
+2025-04-05 16:57:45,818 [INFO] 127.0.0.1 - - [05/Apr/2025 16:57:45] "[35m[1mDELETE /api/user/b2018f2413e04cb78f003a138bdcb23e%20 HTTP/1.1[0m" 500 -
+2025-04-05 16:58:25,553 [INFO] 127.0.0.1 - - [05/Apr/2025 16:58:25] "[35m[1mDELETE /api/user/b2018f2413e04cb78f003a138bdcb23e HTTP/1.1[0m" 500 -
+2025-04-05 16:58:54,005 [INFO] 127.0.0.1 - - [05/Apr/2025 16:58:54] "[35m[1mDELETE /api/user/c2f18a10c8e14ab4af259c75ecb86daf HTTP/1.1[0m" 500 -
+2025-04-05 17:02:08,108 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 17:02:08,108 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 17:02:08,124 [INFO]  * Restarting with stat
+2025-04-05 17:02:09,371 [WARNING]  * Debugger is active!
+2025-04-05 17:02:09,371 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 17:02:10,653 [INFO] 127.0.0.1 - - [05/Apr/2025 17:02:10] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 17:02:10,738 [INFO] 127.0.0.1 - - [05/Apr/2025 17:02:10] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 17:03:08,380 [INFO] 127.0.0.1 - - [05/Apr/2025 17:03:08] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 17:03:08,440 [INFO] 127.0.0.1 - - [05/Apr/2025 17:03:08] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 17:04:15,468 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 17:04:15,528 [INFO]  * Restarting with stat
+2025-04-05 17:04:16,857 [WARNING]  * Debugger is active!
+2025-04-05 17:04:16,867 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 17:04:20,888 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 17:04:20,888 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 17:04:20,888 [INFO]  * Restarting with stat
+2025-04-05 17:04:22,180 [WARNING]  * Debugger is active!
+2025-04-05 17:04:22,180 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 17:04:22,497 [INFO] 127.0.0.1 - - [05/Apr/2025 17:04:22] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-05 17:04:22,535 [INFO] 127.0.0.1 - - [05/Apr/2025 17:04:22] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-05 17:05:01,297 [INFO] BEGIN (implicit)
+2025-04-05 17:05:01,297 [INFO] ROLLBACK
+2025-04-05 17:05:01,306 [INFO] 127.0.0.1 - - [05/Apr/2025 17:05:01] "[35m[1mDELETE /api/user/b2018f2413e04cb78f003a138bdcb23e HTTP/1.1[0m" 500 -
+2025-04-05 17:05:19,608 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 17:05:19,675 [INFO]  * Restarting with stat
+2025-04-05 17:05:20,985 [WARNING]  * Debugger is active!
+2025-04-05 17:05:20,985 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 17:05:44,587 [INFO] 127.0.0.1 - - [05/Apr/2025 17:05:44] "[35m[1mDELETE /api/user/b2018f2413e04cb78f003a138bdcb23e HTTP/1.1[0m" 500 -
+2025-04-05 17:06:32,075 [INFO] 127.0.0.1 - - [05/Apr/2025 17:06:32] "[31m[1mGET /api/user HTTP/1.1[0m" 401 -
+2025-04-05 17:08:30,589 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-05 17:08:30,648 [INFO]  * Restarting with stat
+2025-04-05 17:08:34,697 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 17:08:34,697 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-05 17:08:34,697 [INFO]  * Restarting with stat
+2025-04-05 17:08:35,930 [WARNING]  * Debugger is active!
+2025-04-05 17:08:35,930 [INFO]  * Debugger PIN: 201-715-300
+2025-04-05 17:08:41,652 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:41] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:08:53,230 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:53] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:08:53,935 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:53] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:08:54,303 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:54] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:08:54,639 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:54] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:08:54,950 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:54] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:08:55,303 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:55] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:08:55,614 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:55] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
+2025-04-05 17:09:02,053 [INFO] 127.0.0.1 - - [05/Apr/2025 17:09:02] "[31m[1mGET /api/user HTTP/1.1[0m" 401 -

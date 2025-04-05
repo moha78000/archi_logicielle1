@@ -20,12 +20,12 @@ auth = HTTPBasicAuth()
 
 
 
-
-
 @web_ui.route("/logout")
 def logout():
     flash("Déconnexion réussie.", "info")
     return redirect(url_for("auth_ui.login"))
+
+
 
 
 users = {
@@ -46,12 +46,13 @@ def verify_password(username, password):
     """ Vérifie les identifiants de l'utilisateur """
     if username in users and check_password_hash(users[username]["password"], password):
         return username  # Retourne l'utilisateur connecté
+    
+
 
 
 @auth.get_user_roles
 def get_user_roles(username):
-    return username.roles
-
+    return [users[username]["role"]]
 
 
 
@@ -222,11 +223,6 @@ def import_csv():
     return render_template("import_csv.html")  # Reste sur la page en cas d'erreur
 
 
-@web_ui.get("/users/create")
-def users_create_form():
-    logging.info("Accès à la page de création d'utilisateur.")
-    abort(500)
-    return render_template("users_create_form.html")    
 
 @web_ui.errorhandler(500)
 def handle_internal_error(error):
