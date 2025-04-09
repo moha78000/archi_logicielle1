@@ -1745,3 +1745,111 @@ FROM entries
 2025-04-05 17:08:55,303 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:55] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
 2025-04-05 17:08:55,614 [INFO] 127.0.0.1 - - [05/Apr/2025 17:08:55] "[31m[1mGET /api/test HTTP/1.1[0m" 401 -
 2025-04-05 17:09:02,053 [INFO] 127.0.0.1 - - [05/Apr/2025 17:09:02] "[31m[1mGET /api/user HTTP/1.1[0m" 401 -
+2025-04-09 11:13:01,854 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-09 11:13:01,855 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-09 11:13:01,876 [INFO]  * Restarting with stat
+2025-04-09 11:13:05,323 [WARNING]  * Debugger is active!
+2025-04-09 11:13:05,333 [INFO]  * Debugger PIN: 609-220-695
+2025-04-09 11:13:44,858 [INFO] 127.0.0.1 - - [09/Apr/2025 11:13:44] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-04-09 11:13:58,181 [INFO] Accès à la page d'accueil.
+2025-04-09 11:13:58,216 [INFO] 127.0.0.1 - - [09/Apr/2025 11:13:58] "GET / HTTP/1.1" 200 -
+2025-04-09 11:13:58,325 [INFO] 127.0.0.1 - - [09/Apr/2025 11:13:58] "GET /static/css/home.css HTTP/1.1" 200 -
+2025-04-09 11:13:58,359 [INFO] 127.0.0.1 - - [09/Apr/2025 11:13:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-09 11:13:59,825 [INFO] Consultation des entrées par admin
+2025-04-09 11:13:59,831 [INFO] BEGIN (implicit)
+2025-04-09 11:13:59,834 [INFO] SELECT entries.id, entries.name, entries.amount, entries.category 
+FROM entries
+2025-04-09 11:13:59,835 [INFO] [generated in 0.00385s] ()
+2025-04-09 11:13:59,837 [INFO] ROLLBACK
+2025-04-09 11:13:59,839 [INFO] 14 entrées récupérées.
+2025-04-09 11:13:59,870 [INFO] 127.0.0.1 - - [09/Apr/2025 11:13:59] "GET /entries HTTP/1.1" 200 -
+2025-04-09 11:13:59,910 [INFO] 127.0.0.1 - - [09/Apr/2025 11:13:59] "GET /static/css/entries.css HTTP/1.1" 200 -
+2025-04-09 11:14:45,413 [INFO] 127.0.0.1 - - [09/Apr/2025 11:14:45] "[32mGET /api HTTP/1.1[0m" 308 -
+2025-04-09 11:14:45,417 [INFO] 127.0.0.1 - - [09/Apr/2025 11:14:45] "[31m[1mGET /api/ HTTP/1.1[0m" 401 -
+2025-04-09 11:16:41,766 [INFO] 127.0.0.1 - - [09/Apr/2025 11:16:41] "[31m[1mGET /api/user HTTP/1.1[0m" 401 -
+2025-04-09 11:17:02,411 [INFO] 127.0.0.1 - - [09/Apr/2025 11:17:02] "[33mGET /user HTTP/1.1[0m" 404 -
+2025-04-09 11:17:06,560 [INFO] 127.0.0.1 - - [09/Apr/2025 11:17:06] "[31m[1mGET /api/user HTTP/1.1[0m" 401 -
+2025-04-09 11:17:44,061 [INFO] 127.0.0.1 - - [09/Apr/2025 11:17:44] "[33mGET /api/api/user HTTP/1.1[0m" 404 -
+2025-04-09 11:18:17,571 [INFO] 127.0.0.1 - - [09/Apr/2025 11:18:17] "[31m[1mGET /api/user HTTP/1.1[0m" 401 -
+2025-04-09 11:20:12,536 [INFO] 127.0.0.1 - - [09/Apr/2025 11:20:12] "[33mGET /api/apidoc HTTP/1.1[0m" 404 -
+2025-04-09 11:20:16,785 [INFO] 127.0.0.1 - - [09/Apr/2025 11:20:16] "[32mGET /api/apidoc/swagger HTTP/1.1[0m" 308 -
+2025-04-09 11:20:16,790 [INFO] 127.0.0.1 - - [09/Apr/2025 11:20:16] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:20:17,099 [INFO] 127.0.0.1 - - [09/Apr/2025 11:20:17] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:21:14,407 [INFO] BEGIN (implicit)
+2025-04-09 11:21:14,410 [INFO] INSERT INTO entries (id, name, amount, category) VALUES (?, ?, ?, ?)
+2025-04-09 11:21:14,411 [INFO] [generated in 0.00112s] ('a0ffaf981686428587e20516e395a3dc', 'abdelaziz', 200.0, 'it')
+2025-04-09 11:21:14,420 [INFO] COMMIT
+2025-04-09 11:21:14,438 [INFO] 127.0.0.1 - - [09/Apr/2025 11:21:14] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+2025-04-09 11:22:33,775 [INFO] 127.0.0.1 - - [09/Apr/2025 11:22:33] "[35m[1mDELETE /api/user/a0ffaf981686428587e20516e395a3dc HTTP/1.1[0m" 500 -
+2025-04-09 11:24:49,529 [INFO] BEGIN (implicit)
+2025-04-09 11:24:49,532 [INFO] UPDATE entries SET name=?, amount=?, category=? WHERE entries.id = ?
+2025-04-09 11:24:49,533 [INFO] [generated in 0.00111s] ('paul', 14.0, 'judo', 'a0ffaf981686428587e20516e395a3dc')
+2025-04-09 11:24:49,535 [INFO] COMMIT
+2025-04-09 11:24:49,568 [INFO] 127.0.0.1 - - [09/Apr/2025 11:24:49] "PUT /api/user/a0ffaf981686428587e20516e395a3dc HTTP/1.1" 200 -
+2025-04-09 11:29:13,245 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-09 11:29:13,391 [INFO]  * Restarting with stat
+2025-04-09 11:29:22,344 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-09 11:29:22,344 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-09 11:29:22,359 [INFO]  * Restarting with stat
+2025-04-09 11:29:25,276 [WARNING]  * Debugger is active!
+2025-04-09 11:29:25,287 [INFO]  * Debugger PIN: 609-220-695
+2025-04-09 11:29:26,710 [INFO] 127.0.0.1 - - [09/Apr/2025 11:29:26] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:29:26,851 [INFO] 127.0.0.1 - - [09/Apr/2025 11:29:26] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:30:00,174 [INFO] BEGIN (implicit)
+2025-04-09 11:30:00,176 [INFO] ROLLBACK
+2025-04-09 11:30:00,313 [INFO] 127.0.0.1 - - [09/Apr/2025 11:30:00] "[35m[1mDELETE /api/user/a0ffaf981686428587e20516e395a3dc HTTP/1.1[0m" 500 -
+2025-04-09 11:31:53,635 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-09 11:31:53,744 [INFO]  * Restarting with stat
+2025-04-09 11:31:57,729 [WARNING]  * Debugger is active!
+2025-04-09 11:31:57,744 [INFO]  * Debugger PIN: 609-220-695
+2025-04-09 11:32:00,871 [INFO] 127.0.0.1 - - [09/Apr/2025 11:32:00] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:32:00,962 [INFO] 127.0.0.1 - - [09/Apr/2025 11:32:00] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:32:29,629 [INFO] 127.0.0.1 - - [09/Apr/2025 11:32:29] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:32:29,675 [INFO] 127.0.0.1 - - [09/Apr/2025 11:32:29] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:32:45,042 [INFO] 127.0.0.1 - - [09/Apr/2025 11:32:45] "[35m[1mDELETE /api/user/a0ffaf981686428587e20516e395a3dc HTTP/1.1[0m" 500 -
+2025-04-09 11:33:32,448 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-09 11:33:32,548 [INFO]  * Restarting with stat
+2025-04-09 11:33:47,603 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-09 11:33:47,603 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-09 11:33:47,619 [INFO]  * Restarting with stat
+2025-04-09 11:33:51,553 [WARNING]  * Debugger is active!
+2025-04-09 11:33:51,565 [INFO]  * Debugger PIN: 609-220-695
+2025-04-09 11:33:52,509 [INFO] 127.0.0.1 - - [09/Apr/2025 11:33:52] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:33:52,558 [INFO] 127.0.0.1 - - [09/Apr/2025 11:33:52] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:34:08,627 [INFO] BEGIN (implicit)
+2025-04-09 11:34:08,628 [INFO] DELETE FROM entries WHERE entries.id = ?
+2025-04-09 11:34:08,628 [INFO] [generated in 0.00120s] ('a0ffaf981686428587e20516e395a3dc',)
+2025-04-09 11:34:08,642 [INFO] COMMIT
+2025-04-09 11:34:08,658 [INFO] 127.0.0.1 - - [09/Apr/2025 11:34:08] "[35m[1mDELETE /api/user/a0ffaf981686428587e20516e395a3dc HTTP/1.1[0m" 204 -
+2025-04-09 11:34:43,912 [INFO] BEGIN (implicit)
+2025-04-09 11:34:43,913 [INFO] DELETE FROM entries WHERE entries.id = ?
+2025-04-09 11:34:43,914 [INFO] [cached since 35.29s ago] ('b2018f2413e04cb78f003a138bdcb23e',)
+2025-04-09 11:34:43,923 [INFO] COMMIT
+2025-04-09 11:34:44,001 [INFO] 127.0.0.1 - - [09/Apr/2025 11:34:44] "[35m[1mDELETE /api/user/b2018f2413e04cb78f003a138bdcb23e HTTP/1.1[0m" 204 -
+2025-04-09 11:36:01,309 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-09 11:36:01,436 [INFO]  * Restarting with stat
+2025-04-09 11:36:05,625 [WARNING]  * Debugger is active!
+2025-04-09 11:36:05,636 [INFO]  * Debugger PIN: 609-220-695
+2025-04-09 11:36:06,135 [INFO] 127.0.0.1 - - [09/Apr/2025 11:36:06] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:36:06,187 [INFO] 127.0.0.1 - - [09/Apr/2025 11:36:06] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:36:21,150 [INFO] 127.0.0.1 - - [09/Apr/2025 11:36:21] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:36:21,196 [INFO] 127.0.0.1 - - [09/Apr/2025 11:36:21] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:36:40,511 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-09 11:36:40,511 [INFO] [33mPress CTRL+C to quit[0m
+2025-04-09 11:36:40,526 [INFO]  * Restarting with stat
+2025-04-09 11:36:43,613 [WARNING]  * Debugger is active!
+2025-04-09 11:36:43,623 [INFO]  * Debugger PIN: 609-220-695
+2025-04-09 11:36:44,106 [INFO] 127.0.0.1 - - [09/Apr/2025 11:36:44] "GET /api/apidoc/swagger/ HTTP/1.1" 200 -
+2025-04-09 11:36:44,161 [INFO] 127.0.0.1 - - [09/Apr/2025 11:36:44] "GET /api/apidoc/openapi.json HTTP/1.1" 200 -
+2025-04-09 11:38:49,449 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-09 11:38:49,541 [INFO]  * Restarting with stat
+2025-04-09 11:38:53,336 [WARNING]  * Debugger is active!
+2025-04-09 11:38:53,347 [INFO]  * Debugger PIN: 609-220-695
+2025-04-09 11:38:54,105 [INFO]  * Detected change in '\\\\192.168.24.10\\STUDENTS\\22302683\\archi_logicielle1\\src\\archilog\\views\\api.py', reloading
+2025-04-09 11:38:54,199 [INFO]  * Restarting with stat
+2025-04-09 11:38:57,245 [WARNING]  * Debugger is active!
+2025-04-09 11:38:57,245 [INFO]  * Debugger PIN: 609-220-695

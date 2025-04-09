@@ -64,7 +64,6 @@ def create_user(json: CreateEntry):
 
 
 class UpdateEntry(BaseModel):
-    id: UUID  = Field(description="ID de l'entrée à mettre à jour")
     name: str = Field(min_length=2, max_length=100, description="Nouveau nom de l'entrée")  
     amount: float = Field(gt=0, description="Nouveau montant de l'entrée")
     category: str = Field(min_length=2, max_length=50, description="Nouvelle catégorie de l'entrée")
@@ -74,7 +73,7 @@ class UpdateEntry(BaseModel):
 @auth.login_required
 @spec.validate(tags=["user"])
 def update_user(id: UUID, json: UpdateEntry):
-    models.update_entry(json.id ,json.name, json.amount, json.category)
+    models.update_entry(UUID(id), json.name, json.amount, json.category)
     # Ici, json contient un objet de type UpdateEntry
     return jsonify({"message": f"User {id} updated"}), 200
 
@@ -86,8 +85,8 @@ class DeleteEntry(BaseModel):
 @api.route("/user/<id>", methods=["DELETE"])
 @auth.login_required
 @spec.validate(tags=["user"])
-def delete_user(id: UUID , json: DeleteEntry):
-    models.delete_entry(json.id)
+def delete_user(id: UUID):
+    models.delete_entry(UUID(id))
     # Ici, json contient l'ID de l'utilisateur à supprimer
     return jsonify({"message": f"User {id} deleted"}), 204    
 
