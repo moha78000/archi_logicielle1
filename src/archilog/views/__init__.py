@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from flask import Flask
 from archilog import config
 from archilog.views.web_ui import web_ui
