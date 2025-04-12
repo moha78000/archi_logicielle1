@@ -67,7 +67,7 @@ def list_entries():
 
 
 @web_ui.route("/entry", methods=["GET"])
-@auth.login_requireds
+@auth.login_required
 def get_entry():
     # Récupérer l'ID de la requête (depuis le formulaire)   
     entry_id = request.args.get("id")
