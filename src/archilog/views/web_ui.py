@@ -1,5 +1,5 @@
 import uuid
-from flask import Blueprint, render_template, request, redirect, url_for, flash, Response , abort
+from flask import Blueprint, render_template, request, redirect, url_for, flash, Response
 import archilog.models as models
 import archilog.services as services
 from flask_wtf import FlaskForm
@@ -19,15 +19,7 @@ web_ui = Blueprint("web_ui", __name__, url_prefix="/")
 auth = HTTPBasicAuth()
 
 
-
-@web_ui.route("/logout")
-def logout():
-    flash("Déconnexion réussie.", "info")
-    return redirect(url_for("auth_ui.login"))
-
-
-
-
+# Configuration de l'authentification de base
 users = {
     "admin": {
         "password": generate_password_hash("admin"),
@@ -36,7 +28,7 @@ users = {
     "user": {
         "password": generate_password_hash("user"),
         "role": "user"
-    }   
+    }
 }
 
 
@@ -52,7 +44,10 @@ def verify_password(username, password):
 
 @auth.get_user_roles
 def get_user_roles(username):
-    return [users[username]["role"]]
+    if username in users:
+        return users[username]["role"]
+    return [] # Aucun rôle si l'utilisateur n'existe pas
+    
 
 
 
@@ -72,6 +67,7 @@ def list_entries():
 
 
 @web_ui.route("/entry", methods=["GET"])
+@auth.login_requireds
 def get_entry():
     # Récupérer l'ID de la requête (depuis le formulaire)   
     entry_id = request.args.get("id")
@@ -189,7 +185,7 @@ def update_entry_form():
 
 
 @web_ui.route("/export_csv")
-@auth.login_required(role="user")
+@auth.login_required(role="user , admin")
 def export_csv():
     logging.info("Exportation des données en CSV.")
     csv_file = services.export_to_csv()

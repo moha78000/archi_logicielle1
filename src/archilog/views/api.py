@@ -1,10 +1,11 @@
 from flask import Blueprint , jsonify , Response
 from flask_httpauth import HTTPTokenAuth
-from spectree import SpecTree , SecurityScheme
-from pydantic import BaseModel, Field, constr
+from spectree import SpecTree , SecurityScheme , BaseFile
+from pydantic import BaseModel, Field
 import archilog.models as models
-from archilog.services import export_to_csv
+from archilog.services import export_to_csv , import_from_csv
 from uuid import UUID
+import io
 
 
 
@@ -25,8 +26,8 @@ security=[{"bearer_token": []}]
 
 
 tokens = {
-"secret-token-1": "john",
-"secret-token-2": "susan"
+"secret-token-1": {"username" : "admin" , "role": "admin"},
+"secret-token-2": {"username" : "user" , "role": "user"},
 }
 
 
@@ -37,16 +38,9 @@ def verify_token(token):
     return None
 
 
-
-
-
-# Exemple de route de test pour vérifier l'authentification
-@api.route("/test", methods=["GET"])
-@auth.login_required
-def test_auth():
-    return jsonify({"message": f"Hello {auth.current_user()}!"}), 200
-
-
+@auth.get_user_roles
+def get_user_roles(user):
+    return user.get("role", []) 
 
 class CreateEntry(BaseModel):
     name: str = Field(min_length=2, max_length=100, description="Le nom de l'entrée")
@@ -55,7 +49,7 @@ class CreateEntry(BaseModel):
 
 
 @api.route("/user", methods=["POST"])
-@auth.login_required
+@auth.login_required(role="admin")
 @spec.validate(tags=["user"])   
 def create_user(json: CreateEntry):
     models.create_entry(json.name, json.amount, json.category)
@@ -70,7 +64,7 @@ class UpdateEntry(BaseModel):
 
 
 @api.route("/user/<id>", methods=["PUT"])
-@auth.login_required
+@auth.login_required(role="admin")
 @spec.validate(tags=["user"])
 def update_user(id: UUID, json: UpdateEntry):
     models.update_entry(UUID(id), json.name, json.amount, json.category)
@@ -83,7 +77,7 @@ class DeleteEntry(BaseModel):
     id: UUID = Field(description="ID de l'entrée à supprimer")
 
 @api.route("/user/<id>", methods=["DELETE"])
-@auth.login_required
+@auth.login_required(role="admin")
 @spec.validate(tags=["user"])
 def delete_user(id: UUID):
     models.delete_entry(UUID(id))
@@ -111,12 +105,23 @@ def get_entries():
     return jsonify(entries_data), 200
 
 
-@api.route("/products/export", methods=["GET"])
+@api.route("/export/entries", methods=["GET"])
 @spec.validate(tags=["api"])
 @auth.login_required
 def export_csv_api():
     csv_data = export_to_csv()
     return Response(csv_data.getvalue(), content_type="text/csv")
+
+class File(BaseModel):
+    file : BaseFile
+
+@api.route("/import/entries", methods=["POST"])
+@spec.validate(tags=["api"])
+@auth.login_required(role="admin")
+def import_csv(form : File): 
+    filestream = io.StringIO(form.file.stream.read().decode("utf-8"))
+    import_from_csv(filestream)
+    return jsonify({"message": "CSV imported successfully"}), 201
 
 
 
