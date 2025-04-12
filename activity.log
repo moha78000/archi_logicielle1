@@ -2393,3 +2393,7 @@ FROM entries
 2025-04-12 11:33:20,292 [INFO] [cached since 21.61s ago] ()
 2025-04-12 11:33:20,293 [INFO] ROLLBACK
 2025-04-12 11:33:20,294 [INFO] 127.0.0.1 - - [12/Apr/2025 11:33:20] "GET /api/user HTTP/1.1" 200 -
+2025-04-12 11:33:44,234 [INFO]  * Detected change in 'C:\\Users\\moh78\\Projet_archilog1.0\\archi_logicielle1\\src\\archilog\\views\\web_ui.py', reloading
+2025-04-12 11:33:44,311 [INFO]  * Restarting with stat
+2025-04-12 11:33:45,479 [WARNING]  * Debugger is active!
+2025-04-12 11:33:45,482 [INFO]  * Debugger PIN: 133-606-123
