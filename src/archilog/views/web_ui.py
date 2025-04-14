@@ -176,7 +176,7 @@ def update_entry_form():
             models.update_entry(entry_id, name, amount, category)
             flash("Entrée mise à jour avec succès!", "success")
             logging.info(f"Entrée mise à jour avec succès: {entry_id}")
-            return redirect(url_for('home'))
+            return redirect(url_for('web_ui.home'))
         except Exception as e:
             flash(f"Erreur lors de la mise à jour : {str(e)}", "error")
             logging.error(f"Erreur lors de la mise à jour de l'entrée: {e}")
