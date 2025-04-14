@@ -1,15 +1,16 @@
 import uuid
-from flask import Blueprint, render_template, request, redirect, url_for, flash, Response
+from flask import Blueprint, render_template, request, redirect, url_for, flash, Response 
 import archilog.models as models
 import archilog.services as services
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm 
 from wtforms import StringField, DecimalField, SubmitField
 from wtforms.validators import DataRequired, Length, NumberRange, Optional
 import logging
 
+
 from flask_httpauth import HTTPBasicAuth
-from werkzeug.security import generate_password_hash
-from werkzeug.security import check_password_hash
+from werkzeug.security import generate_password_hash , check_password_hash
+
 
 
 
@@ -185,7 +186,7 @@ def update_entry_form():
 
 
 @web_ui.route("/export_csv")
-@auth.login_required(role="user , admin")
+@auth.login_required(role=["admin", "user"])
 def export_csv():
     logging.info("Exportation des données en CSV.")
     csv_file = services.export_to_csv()
@@ -232,6 +233,12 @@ def handle_404_error(error):
     flash("Page non trouvée", "error")
     logging.error("Erreur 404: Page introuvable.")
     return render_template("404.html"), 404
+
+
+@web_ui.get("/users/create")
+def users_create_form():
+    abort(500)
+    return render_template("users_create_form.html")
 
 
 

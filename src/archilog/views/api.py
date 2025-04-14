@@ -3,6 +3,7 @@ from flask_httpauth import HTTPTokenAuth
 from spectree import SpecTree , SecurityScheme , BaseFile
 from pydantic import BaseModel, Field
 import archilog.models as models
+from typing import Optional
 from archilog.services import export_to_csv , import_from_csv
 from uuid import UUID
 import io
@@ -19,7 +20,7 @@ security_schemes=[
     SecurityScheme(
         name="bearer_token",
         data={"type": "http", "scheme": "bearer"}
-    )
+    )   
 ],
 security=[{"bearer_token": []}]
 )
@@ -45,7 +46,8 @@ def get_user_roles(user):
 class CreateEntry(BaseModel):
     name: str = Field(min_length=2, max_length=100, description="Le nom de l'entrée")
     amount: float = Field(gt=0, description="Le montant de l'entrée")
-    category: str = Field(min_length=2, max_length=50, description="La catégorie de l'entrée")
+    category: Optional[str] = Field(default=None, min_length=2, max_length=50, description="La catégorie de l'entrée (optionnelle)")
+
 
 
 @api.route("/user", methods=["POST"])
@@ -60,7 +62,7 @@ def create_user(json: CreateEntry):
 class UpdateEntry(BaseModel):
     name: str = Field(min_length=2, max_length=100, description="Nouveau nom de l'entrée")  
     amount: float = Field(gt=0, description="Nouveau montant de l'entrée")
-    category: str = Field(min_length=2, max_length=50, description="Nouvelle catégorie de l'entrée")
+    category: Optional[str] = Field(default=None, min_length=2, max_length=50, description="Nouvelle catégorie de l'entrée (optionnelle)")
 
 
 @api.route("/user/<id>", methods=["PUT"])
@@ -104,6 +106,24 @@ def get_entries():
     # Retourner les entrées en format JSON
     return jsonify(entries_data), 200
 
+@api.route("/user/<id>", methods=["GET"])
+@auth.login_required
+@spec.validate(tags=["user"])
+def get_entry(id: UUID):
+    entry = models.get_entry(UUID(id))
+
+    if not entry:
+        return jsonify({"error": "Entrée non trouvée"}), 404
+
+    entry_data = {
+            "id": str(entry["id"]),
+            "name": entry["name"],
+            "amount": entry["amount"],
+            "category": entry["category"]
+        }
+
+
+    return jsonify(entry_data), 200
 
 @api.route("/export/entries", methods=["GET"])
 @spec.validate(tags=["api"])
